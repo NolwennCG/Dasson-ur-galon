@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT TEI (#PCDATA | teiHeader | body)*>
+    <!ELEMENT teiHeader (#PCDATA | fileDesc)*>
+        <!ELEMENT fileDesc (#PCDATA | titleStmt | editionStmt | publicationStmt | sourceDesc | profileDesc)*>
+            <!ELEMENT titleStmt (#PCDATA | title | author)*>
+                <!ELEMENT title (#PCDATA)>
+                <!ATTLIST title type CDATA #IMPLIED>
+                <!ELEMENT author (#PCDATA)>
+                <!ATTLIST author key CDATA #IMPLIED>
+                <!ATTLIST author ref CDATA #IMPLIED>
+            <!ELEMENT editionStmt (#PCDATA | edition | respStmt)*>
+                <!ELEMENT edition (#PCDATA)>
+                <!ELEMENT respStmt (#PCDATA | name | resp)*>
+                    <!ELEMENT name (#PCDATA)>
+                    <!ATTLIST name xml:id CDATA #IMPLIED>
+                    <!ELEMENT resp (#PCDATA)>
+            <!ELEMENT publicationStmt (#PCDATA | publisher | date | availability)*>
+                <!ELEMENT availability (#PCDATA | licence | p)*>
+                <!ATTLIST availability status CDATA #IMPLIED>
+                    <!ELEMENT licence (#PCDATA)>
+                    <!ATTLIST licence target CDATA #IMPLIED>
+            <!ELEMENT sourceDesc (#PCDATA | bibl)*>
+                <!ELEMENT bibl (#PCDATA | author | title | editor | pubPlace | publisher | date | biblScope | ref)*>
+                    <!ELEMENT editor (#PCDATA)>
+                    <!ELEMENT publisher (#PCDATA)>
+                    <!ELEMENT pubPlace (#PCDATA)>
+                    <!ELEMENT biblScope (#PCDATA)>
+                    <!ELEMENT ref (#PCDATA)>
+                    <!ATTLIST ref target CDATA #IMPLIED>
+            <!ELEMENT profileDesc (#PCDATA | creation | langUsage)*>
+                <!ELEMENT creation (#PCDATA | date)*>
+                    <!ELEMENT date (#PCDATA)>
+                    <!ATTLIST date when CDATA #IMPLIED>
+                <!ELEMENT langUsage (#PCDATA | language)*>
+                    <!ELEMENT language (#PCDATA)>
+                    <!ATTLIST language ident CDATA #IMPLIED>
+
+    <!ELEMENT body (#PCDATA | div)*>
+        <!ELEMENT div (#PCDATA | cit | dateline | head | lg | label | p | pb)*>
+        <!ATTLIST div type CDATA #IMPLIED>
+            <!ELEMENT cit (#PCDATA | abbr | pc | seg | pb | quote | bibl)*>
+                <!ELEMENT quote (#PCDATA | abbr | pc | seg | pb)*>
+            <!ELEMENT dateline (#PCDATA | origDate | origPlace)*>
+                <!ELEMENT origPlace (#PCDATA | abbr | pc | seg | note | choice)*>
+                <!ELEMENT origDate (#PCDATA | abbr | pc | seg | note | choice)*>
+            <!ELEMENT head (#PCDATA | abbr | pc | seg | note | choice)*>
+            <!ATTLIST head type CDATA #IMPLIED>
+            <!ELEMENT lg (#PCDATA | l | pb)*>
+                <!ELEMENT l (#PCDATA | abbr | pc | seg | pb | note | choice)*>
+                    <!ELEMENT pc (#PCDATA | choice)*>
+                    <!ATTLIST pc type CDATA #IMPLIED>
+                    <!ELEMENT abbr (#PCDATA | choice)*>
+                    <!ATTLIST abbr type CDATA #IMPLIED>
+                    <!ELEMENT seg (#PCDATA | choice)*>
+                    <!ATTLIST seg type CDATA #IMPLIED>
+                        <!ELEMENT choice (#PCDATA | orig | reg | corr | sic)*>
+                        <!ELEMENT orig (#PCDATA)>
+                        <!ELEMENT reg (#PCDATA)>
+                        <!ELEMENT sic (#PCDATA)>
+                        <!ELEMENT corr (#PCDATA)>
+                        <!ATTLIST corr resp CDATA #IMPLIED>
+                    <!ELEMENT note (#PCDATA | choice | hi)*>
+                    <!ATTLIST note resp CDATA #IMPLIED>
+                    <!ATTLIST note n CDATA #IMPLIED>
+                        <!ELEMENT hi (#PCDATA)>
+                        <!ATTLIST hi rend CDATA #IMPLIED>
+            <!ELEMENT label (#PCDATA | abbr | pc | seg | pb)*>
+            <!ELEMENT p (#PCDATA | abbr | pc | seg | pb)*>
+            <!ELEMENT pb (#PCDATA)>
+            <!ATTLIST pb n CDATA #IMPLIED>
