@@ -2,251 +2,334 @@
 <!DOCTYPE TEI
   SYSTEM "MM2_DUG_Poeme.dtd">
 <TEI><teiHeader><fileDesc><titleStmt><title type="main">Dasson ur galon</title><title type="sub">Men
-          dous</title><author key="Herrieu, Loeiz (1879-1953)"
-          ref="https://data.bnf.fr/fr/12041305/loeiz_herrieu/">Loeiz
-          Herrieu</author></titleStmt><editionStmt><edition>Université de
-            Lille</edition><respStmt><name xml:id="NC">Nolwenn Chevalier</name><resp>éditrice
-            critique</resp></respStmt></editionStmt><publicationStmt><publisher>Université de
-          Lille</publisher><date when="2019"/><availability status="restricted"><licence
-            target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/><p>Copyright © 2014
-            Université de Lille.</p><p>Cette ressource électronique protégée par le code de la
-            propriété intellectuelle sur les bases de données (L341-1) est mise à disposition de la
-            communauté scientifique internationale par l’Université de Lille, selon les termes de la
-            licence Creative Commons : « Attribution - Pas d’Utilisation Commerciale - Pas de
-            Modification 3.0 France (CC BY-NC-ND 3.0 FR) ».</p><p>Attribution : afin de référencer
-            la source, toute utilisation ou publication dérivée de cette ressource électroniques
-            comportera le nom de l’Université de Lille et surtout l’adresse Internet de la
-            ressource.</p><p>Pas d’Utilisation Commerciale : dans l’intérêt de la communauté
-            scientifique, toute utilisation commerciale est interdite.</p><p>Pas de Modification :
-            l’Université de Lille s’engage à améliorer et à corriger cette ressource électronique,
-            notamment en intégrant toutes les contributions extérieures. La diffusion de versions
-            modifiées de cette ressource n’est pas
-            souhaitable.</p></availability></publicationStmt><sourceDesc><bibl><author>Loeiz
-            Herrieu</author>, « Men dous », <title>Dasson ur Galon</title>,
-            <pubPlace>Brest</pubPlace>, <publisher>Brud Nevez</publisher>, <date>1983</date>,
-            <biblScope>141 p.</biblScope>. PDF : <ref
-            target="http://bibliotheque.idbe-bzh.org/data/cle_113/Dasson_ur_Galon_.pdf"
-            >Idbe-bzh</ref>. </bibl></sourceDesc><profileDesc><creation><date when="1983"
-          /></creation><langUsage><language ident="bre"
-    /></langUsage></profileDesc></fileDesc></teiHeader><body><div type="poem">
-      <pb n="12"/>
-      <head type="main">Men dous</head>
-      <head type="sub">(Sonenn)</head>
-      <lg>
-        <l>N'<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg><seg
-            type="amuissement_voyelle"><choice><reg>o</reg></choice></seg> ket ‘n ho ti,
-            tavarnour<seg type="signes_diacritiques"
-            ><choice><orig>é</orig><reg>e</reg></choice></seg>z, </l>
-        <l>Em <seg type="digramme"><choice><orig>e</orig><reg>eu</reg></choice></seg>s-m<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> cho<seg
-            type="amenuisement_voyelle"><choice><orig>é</orig><reg>a</reg></choice></seg>jet m<seg
-            type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg> mestr<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>z !</l>
-      </lg>
-      <lg>
-        <l>Tosto<seg type="trigramme_diacritique"
-            ><choice><orig>h</orig><reg>c’h</reg></choice></seg> d<seg type="monophtongaison"
-                ><choice><orig>ei</orig><reg>i</reg></choice></seg>n em <seg type="digramme"
-                ><choice><orig>e</orig><reg>eu</reg></choice></seg>s h<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> cho<seg
-            type="amenuisement_voyelle"><choice><orig>é</orig><reg>a</reg></choice></seg>jet : </l>
-        <l>Ur pla<seg type="trigramme_diacritique"
-            ><choice><orig>h</orig><reg>c’h</reg></choice></seg> koant <seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg><seg
-            type="amuissement_voyelle"><choice><reg>o</reg></choice></seg>, ur ver<seg
-            type="trigramme_diacritique"><choice><orig>h</orig><reg>c’h</reg></choice></seg>
-          ranjet.</l>
-      </lg>
-      <lg>
-        <l>H<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
-          <seg type="trigramme_diacritique"
-            ><choice><orig>h</orig><reg>c’h</reg></choice></seg>arou<seg type="voisement"
-                ><choice><orig>d</orig><reg>t</reg></choice></seg> ‘<seg type="amuissement_consonne"
-                ><choice><orig>h</orig></choice></seg>ran he<seg type="voisement"
-                ><choice><orig>b</orig><reg>p</reg></choice></seg> go<abbr type="signe_special"
-                ><choice><orig>u</orig><reg>û</reg></choice></abbr><seg type="voisement"
-                ><choice><orig>d</orig><reg>t</reg></choice></seg> de<seg type="digramme"
-                ><choice><orig>h</orig><reg>zh</reg></choice></seg>i : </l>
-        <l>Ge<seg type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg>
-          <seg type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>n
-            dra-s<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
-          em <seg type="digramme"><choice><orig>e</orig><reg>eu</reg></choice></seg>s soursi.</l>
-      </lg>
-      <lg>
-        <l>Mechal penao<seg type="voisement"><choice><orig>z</orig><reg>s</reg></choice></seg> e vo
-            d<seg type="monophtongaison"><choice><orig>ei</orig><reg>i</reg></choice></seg>n-m<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
-        </l>
-        <l>Dizol de<seg type="digramme"><choice><orig>h</orig><reg>zh</reg></choice></seg>i m<seg
-            type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>
-          <seg type="trigramme_diacritique"
-            ><choice><orig>h</orig><reg>c’h</reg></choice></seg>arant<seg type="signes_diacritiques"
-                ><choice><orig>é</orig><reg>e</reg></choice></seg><seg type="amuissement_consonne"
-                ><choice><reg>z</reg></choice></seg> ?</l>
-      </lg>
-      <lg>
-        <l>M'h<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
-            gw<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>l
-            <seg type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg><pc
-            type="desagglutination"><choice><reg>-</reg></choice></pc><seg
-            type="amuissement_consonne"><choice><orig>r</orig></choice></seg><seg
-            type="diphtongaison"><choice><orig>o</orig><reg>w</reg></choice></seg>al<seg
-            type="trigramme_diacritique"><choice><orig>h</orig><reg>c’h</reg></choice></seg>
-          <seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>r
-            pardoni<seg type="diphtongaison"><choice><orig>eu</orig><reg>où</reg></choice></seg></l>
-        <l>Ha d<seg type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>
-          noz, <pc type="elision"><choice><reg>‘</reg></choice></pc>bar<seg type="digramme"
-                ><choice><orig>h</orig><reg>zh</reg></choice></seg>
-          <seg type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>r
-            filaj<seg type="diphtongaison"><choice><orig>eu</orig><reg>où</reg></choice></seg>.</l>
-      </lg>
-      <lg>
-        <l>A p<seg type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg> za
-            d<seg type="monophtongaison"><choice><orig>ei</orig><reg>i</reg></choice></seg>n go<abbr
-            type="signe_special"><choice><orig>u</orig><reg>û</reg></choice></abbr><seg
-            type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg> h<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> gw<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>l<seg
-            type="monophtongaison"><choice><orig>ei</orig><reg>i</reg></choice></seg>n, </l>
-        <l>Neuz<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> é
-            t<seg type="augmentation_voyelle"><choice><orig>a</orig><reg>eu</reg></choice></seg>
-            hardi<seg type="digramme"><choice><orig>h</orig><reg>zh</reg></choice></seg>ted d<seg
-            type="monophtongaison"><choice><orig>ei</orig><reg>i</reg></choice></seg>n.</l>
-      </lg>
-      <lg>
-        <l>Me<seg type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg> a p'h<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> gw<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>lan é
-            tost<seg type="signes_diacritiques"
-            ><choice><orig>â</orig><reg>aa</reg></choice></seg><seg type="voisement"
-                ><choice><orig>d</orig><reg>t</reg></choice></seg>, </l>
-        <l>Pl<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>get
-            m<seg type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>
-          'fenn, m<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
-          <seg type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>
-          huanad…</l>
-      </lg>
-      <lg>
-        <l>D'or feut<seg type="augmentation_voyelle"
-            ><choice><orig>a</orig><reg>eu</reg></choice></seg>n-ni, bemd<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg><seg
-            type="amuissement_consonne"><choice><reg>z</reg></choice></seg> riget, </l>
-        <l>É t<seg type="augmentation_voyelle"><choice><orig>a</orig><reg>eu</reg></choice></seg>
-            d<seg type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>
-            z<seg type="augmentation_voyelle"
-            ><choice><orig>eu</orig><reg>ou</reg></choice></seg>ra<seg type="voisement"
-                ><choice><orig>d</orig><reg>t</reg></choice></seg> h<seg type="signes_diacritiques"
-                ><choice><orig>é</orig><reg>e</reg></choice></seg> l<seg type="diphtongaison"
-                ><choice><orig>o</orig><reg>oe</reg></choice></seg>ned.</l>
-      </lg>
-      <pb n="14"/>
-      <lg>
-        <l>D<seg type="diphtongaison"><choice><orig>ei</orig><reg>eue</reg></choice></seg>t d<seg
-            type="monophtongaison"><choice><orig>ei</orig><reg>i</reg></choice></seg>n er so<seg
-            type="nasalisation"><choice><orig>n</orig><reg>ñ</reg></choice></seg>j, un ander<seg
-            type="lettre_ramiste"><choice><orig>u</orig><reg>v</reg></choice></seg>-noz, </l>
-        <l>D<seg type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>
-            vone<seg type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg> d'<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>no d'h<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> gortoz.
-        </l>
-      </lg>
-      <lg>
-        <l>En d<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg><seg
-            type="amuissement_voyelle"><choice><reg>i</reg></choice></seg><seg
-            type="amuissement_consonne"><choice><reg>z</reg></choice></seg>-s<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> 'h oen
-            so<seg type="nasalisation"><choice><orig>n</orig><reg>ñ</reg></choice></seg>jet er<seg
-            type="mutation_consonantique"><choice><orig>h</orig><reg>v</reg></choice></seg>a<seg
-            type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg>
-        </l>
-        <l>D<seg type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>
-            zisamm<seg type="monophtongaison"><choice><orig>ei</orig><reg>i</reg></choice></seg><seg
-            type="nasalisation"><choice><orig>n</orig><reg>ñ</reg></choice></seg> m<seg
-            type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>
-          <seg type="trigramme_diacritique"
-          ><choice><orig>h</orig><reg>c’h</reg></choice></seg>alonad. </l>
-      </lg>
-      <lg>
-        <l>Az<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg><seg
-            type="amuissement_consonne"><choice><reg>z</reg></choice></seg>et <pc type="elision"
-                ><choice><reg>‘</reg></choice></pc>ar v<seg type="signes_diacritiques"
-                ><choice><orig>ê</orig><reg>ae</reg></choice></seg>n <seg
-            type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>r feut<seg
-            type="augmentation_voyelle"><choice><orig>a</orig><reg>eu</reg></choice></seg>n, </l>
-        <l>Na g<seg type="signes_diacritiques"
-            ><choice><orig>é</orig><reg>e</reg></choice></seg>ri<seg type="diphtongaison"
-                ><choice><orig>eu</orig><reg>où</reg></choice></seg> flour <seg
-            type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>
-          zibaban !</l>
-      </lg>
-      <lg>
-        <l>Me<seg type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg> setu h<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> saout é
-            tone<seg type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg> ; </l>
-        <l>Fonnapl, fonnapl d<seg type="diphtongaison"
-            ><choice><orig>a</orig><reg>eo</reg></choice></seg>m<seg type="amuissement_consonne"
-                ><choice><reg>p</reg></choice></seg> d<seg type="amenuisement_voyelle"
-                ><choice><orig>e</orig><reg>a</reg></choice></seg> gu<seg type="digramme"
-                ><choice><orig>h</orig><reg>zh</reg></choice></seg><seg type="amenuisement_voyelle"
-                ><choice><orig>e</orig><reg>a</reg></choice></seg><seg type="voisement"
-                ><choice><orig>d</orig><reg>t</reg></choice></seg>…</l>
-      </lg>
-      <lg>
-        <l>Gwi<seg type="lettre_ramiste"><choice><orig>ù</orig><reg>v</reg></choice></seg> ha
-            skañ<seg type="lettre_ramiste"><choice><orig>ù</orig><reg>v</reg></choice></seg> h<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> gw<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>lan <seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>mberr </l>
-        <l><seg type="signes_diacritiques"><choice><orig>É</orig><reg>E</reg></choice></seg><seg
-            type="trigramme_diacritique"><choice><orig>h</orig><reg>c’h</reg></choice></seg>
-          <seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>ve<seg
-            type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg> d<seg
-            type="augmentation_voyelle"><choice><orig>eu</orig><reg>ou</reg></choice></seg>r <seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>r feut<seg
-            type="augmentation_voyelle"><choice><orig>a</orig><reg>eu</reg></choice></seg>n skl<seg
-            type="signes_diacritiques"><choice><orig>ê</orig><reg>ae</reg></choice></seg>r. </l>
-      </lg>
-      <lg>
-        <l>H<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> l<seg
-            type="diphtongaison"><choice><orig>o</orig><reg>oe</reg></choice></seg>ned a p'h<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> d<seg
-            type="digramme"><choice><orig>e</orig><reg>eu</reg></choice></seg>s d<seg
-            type="augmentation_voyelle"><choice><orig>eu</orig><reg>ou</reg></choice></seg>r<seg
-            type="monophtongaison"><choice><orig>ei</orig><reg>e</reg></choice></seg>t, </l>
-        <l><pc type="elision"><choice><reg>‘</reg></choice></pc>Ar h<seg type="signes_diacritiques"
-                ><choice><orig>é</orig><reg>e</reg></choice></seg> goar d'<seg
-            type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>r g<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>ê</reg></choice></seg>r <seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>m<seg
-            type="nasalisation"><choice><orig>an</orig><reg>añ</reg></choice></seg>
-          <seg type="en_cours"><choice><orig>oei</orig><reg>ae</reg></choice></seg>t. </l>
-      </lg>
-      <lg>
-        <l>Neuz<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>,
-            <pc type="elision"><choice><reg>‘</reg></choice></pc><seg type="signes_diacritiques"
-                ><choice><orig>é</orig><reg>e</reg></choice></seg>l ur paourk<seg
-            type="signes_diacritiques"><choice><orig>ê</orig><reg>ae</reg></choice></seg><seg
-            type="digramme"><choice><orig>h</orig><reg>zh</reg></choice></seg> Yannig, </l>
-        <l>É pl<seg type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>gan
-          dreist <seg type="amenuisement_voyelle"><choice><orig>e</orig><reg>a</reg></choice></seg>r
-            feut<seg type="augmentation_voyelle"
-          ><choice><orig>a</orig><reg>eu</reg></choice></seg>nig, </l>
-      </lg>
-      <lg>
-        <l>Evi<seg type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg>
-          <seg type="augmentation_voyelle"><choice><orig>a</orig><reg>e</reg></choice></seg>s<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>, <seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>n d<seg
-            type="augmentation_voyelle"><choice><orig>eu</orig><reg>ou</reg></choice></seg>r,
-            kave<seg type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg>
-        </l>
-        <l>A<seg type="trigramme_diacritique"><choice><orig>h</orig><reg>c’h</reg></choice></seg>oel
-            <note n="1" resp="NC"><hi rend="i">ac</hi><hi rend="i">’h</hi><hi rend="i">oel</hi>,
-            voir : <hi rend="i">a-wael</hi></note> l<seg type="signes_diacritiques"
-                ><choice><orig>é</orig><reg>e</reg></choice></seg><seg type="trigramme_diacritique"
-                ><choice><orig>h</orig><reg>c’h</reg></choice></seg> h<seg
-            type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg> di<seg
-            type="diphtongaison"><choice><orig>v</orig><reg>w</reg></choice></seg><seg
-            type="digramme"><choice><orig>é</orig><reg>eu</reg></choice></seg>z karet…</l>
-      </lg></div></body></TEI>
+                    dous</title><author key="Herrieu, Loeiz (1879-1953)"
+                    ref="https://data.bnf.fr/fr/12041305/loeiz_herrieu/">Loeiz
+                Herrieu</author></titleStmt><editionStmt><edition>Université de
+                        Lille</edition><respStmt><name xml:id="NC">Nolwenn
+                        Chevalier</name><resp>éditrice
+                    critique</resp></respStmt></editionStmt><publicationStmt><publisher>Université
+                    de Lille</publisher><date when="2019"/><availability status="restricted"
+                        ><licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"
+                        /><p>Copyright © 2014 Université de Lille.</p><p>Cette ressource
+                        électronique protégée par le code de la propriété intellectuelle sur les
+                        bases de données (L341-1) est mise à disposition de la communauté
+                        scientifique internationale par l’Université de Lille, selon les termes de
+                        la licence Creative Commons : « Attribution - Pas d’Utilisation Commerciale
+                        - Pas de Modification 3.0 France (CC BY-NC-ND 3.0 FR) ».</p><p>Attribution :
+                        afin de référencer la source, toute utilisation ou publication dérivée de
+                        cette ressource électroniques comportera le nom de l’Université de Lille et
+                        surtout l’adresse Internet de la ressource.</p><p>Pas d’Utilisation
+                        Commerciale : dans l’intérêt de la communauté scientifique, toute
+                        utilisation commerciale est interdite.</p><p>Pas de Modification :
+                        l’Université de Lille s’engage à améliorer et à corriger cette ressource
+                        électronique, notamment en intégrant toutes les contributions extérieures.
+                        La diffusion de versions modifiées de cette ressource n’est pas
+                        souhaitable.</p></availability></publicationStmt><sourceDesc><bibl><author>Loeiz
+                        Herrieu</author>, « Men dous », <title>Dasson ur Galon</title>,
+                        <pubPlace>Brest</pubPlace>, <publisher>Brud Nevez</publisher>,
+                        <date>1983</date>, <biblScope>141 p.</biblScope>. PDF : <ref
+                        target="http://bibliotheque.idbe-bzh.org/data/cle_113/Dasson_ur_Galon_.pdf"
+                        >Idbe-bzh</ref>. </bibl></sourceDesc><profileDesc><creation><date
+                        when="1983"/></creation><langUsage><language ident="bre"
+                /></langUsage></profileDesc></fileDesc></teiHeader><body><div type="poem">
+            <pb n="12"/>
+            <head type="main">Men dous</head>
+            <head type="sub">(Sonenn)</head>
+            <lg>
+                <l>N'<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg><seg
+                        type="amuissement_voyelle"><choice><reg>o</reg></choice></seg> ket ‘n ho ti,
+                        tavarnour<seg type="signes_diacritiques"
+                            ><choice><orig>é</orig><reg>e</reg></choice></seg>z, </l>
+                <l>Em <seg type="digramme"><choice><orig>e</orig><reg>eu</reg></choice></seg>s-m<seg
+                        type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
+                        cho<seg type="amenuisement_voyelle"
+                            ><choice><orig>é</orig><reg>a</reg></choice></seg>jet m<seg
+                        type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg> mestr<seg
+                        type="signes_diacritiques"
+                    ><choice><orig>é</orig><reg>e</reg></choice></seg>z !</l>
+            </lg>
+            <lg>
+                <l>Tosto<seg type="trigramme_diacritique"
+                            ><choice><orig>h</orig><reg>c’h</reg></choice></seg> d<seg
+                        type="monophtongaison"><choice><orig>ei</orig><reg>i</reg></choice></seg>n
+                    em <seg type="digramme"><choice><orig>e</orig><reg>eu</reg></choice></seg>s
+                        h<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg> cho<seg
+                        type="amenuisement_voyelle"
+                        ><choice><orig>é</orig><reg>a</reg></choice></seg>jet : </l>
+                <l>Ur pla<seg type="trigramme_diacritique"
+                            ><choice><orig>h</orig><reg>c’h</reg></choice></seg> koant <seg
+                        type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg><seg
+                        type="amuissement_voyelle"><choice><reg>o</reg></choice></seg>, ur ver<seg
+                        type="trigramme_diacritique"
+                        ><choice><orig>h</orig><reg>c’h</reg></choice></seg> ranjet.</l>
+            </lg>
+            <lg>
+                <l>H<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg>
+                    <seg type="trigramme_diacritique"
+                        ><choice><orig>h</orig><reg>c’h</reg></choice></seg>arou<seg
+                        type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg> ‘<seg
+                        type="amuissement_consonne"><choice><orig>h</orig></choice></seg>ran he<seg
+                        type="voisement"><choice><orig>b</orig><reg>p</reg></choice></seg> go<abbr
+                        type="signe_special"><choice><orig>u</orig><reg>û</reg></choice></abbr><seg
+                        type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg> de<seg
+                        type="digramme"><choice><orig>h</orig><reg>zh</reg></choice></seg>i : </l>
+                <l>Ge<seg type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg>
+                    <seg type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg>n dra-s<seg
+                        type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
+                    em <seg type="digramme"><choice><orig>e</orig><reg>eu</reg></choice></seg>s
+                    soursi.</l>
+            </lg>
+            <lg>
+                <l>Mechal penao<seg type="voisement"
+                        ><choice><orig>z</orig><reg>s</reg></choice></seg> e vo d<seg
+                        type="monophtongaison"
+                        ><choice><orig>ei</orig><reg>i</reg></choice></seg>n-m<seg
+                        type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
+                </l>
+                <l>Dizol de<seg type="digramme"><choice><orig>h</orig><reg>zh</reg></choice></seg>i
+                        m<seg type="amenuisement_voyelle"
+                            ><choice><orig>e</orig><reg>a</reg></choice></seg>
+                    <seg type="trigramme_diacritique"
+                        ><choice><orig>h</orig><reg>c’h</reg></choice></seg>arant<seg
+                        type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg><seg
+                        type="amuissement_consonne"><choice><reg>z</reg></choice></seg> ?</l>
+            </lg>
+            <lg>
+                <l>M'h<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg> gw<seg
+                        type="signes_diacritiques"
+                    ><choice><orig>é</orig><reg>e</reg></choice></seg>l <seg
+                        type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg><pc
+                        type="desagglutination"><choice><reg>-</reg></choice></pc><seg
+                        type="amuissement_consonne"><choice><orig>r</orig></choice></seg><seg
+                        type="diphtongaison"><choice><orig>o</orig><reg>w</reg></choice></seg>al<seg
+                        type="trigramme_diacritique"
+                        ><choice><orig>h</orig><reg>c’h</reg></choice></seg>
+                    <seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg>r pardoni<seg
+                        type="diphtongaison"><choice><orig>eu</orig><reg>où</reg></choice></seg></l>
+                <l>Ha d<seg type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg> noz, <pc type="elision"
+                                ><choice><reg>‘</reg></choice></pc>bar<seg type="digramme"
+                                ><choice><orig>h</orig><reg>zh</reg></choice></seg>
+                    <seg type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg>r filaj<seg
+                        type="diphtongaison"
+                    ><choice><orig>eu</orig><reg>où</reg></choice></seg>.</l>
+            </lg>
+            <lg>
+                <l>A p<seg type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg> za d<seg
+                        type="monophtongaison"><choice><orig>ei</orig><reg>i</reg></choice></seg>n
+                        go<abbr type="signe_special"
+                        ><choice><orig>u</orig><reg>û</reg></choice></abbr><seg type="voisement"
+                                ><choice><orig>d</orig><reg>t</reg></choice></seg> h<seg
+                        type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
+                        gw<seg type="signes_diacritiques"
+                            ><choice><orig>é</orig><reg>e</reg></choice></seg>l<seg
+                        type="monophtongaison"><choice><orig>ei</orig><reg>i</reg></choice></seg>n, </l>
+                <l>Neuz<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg> é t<seg
+                        type="augmentation_voyelle"
+                        ><choice><orig>a</orig><reg>eu</reg></choice></seg> hardi<seg
+                        type="digramme"><choice><orig>h</orig><reg>zh</reg></choice></seg>ted d<seg
+                        type="monophtongaison"
+                    ><choice><orig>ei</orig><reg>i</reg></choice></seg>n.</l>
+            </lg>
+            <lg>
+                <l>Me<seg type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg> a
+                        p'h<seg type="signes_diacritiques"
+                            ><choice><orig>é</orig><reg>e</reg></choice></seg> gw<seg
+                        type="signes_diacritiques"
+                    ><choice><orig>é</orig><reg>e</reg></choice></seg>lan é tost<seg
+                        type="signes_diacritiques"
+                        ><choice><orig>â</orig><reg>aa</reg></choice></seg><seg type="voisement"
+                                ><choice><orig>d</orig><reg>t</reg></choice></seg>, </l>
+                <l>Pl<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg>get m<seg
+                        type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg> 'fenn, m<seg
+                        type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
+                    <seg type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg> huanad…</l>
+            </lg>
+            <lg>
+                <l>D'or feut<seg type="augmentation_voyelle"
+                            ><choice><orig>a</orig><reg>eu</reg></choice></seg>n-ni, bemd<seg
+                        type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg><seg
+                        type="amuissement_consonne"><choice><reg>z</reg></choice></seg> riget, </l>
+                <l>É t<seg type="augmentation_voyelle"
+                        ><choice><orig>a</orig><reg>eu</reg></choice></seg> d<seg
+                        type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg> z<seg
+                        type="augmentation_voyelle"
+                        ><choice><orig>eu</orig><reg>ou</reg></choice></seg>ra<seg type="voisement"
+                                ><choice><orig>d</orig><reg>t</reg></choice></seg> h<seg
+                        type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
+                        l<seg type="diphtongaison"
+                        ><choice><orig>o</orig><reg>oe</reg></choice></seg>ned.</l>
+            </lg>
+            <pb n="14"/>
+            <lg>
+                <l>D<seg type="diphtongaison"><choice><orig>ei</orig><reg>eue</reg></choice></seg>t
+                        d<seg type="monophtongaison"
+                        ><choice><orig>ei</orig><reg>i</reg></choice></seg>n er so<seg
+                        type="nasalisation"><choice><orig>n</orig><reg>ñ</reg></choice></seg>j, un
+                        ander<seg type="lettre_ramiste"
+                        ><choice><orig>u</orig><reg>v</reg></choice></seg>-noz, </l>
+                <l>D<seg type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg> vone<seg type="voisement"
+                                ><choice><orig>d</orig><reg>t</reg></choice></seg> d'<seg
+                        type="signes_diacritiques"
+                    ><choice><orig>é</orig><reg>e</reg></choice></seg>no d'h<seg
+                        type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
+                    gortoz. </l>
+            </lg>
+            <lg>
+                <l>En d<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg><seg
+                        type="amuissement_voyelle"><choice><reg>i</reg></choice></seg><seg
+                        type="amuissement_consonne"><choice><reg>z</reg></choice></seg>-s<seg
+                        type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
+                    'h oen so<seg type="nasalisation"
+                        ><choice><orig>n</orig><reg>ñ</reg></choice></seg>jet er<seg
+                        type="mutation_consonantique"
+                        ><choice><orig>h</orig><reg>v</reg></choice></seg>a<seg type="voisement"
+                                ><choice><orig>d</orig><reg>t</reg></choice></seg>
+                </l>
+                <l>D<seg type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg> zisamm<seg
+                        type="monophtongaison"
+                        ><choice><orig>ei</orig><reg>i</reg></choice></seg><seg type="nasalisation"
+                                ><choice><orig>n</orig><reg>ñ</reg></choice></seg> m<seg
+                        type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg>
+                    <seg type="trigramme_diacritique"
+                        ><choice><orig>h</orig><reg>c’h</reg></choice></seg>alonad. </l>
+            </lg>
+            <lg>
+                <l>Az<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg><seg
+                        type="amuissement_consonne"><choice><reg>z</reg></choice></seg>et <pc
+                        type="elision"><choice><reg>‘</reg></choice></pc>ar v<seg
+                        type="signes_diacritiques"
+                        ><choice><orig>ê</orig><reg>ae</reg></choice></seg>n <seg
+                        type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg>r feut<seg
+                        type="augmentation_voyelle"
+                        ><choice><orig>a</orig><reg>eu</reg></choice></seg>n, </l>
+                <l>Na g<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg>ri<seg
+                        type="diphtongaison"><choice><orig>eu</orig><reg>où</reg></choice></seg>
+                    flour <seg type="amenuisement_voyelle"
+                            ><choice><orig>e</orig><reg>a</reg></choice></seg> zibaban !</l>
+            </lg>
+            <lg>
+                <l>Me<seg type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg> setu
+                        h<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg> saout é tone<seg
+                        type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg> ; </l>
+                <l>Fonnapl, fonnapl d<seg type="diphtongaison"
+                            ><choice><orig>a</orig><reg>eo</reg></choice></seg>m<seg
+                        type="amuissement_consonne"><choice><reg>p</reg></choice></seg> d<seg
+                        type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg> gu<seg type="digramme"
+                                ><choice><orig>h</orig><reg>zh</reg></choice></seg><seg
+                        type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg><seg type="voisement"
+                                ><choice><orig>d</orig><reg>t</reg></choice></seg>…</l>
+            </lg>
+            <lg>
+                <l>Gwi<seg type="lettre_ramiste"><choice><orig>ù</orig><reg>v</reg></choice></seg>
+                    ha skañ<seg type="lettre_ramiste"
+                        ><choice><orig>ù</orig><reg>v</reg></choice></seg> h<seg
+                        type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
+                        gw<seg type="signes_diacritiques"
+                            ><choice><orig>é</orig><reg>e</reg></choice></seg>lan <seg
+                        type="signes_diacritiques"
+                    ><choice><orig>é</orig><reg>e</reg></choice></seg>mberr </l>
+                <l><seg type="signes_diacritiques"
+                        ><choice><orig>É</orig><reg>E</reg></choice></seg><seg
+                        type="trigramme_diacritique"
+                        ><choice><orig>h</orig><reg>c’h</reg></choice></seg>
+                    <seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg>ve<seg type="voisement"
+                                ><choice><orig>d</orig><reg>t</reg></choice></seg> d<seg
+                        type="augmentation_voyelle"
+                        ><choice><orig>eu</orig><reg>ou</reg></choice></seg>r <seg
+                        type="signes_diacritiques"
+                    ><choice><orig>é</orig><reg>e</reg></choice></seg>r feut<seg
+                        type="augmentation_voyelle"
+                        ><choice><orig>a</orig><reg>eu</reg></choice></seg>n skl<seg
+                        type="signes_diacritiques"
+                        ><choice><orig>ê</orig><reg>ae</reg></choice></seg>r. </l>
+            </lg>
+            <lg>
+                <l>H<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg> l<seg
+                        type="diphtongaison"><choice><orig>o</orig><reg>oe</reg></choice></seg>ned a
+                        p'h<seg type="signes_diacritiques"
+                            ><choice><orig>é</orig><reg>e</reg></choice></seg> d<seg type="digramme"
+                                ><choice><orig>e</orig><reg>eu</reg></choice></seg>s d<seg
+                        type="augmentation_voyelle"
+                        ><choice><orig>eu</orig><reg>ou</reg></choice></seg>r<seg
+                        type="monophtongaison"><choice><orig>ei</orig><reg>e</reg></choice></seg>t, </l>
+                <l><pc type="elision"><choice><reg>‘</reg></choice></pc>Ar h<seg
+                        type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
+                    goar d'<seg type="amenuisement_voyelle"
+                            ><choice><orig>e</orig><reg>a</reg></choice></seg>r g<seg
+                        type="signes_diacritiques"
+                    ><choice><orig>é</orig><reg>ê</reg></choice></seg>r <seg
+                        type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg>m<seg type="nasalisation"
+                                ><choice><orig>an</orig><reg>añ</reg></choice></seg>
+                    <seg type="en_cours"><choice><orig>oei</orig><reg>ae</reg></choice></seg>t. </l>
+            </lg>
+            <lg>
+                <l>Neuz<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg>, <pc type="elision"
+                                ><choice><reg>‘</reg></choice></pc><seg type="signes_diacritiques"
+                                ><choice><orig>é</orig><reg>e</reg></choice></seg>l ur paourk<seg
+                        type="signes_diacritiques"
+                        ><choice><orig>ê</orig><reg>ae</reg></choice></seg><seg type="digramme"
+                                ><choice><orig>h</orig><reg>zh</reg></choice></seg> Yannig, </l>
+                <l>É pl<seg type="signes_diacritiques"
+                        ><choice><orig>é</orig><reg>e</reg></choice></seg>gan dreist <seg
+                        type="amenuisement_voyelle"
+                        ><choice><orig>e</orig><reg>a</reg></choice></seg>r feut<seg
+                        type="augmentation_voyelle"
+                        ><choice><orig>a</orig><reg>eu</reg></choice></seg>nig, </l>
+            </lg>
+            <lg>
+                <l>Evi<seg type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg>
+                    <seg type="augmentation_voyelle"
+                        ><choice><orig>a</orig><reg>e</reg></choice></seg>s<seg
+                        type="signes_diacritiques"
+                    ><choice><orig>é</orig><reg>e</reg></choice></seg>, <seg
+                        type="signes_diacritiques"
+                    ><choice><orig>é</orig><reg>e</reg></choice></seg>n d<seg
+                        type="augmentation_voyelle"
+                        ><choice><orig>eu</orig><reg>ou</reg></choice></seg>r, kave<seg
+                        type="voisement"><choice><orig>d</orig><reg>t</reg></choice></seg>
+                </l>
+                <l>A<seg type="trigramme_diacritique"
+                        ><choice><orig>h</orig><reg>c’h</reg></choice></seg>oel <note n="1"
+                        resp="NC"><hi rend="i">ac</hi><hi rend="i">’h</hi><hi rend="i">oel</hi>,
+                        voir : <hi rend="i">a-wael</hi></note> l<seg type="signes_diacritiques"
+                                ><choice><orig>é</orig><reg>e</reg></choice></seg><seg
+                        type="trigramme_diacritique"
+                        ><choice><orig>h</orig><reg>c’h</reg></choice></seg> h<seg
+                        type="signes_diacritiques"><choice><orig>é</orig><reg>e</reg></choice></seg>
+                        di<seg type="diphtongaison"
+                        ><choice><orig>v</orig><reg>w</reg></choice></seg><seg type="digramme"
+                                ><choice><orig>é</orig><reg>eu</reg></choice></seg>z karet…</l>
+            </lg></div></body></TEI>
