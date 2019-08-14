@@ -1,0 +1,74 @@
+button{
+    font-size: 90%;
+    color:#7F7785;
+    background-image:linear-gradient(#ffffff,#f8f8f8);
+    border: 1.5px solid #999999;
+    border-radius: 3px;
+    margin: 4px 4px 4px 4px;
+    
+}
+
+button:hover{
+    color:#dbaa7f;
+    background-image:linear-gradient(#fefdfe,#faf1fa);
+    border: 1.5px solid #ccbca2;
+}
+
+button i {
+    margin-right: 3px;
+}
+
+div.index button {
+    margin-left: 5%;
+    margin-bottom: 3%;
+    width: 90%;
+}
+
+div.navigation button {
+   margin-left: 68.2%;
+   margin-top: 3%;
+}
+
+div.image{
+    position: absolute;
+    background-image: url("DUG_Titre.png");
+    width:540px;
+    height:557px;
+}
+
+div.menu span {
+padding-left: 10px;
+font-family: 'Source Sans Pro', sans-serif; 
+color: #b3b3b3;
+font-size: 18px;
+}
+
+div.presentation{
+    text-align: justify;
+    position:relative;
+    top: 210px; 
+    left: -130px; 
+    margin-left: 58%;
+    margin-right: -14%;
+    padding:2%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+span.resp {
+    padding-left: 50%;
+}
+
+div.tutoriel{
+    text-align: justify;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 415px;
+    margin-left: 1%;
+    margin-right: 4%;
+}
+
+span.information {
+    color: #dbaa7f;
+    font-weight: bold;
+}

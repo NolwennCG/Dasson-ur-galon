@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI
+  SYSTEM "MM2_DUG_Poeme.dtd">
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Dasson ur galon</title>
+        <title type="sub">Titre*(ou) Titre principal*</title>
+        <author key="Herrieu, Loeiz (1879-1953)"
+          ref="https://data.bnf.fr/fr/12041305/loeiz_herrieu/">Loeiz Herrieu</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>Université de Lille</edition>
+        <respStmt>
+          <name xml:id="NC">Nolwenn Chevalier</name>
+          <resp>éditrice critique</resp>
+        </respStmt>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>Université de Lille</publisher>
+        <date when="2019"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+          <p>Copyright © 2014 Université de Lille.</p>
+          <p>Cette ressource électronique protégée par le code de la propriété intellectuelle sur
+            les bases de données (L341-1) est mise à disposition de la communauté scientifique
+            internationale par l’Université de Lille, selon les termes de la licence Creative
+            Commons : « Attribution - Pas d’Utilisation Commerciale - Pas de Modification 3.0 France
+            (CC BY-NC-ND 3.0 FR) ».</p>
+          <p>Attribution : afin de référencer la source, toute utilisation ou publication dérivée de
+            cette ressource électroniques comportera le nom de l’Université de Lille et surtout
+            l’adresse Internet de la ressource.</p>
+          <p>Pas d’Utilisation Commerciale : dans l’intérêt de la communauté scientifique, toute
+            utilisation commerciale est interdite.</p>
+          <p>Pas de Modification : l’Université de Lille s’engage à améliorer et à corriger cette
+            ressource électronique, notamment en intégrant toutes les contributions extérieures. La
+            diffusion de versions modifiées de cette ressource n’est pas souhaitable.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl><author>Loeiz Herrieu</author>, « (ou) Titre principal*Titre* », <title>Dasson ur
+            Galon</title>, <pubPlace>Brest</pubPlace>, <publisher>Brud Nevez</publisher>,
+            <date>1983</date>, <biblScope>141 p.</biblScope>. PDF : <ref
+            target="http://bibliotheque.idbe-bzh.org/data/cle_113/Dasson_ur_Galon_.pdf"
+            >Idbe-bzh</ref>. </bibl>
+      </sourceDesc>
+      <profileDesc>
+        <creation>
+          <date when="1983"/>
+        </creation>
+        <langUsage>
+          <language ident="bre"/>
+        </langUsage>
+      </profileDesc>
+    </fileDesc>
+  </teiHeader>
+  <body>
+    <div type="poem">
+      <pb n="Page"/>
+      <head>Titre*</head>
+      <head type="main">(ou) Titre principal*</head>
+      <head type="sub">Sous-titre*</head>
+      <cit><quote>Citation*</quote><bibl>(si contenue) Référence bibliographique*</bibl></cit>
+      <lg>
+        <l>vers 1*</l>
+        <l>vers 2*</l>
+      </lg>
+      <pb n="Page"/>
+      <lg>
+        <l>Changement voyelle/consonne : </l>
+        <l>Ouverture voyelle : m<seg type="ouverture_voyelle"
+              ><choice><orig>e</orig><reg>a</reg></choice></seg>n ; jo<seg type="ouverture_voyelle"
+                ><choice><orig>é</orig><reg>a</reg></choice></seg></l>
+        <l>Augmentation voyelle : h<seg type="fermeture_voyelle"
+              ><choice><orig>a</orig><reg>i</reg></choice></seg>ñni ; dimé<seg
+            type="fermeture_voyelle"><choice><orig>a</orig><reg>o</reg></choice></seg>m ; <seg
+            type="fermeture_voyelle"><choice><orig>a</orig><reg>e</reg></choice></seg>barh ; d<seg
+            type="fermeture_voyelle"><choice><orig>eu</orig><reg>ou</reg></choice></seg>r</l>
+        <l>Amuïssement consonne orig : <seg type="amuissement_consonne"
+              ><choice><orig>h</orig></choice></seg>rér ; dira<seg type="amuissement_consonne"
+                ><choice><orig>g</orig></choice></seg>zoñ</l>
+        <l>Amuïssement consonne reg : bleu<seg type="amuissement_consonne"
+              ><choice><reg>v</reg></choice></seg>n ; dimé<seg type="amuissement_consonne"
+                ><choice><reg>z</reg></choice></seg>am<seg type="amuissement_consonne"
+                ><choice><reg>p</reg></choice></seg></l>
+        <l>Amuïssement voyelle orig : <seg type="amuissement_voyelle"
+              ><choice><orig>i</orig></choice></seg>huél ; do<seg type="amuissement_voyelle"
+                ><choice><orig>e</orig></choice></seg>mmed</l>
+        <l>Amuïssement voyelle reg : é<seg type="amuissement_voyelle"
+            ><choice><reg>o</reg></choice></seg>
+        </l>
+        <l>Consonne palatalisée : skui<seg type="consonne_palatalisée"
+                ><choice><orig>ll</orig><reg>lh</reg></choice></seg>et</l>
+        <l>Mutation consonantique : ve<seg type="mutation_consonantique"
+                ><choice><orig>h</orig><reg>f</reg></choice></seg>en ;<seg
+            type="mutation_consonantique"><choice><reg> </reg></choice></seg></l>
+        <l>Voisement : penao<seg type="voisement"
+          ><choice><orig>z</orig><reg>s</reg></choice></seg> ; kor<seg type="voisement"
+                ><choice><orig>v</orig><reg>f</reg></choice></seg> ; pe<seg type="voisement"
+                ><choice><orig>b</orig><reg>p</reg></choice></seg> ; se<seg type="voisement"
+                ><choice><orig>g</orig><reg>k</reg></choice></seg>re<seg type="voisement"
+                ><choice><orig>d</orig><reg>t</reg></choice></seg></l>
+        <l>Nasalisation : spurmant<seg type="monophtongaison"
+              ><choice><orig>ei</orig><reg>i</reg></choice></seg><seg type="nasalisation"
+                ><choice><orig>n</orig><reg>ñ</reg></choice></seg> ; ém<seg type="nasalisation"
+                ><choice><orig>a</orig><reg>añ</reg></choice></seg> (de préférence, prendre la
+          syllabe entière qui subit la nasalisation) ; <seg type="nasalisation"
+                ><choice><orig>ean</orig><reg>eñ</reg></choice></seg> ; diraz<seg
+            type="nasalisation"><choice><orig>oñ</orig><reg>on</reg></choice></seg></l>
+      </lg>
+      <lg>
+        <l>Diacritique :</l>
+        <l>Signe diacritique : parr<seg type="signes_diacritiques"
+                ><choice><orig>é</orig><reg>e</reg></choice></seg>z ; k<seg
+            type="signes_diacritiques"><choice><orig>é</orig><reg>ê</reg></choice></seg>r ; <seg
+            type="signes_diacritiques"><choice><orig>è</orig><reg>e</reg></choice></seg>l ; diav<seg
+            type="signes_diacritiques"><choice><orig>ê</orig><reg>ae</reg></choice></seg>zein ;
+            pell<seg type="signes_diacritiques"
+          ><choice><orig>â</orig><reg>aa</reg></choice></seg>d ; e<seg type="signes_diacritiques"
+                ><choice><orig>u</orig><reg>ü</reg></choice></seg>ruz ; </l>
+        <l>Digramme diacritique : gu<seg type="digramme_diacritique"
+                ><choice><orig>h</orig><reg>zh</reg></choice></seg> ; d<seg type="digramme"
+                ><choice><orig>e</orig><reg>eu</reg></choice></seg>s</l>
+        <l>Trigramme diacritique : <seg type="trigramme_diacritique"
+                ><choice><orig>h</orig><reg>c’h</reg></choice></seg>oant</l>
+        <l>Lettre ramiste : arsa<seg type="lettre_ramiste"
+              ><choice><orig>ù</orig><reg>v</reg></choice></seg>et ; arsa<seg type="lettre_ramiste"
+                ><choice><orig>u</orig><reg>v</reg></choice></seg> ; gel<seg type="lettre_ramiste"
+                ><choice><orig>ù</orig><reg>w</reg></choice></seg>enn</l>
+        <l>Abréviation par signe spécial : go<abbr type="signe_special"
+                ><choice><orig>u</orig><reg>û</reg></choice></abbr>d ; l<abbr type="signe_special"
+                ><choice><orig>a</orig><reg>â</reg></choice></abbr>red</l>
+      </lg>
+      <lg>
+        <l>Autre :</l>
+        <l>Monophtongaison : d<seg type="monophtongaison"
+              ><choice><orig>ei</orig><reg>i</reg></choice></seg>n ; ge<seg type="monophtongaison"
+                ><choice><orig>ou</orig><reg>o</reg></choice></seg></l>
+        <l>Diphtongaison : mad<seg type="diphtongaison"
+              ><choice><orig>eu</orig><reg>où</reg></choice></seg> ; d<seg type="diphtongaison"
+                ><choice><orig>a</orig><reg>ae</reg></choice></seg>r<seg type="diphtongaison"
+                ><choice><orig>eu</orig><reg>où</reg></choice></seg> ; g<seg type="diphtongaison"
+                ><choice><orig>o</orig><reg>w</reg></choice></seg>èd ; tañ<seg type="diphtongaison"
+                ><choice><orig>o</orig><reg>v</reg></choice></seg>âd ; si<seg type="diphtongaison"
+                ><choice><orig>ou</orig><reg>w</reg></choice></seg>ah</l>
+        <l>Métathèse : <seg type="metathese"><choice><orig>hu</orig><reg>uh</reg></choice></seg>él ;
+            <seg type="metathese"><choice><orig>re</orig><reg>er</reg></choice></seg>vé</l>
+        <l>Désagglutination : em<pc type="desagglutination"
+              ><choice><orig>-</orig><reg> </reg></choice></pc>lédet ; d'é<pc
+            type="desagglutination"><choice><orig> </orig></choice></pc>gilé ; mab<pc
+            type="desagglutination"><choice><reg>-</reg></choice></pc>dén </l>
+        <l>Élision : <pc type="elision"><choice><reg>‘</reg></choice></pc>èl ; <pc type="elision"
+                ><choice><reg>‘</reg></choice></pc>ar ; bet<pc type="elision"
+              ><choice><reg>’</reg></choice></pc> ; <pc type="elision"
+              ><choice><orig>‘</orig></choice></pc>penn</l>
+        <l>Correction : <choice><sic>b</sic><corr resp="NC">m</corr></choice>ouéh ;
+              abe<choice><sic>nn</sic><corr resp="NC">n</corr></choice> (de préférence, accompagner
+          les éléments normalisés d’une note explicative)</l>
+        <l>En cours : <seg type="amuissement_consonne"><choice><reg>H</reg></choice></seg><seg
+            type="en_cours"><choice><orig>O</orig><reg>o</reg></choice></seg>ll (changement sans
+          catégorie induit par l’ajout d’une lettre en reg) ; d<seg type="en_cours"
+                ><choice><orig>é</orig><reg>eus</reg></choice></seg> (cas sans catégorie
+          attribuée) ; get<seg type="en_cours"><choice><orig>è</orig><reg>o</reg></choice></seg>
+          (bis)</l>
+        <l>Ajout ou suppression d’éléments de ponctuation : <pc type="dialogue"
+                ><choice><orig>« </orig></choice></pc>A<pc type="desagglutination"
+                ><choice><reg>-</reg></choice></pc>rao<seg type="voisement"
+                ><choice><orig>g</orig><reg>k</reg></choice></seg></l>
+        <l>Note de bas de page : a<seg type="trigramme_diacritique"
+                ><choice><orig>h</orig><reg>c’h</reg></choice></seg>oel <note n="1" resp="NC"><hi
+              rend="i">ahoel</hi>, voir : <hi rend="i">a-wael </hi>([Ernault, 1904] p.192)</note> ;
+          erbad <note n="2" resp="NC"><hi rend="i">erbad</hi>, gall. : <hi rend="i">d</hi><hi
+              rend="i">éfendu</hi></note></l>
+      </lg>
+      <dateline><origPlace>Lieu de production*</origPlace><origDate>Date de
+        production*</origDate></dateline> * peut contenir des éléments normalisés</div>
+  </body>
+</TEI>

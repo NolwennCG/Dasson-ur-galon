@@ -97,8 +97,8 @@ function cleanArray(array) {
 
 function getRandomColor() {
 	var color = "hsl(" + 360 * Math.random() + ',' +
-                 (25 + 100 * Math.random()) + '%,' + 
-                 (85.5 + 0 * Math.random()) + '%)';
+                 (20 + 100 * Math.random()) + '%,' + 
+                 (80 + 0 * Math.random()) + '%)';
 	return color;
 }
 

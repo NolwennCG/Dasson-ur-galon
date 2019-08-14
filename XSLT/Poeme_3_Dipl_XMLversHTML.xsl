@@ -68,6 +68,15 @@
                             <xsl:attribute name="href"><xsl:text>../MM2_DUG_General/MM2_DUG_Glossaire.html</xsl:text></xsl:attribute>
                             <button type="button"><i class="fa">&#xf02d;</i> Glossaire</button> 
                         </xsl:element>
+                        <xsl:element name="a">
+                            <xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()] "/>
+                            <xsl:attribute name="href">
+                                <xsl:text>https://github.com/NolwennCH/Dasson-ur-galon/blob/master/XML/</xsl:text>
+                                <xsl:value-of select="substring-before($filename, '.')"/>
+                                <xsl:text>.xml</xsl:text>
+                            </xsl:attribute>
+                            <button type="button"><i class="fa"></i> Fichier XML</button>
+                        </xsl:element>
                     </div>
 
                     <xsl:element name="div">
@@ -84,7 +93,7 @@
                         <br/>
                         <xsl:element name="editor"><xsl:text>éd. Nolwenn Chevalier</xsl:text></xsl:element>
                     </xsl:element>
-                    
+
                     <!-- Navigation bas : flèches -->
                     <div class="nav">
                         <xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()] "/>
