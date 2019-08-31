@@ -45,7 +45,7 @@ Sept transformations sont à exécuter dans l'ordre pour transformer l'.odt en .
 #### 3. + ajout des catégories aux attributs
 - transformation : `Poeme_2B_XMLversTEI-attr.xsl`
 - format : .xml > .xml
-- ajoute des catégories aux différentes normalisations pour permettre leur hiérarchisation (cette transformation est liée à `checkboxes.js`)
+- ajoute des catégories aux différentes normalisations pour permettre leur hiérarchisation (cette transformation est prépare à `checkboxes.js`)
 #### 4. XML-TEI vers HTML (normalisée)
 - transformation : `Poeme_3_Norm_XMLversHTML.xsl`
 - format : .xml > .html
@@ -61,6 +61,22 @@ Sept transformations sont à exécuter dans l'ordre pour transformer l'.odt en .
 - `checkboxes.js` permet de créer des checkboxes des checkboxes de façon autonome
 - `typographie.js` rectifie quelques points de la mise en page et certains éléments typohraphiques
 
+## Structure des dossiers pour la constitution site internet
+
+- MM2_DUG_Poemes contient tous les poèmes
+  - sommaire normalisé : MM2_DUG_0.html
+  - sommaire diplomatique : MM2_DUG_0D.html
+  - poème normalisé : MM2_DUG_1.html (voir `suivi.ods`)
+  - poème compilatoire : MM2_DUG_1D.html (voir `suivi.ods`)
+- MM2_DUG_Images
+  - contient les images
+MM2_DUG_Javascript
+  - contient script javascript
+- MM2_DUG_General
+  - contient les autres pages du site : `MM2_DUG_Accueil.html`, `MM2_DUG_Bibliographie.html`, `MM2_DUG_Glossaire.html`, `MM2_DUG_Introduction.html`, `MM2_DUG_Langue.html`, `MM2_DUG_Normalisation.html`
+- MM2_DUG_CSS
+  - contient les fichiers CSS
+  
 ## Informations sur le corpus
 
 Herrieu Loeiz, *Dasson ur galon*, Pontivy : Éditions Dihunamb, 1957, 253 p. 
