@@ -1,54 +1,13 @@
-/* COLONNE DROITE */
-
-h2 {
-    margin-left: 2%
-}
-
-h3 a {
-  text-decoration: none;
-  color: #b99999; 
-}
-
-h3 {
-    margin-left: 10%;
-    border-bottom-width: 0.5px;
-    border-bottom-style: solid;
-    border-bottom-color: #b99999;
-    color: #b99999;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    margin-top: 1px;
-    margin-bottom: 10px;
-}
-
-div.retour {
-    position: fixed;
-    bottom: 0;
-    padding-left: 7%;
-    margin-bottom: 1%;
-}
-
-div.index ul {
-    overflow: auto;
-    height: 75%;
-    padding-left: 20px;
-}
-
-div.index li {
-    list-style-type: "- "; 
-}
-
-/* CORPS DU TExTE */
-
 div#images {
-    margin-left: 23%;
-    margin-top: 3%;
+  padding-left: 25.5%;
 }
 
 img {
-    width: 45%;
-    padding: 1%;
-    margin-bottom: 1%;
-    position: center;
+  width: 45%
+}
+
+h3 {
+  font-family: 'robotolight', sans-serif;
+  font-size: 1.5em;
+  text-align: left;
 }

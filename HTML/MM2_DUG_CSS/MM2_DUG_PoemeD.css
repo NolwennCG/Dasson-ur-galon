@@ -1,3 +1,30 @@
+/*  POUR : poèmes > structure générale > diplomatique  */
+
+/*  CHECKBOXES  */
+
+div#definition1 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+div#definition2 {
+  height: 45%;
+  overflow: auto;
+  display: block;
+}
+
+div#definition2 div {
+  margin-bottom: 4px;
+  border-radius: 3px;
+}
+
+div#definition2 div[n="2"] {
+  margin-left: 20px;
+}
+
+div#definition2 div[n="1"] {
+  text-transform: uppercase;
+}
+
 input {
   margin : 0.4em;
 }
@@ -8,17 +35,32 @@ span.reg {
 
 span.corr {
   font-size : 0%;
-} 
-
-/*div.l{
-  height: 20px;
-}*/
-
-div.lg{
-  width: 52%;
 }
 
-span.back{
+/* REPARTITION TEXTE */
+
+div.back {
+  margin-top: 2%;
+  margin-left: 24%;
+  margin-right: 2%;
+  text-align: justify;
+  color: #333;
+  font: 85%/1.5 Verdana, sans-serif;
+}
+
+div.back a {
+  color: #bca029;
+  font-weight:bold;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+div.back a:after {
+  color: #333;
+  content: " –";
+}
+
+span.back {
   margin-bottom: 1%;
 }
 
@@ -72,32 +114,9 @@ li .num a::after {
     content: '.';
 }
 
-h2 a {
-    font: .6em Verdana, sans-serif;
-    vertical-align: top;
-    color: inherit;
-    text-decoration: none;
+/* POEME STUCTURE */
+
+div.lg{
+  width: 52%;
 }
 
-/* notes bas */
-
-div.back {
-  margin-top: 2%;
-  margin-left: 24%;
-  margin-right: 2%;
-  text-align: justify;
-  color: #333;
-  font: 85%/1.5 Verdana, sans-serif;
-}
-
-div.back a {
-  color: #bca029;
-  font-weight:bold;
-  margin-right: 5px;
-  text-decoration: none;
-}
-
-div.back a:after {
-  color: #333;
-  content: " –";
-}

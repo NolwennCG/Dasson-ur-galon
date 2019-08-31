@@ -7,6 +7,8 @@
     <!--    <xsl:strip-space elements="*"/>-->
     
     <xsl:template match="/">
+        <xsl:comment>CHEVALIER Nolwenn. Projet Dasson ur Galon. </xsl:comment>
+        <xsl:comment>Transformation XML-TEI vers HTML (version diplomatique) : <xsl:value-of select="format-date(current-date(), '[M01]/[D01]/[Y0001]')"/> à <xsl:value-of select="format-dateTime(current-dateTime(), '[H01]:[m01]')"/>. </xsl:comment>
         <html lang="bre">
             <head>
                 <meta charset="utf-8"></meta>
@@ -31,11 +33,12 @@
                         <li><a href="../MM2_DUG_Accueil.html">Accueil</a></li>
                         <li><a href="MM2_DUG_0.html">Dasson ur galon</a></li>
                         <li><a href="MM2_DUG_0D.html">Compilatoire</a></li>
-                        <li><a href="MM2_DUG_FR.html">VF</a></li>
+                        <li><a href="MM2_DUG_FR.html">Traduction</a></li>
+                        <li><a href="../MM2_DUG_General/MM2_DUG_Glossaire.html">Glossaire</a></li>
                         <li><a><i class="fa">&#xf0d7;</i></a>
                             <ul>
+                                <li><a href="../MM2_DUG_General/MM2_DUG_Projet.html">Le projet</a></li>
                                 <li><a href="../MM2_DUG_General/MM2_DUG_Introduction.html">Introduction</a></li>
-                                <li><a href="../MM2_DUG_General/MM2_DUG_Langue.html">La langue</a></li>
                                 <li><a href="../MM2_DUG_General/MM2_DUG_Normalisation.html">Normalisation</a></li>
                                 <li><a href="../MM2_DUG_General/MM2_DUG_Analyse.html">Analyse lexicale</a></li>
                                 <li><a href="../MM2_DUG_General/MM2_DUG_Bibliographie.html">Bibliographie</a></li>
@@ -78,13 +81,15 @@
                             <button type="button"><i class="fa"></i> Fichier XML</button>
                         </xsl:element>
                     </div>
-
+                    
+                    <h2>Normalisation</h2>
                     <xsl:element name="div">
                         <xsl:attribute name="id"><xsl:text>definition1</xsl:text></xsl:attribute>
-                        <input type="checkbox" name="norm" id="affiche_tout"
-                            value="affiche_tout" onclick="affiche_tout_tout();"/><label for="affiche_tout">Select all</label>
+                        <input type="checkbox" name="norm" id="select_tout"
+                            value="select_tout" onclick="select_tout();"/><label for="affiche_tout">Select all</label>
                         <hr/>
-                        <xsl:element name="div"><xsl:attribute name="id"><xsl:text>definition2</xsl:text></xsl:attribute>
+                        <xsl:element name="div">
+                            <xsl:attribute name="id"><xsl:text>definition2</xsl:text></xsl:attribute>
                         </xsl:element>
                     </xsl:element>
 
@@ -101,11 +106,11 @@
                         <xsl:variable name="number" select="number(substring-after($before,'MM2_DUG_'))"/>
                         <xsl:element name="a">
                             <xsl:attribute name="href"><xsl:text>MM2_DUG_</xsl:text><xsl:value-of select="$number - 1"/><xsl:text>D.html</xsl:text></xsl:attribute>
-                            <button type="button"><i style="font-size:24px" class="fa">&#xf0d9;</i></button> 
+                            <i style="font-size:24px" class="fa">&#xf0d9;</i> 
                         </xsl:element>
                         <xsl:element name="a">
                             <xsl:attribute name="href"><xsl:text>MM2_DUG_</xsl:text><xsl:value-of select="$number + 1"/><xsl:text>D.html</xsl:text></xsl:attribute>
-                            <button type="button"><i style="font-size:24px" class="fa">&#xf0da;</i></button>
+                            <i style="font-size:24px" class="fa">&#xf0da;</i>
                         </xsl:element>
                     </div>
                     
@@ -329,16 +334,16 @@
     
     <xsl:template match="sic">
         <xsl:element name="span">
-            <xsl:attribute name="class">correction</xsl:attribute>
+            <xsl:attribute name="class">autre.correction</xsl:attribute>
             <xsl:element name="span">
                 <xsl:attribute name="class">
-                    <xsl:text>orig</xsl:text>
+                    <xsl:text>sic</xsl:text>
                 </xsl:attribute>
                 <xsl:apply-templates/>
             </xsl:element>
             <xsl:element name="span">
                 <xsl:attribute name="class">
-                    <xsl:text>reg</xsl:text>
+                    <xsl:text>corr</xsl:text>
                 </xsl:attribute>
                 <xsl:text>[</xsl:text>
                 <xsl:value-of select="following-sibling::corr"/>
