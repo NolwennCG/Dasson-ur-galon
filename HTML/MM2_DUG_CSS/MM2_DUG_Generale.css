@@ -1,22 +1,64 @@
-/*   POUR :
-     - Introduction
-     - Langue
-     - Normalisation
-     - Analyse
-     - Bibliographie
-     - Glossaire */
+/*  POUR : dossiers littéraires > structure générale  */
+
+/*  GENERAL  */
 
 div#texte_complet {
-    padding-left:25.5%;
-    margin-right:2%;
-    padding-top:3%;
-    text-align: justify; 
-    font-family: 'Source Sans Pro', sans-serif; 
+  padding-left:25.5%;
+  margin-right:2%;
+  padding-top:3%;
+  text-align: justify; 
+  font-family: 'Source Sans Pro', sans-serif; 
 }
 
 i{
 	padding-right: 1.5px;
 }
+
+/*  TITRES  */
+
+h2 {
+  color: #111; 
+  font-family: 'Century', sans-serif; 
+  font-size: 3em; 
+  font-weight: 100; 
+  text-align: left;
+  border-bottom-width: 0.5px;
+  border-bottom-style: solid;
+  border-bottom-color: #dc8389;
+}
+
+h3 { 
+  color: #111; 
+  font-family: 'robotolight', sans-serif;
+  font-size: 2.5em; 
+  text-align: left;
+  margin: 40px 0 10px 7%;
+}
+
+h4 {
+  font-family: 'robotolight', sans-serif; 
+  font-size: 2em; 
+  text-align: left;
+  margin: 30px 0 10px 7%;
+}
+
+h5 {
+  font-family: 'robotolight', sans-serif; 
+  font-size: 1.5em; 
+  text-align: left;
+  margin: 20px 0 10px 7%;
+}
+
+h6 {
+  color: #111; 
+  font-family: 'robotomedium', sans-serif; 
+  font-size: 1em; 
+  font-weight: 100; 
+  text-align: left;
+  margin: 10px 0 10px 7%; 
+}
+
+/*  IMAGES  */
 
 img {
     display: block;
@@ -27,25 +69,219 @@ img {
 figcaption {
   text-align: center;
   font-style: italic;
-  color: lightgrey;
+  color: grey;
 }
 
-/*****************
- * NORMALISATION *
- *****************/
+/*  TABLE  */
+ 
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200,200,200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  margin-left:auto; 
+  margin-right:auto; 
+}
+
+td {
+  font-family: sans-serif;
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+}
+
+td {
+  text-align: center;
+}
+
+tr {
+  background-color: rgb(250,250,250);
+}
+
+tr:first-child {
+  background-color: rgb(235,235,235);
+}
+
+caption {
+  padding: 10px;
+}
+
+/*  INDEX  */
+
+div.index ul {
+  padding-left: 20px;
+  font-family: 'Source Sans Pro', sans-serif; 
+}
+
+.index h2 {
+  font-family: 'Source Sans Pro', sans-serif; 
+  color: #ffffff;
+  text-align:center; 
+  font-size: 20px;
+  font-weight:100;
+  background-color:#dc8389;
+  width:100%;
+  }
+
+div.index h3 {
+  padding-left: 20px;
+  margin-top: 1px;
+	margin-bottom: -10px;
+  color: #7c795d;
+  font-size: 1.2rem;
+}
+
+div.index .index1 button {
+	margin-left: 1%;
+    margin-bottom: 3%;
+	width: 95%;
+}
+
+.index a, .index a:link, .index a:hover {
+text-decoration: none;
+color: #997A8D;
+}
+
+.index a, .index a:visited, .index a:active {
+text-decoration: none;
+color: #91283B;
+}
+
+.index {
+    position: fixed; 
+    width:20%;
+    top:0%;
+    height: 100%;
+    background-color:#ffffff;
+    border-color:#dc8389;
+    border-width:0px 1px 0px 0px;
+    border-style:solid;
+    padding-right:1%;
+    padding-left: 0.2%;
+}
+
+.index a[href="#"]{
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     font-size:2em;
+     padding-left:0.5%;
+}
+
+div.index1 {
+  margin-top: 5%;
+  padding-left:4%;
+}
+
+/* GLOSSAIRE */
+
+div#mini_index {
+    position: fixed; 
+    width:20%;
+    top:0%;
+    height: 100%;
+    background-color:#ffffff;
+    border-color:#dc8389;
+    border-width:0px 1px 0px 0px;
+    border-style:solid;
+    padding-right:1%;
+    padding-left: 0.2%;
+}
+
+div#retour button {
+    width:100%;
+    margin-bottom: 3%;
+}
+
+div#retour {
+    position: absolute;
+    width:20%;
+    margin-top : 0.5%;
+}
+
+div#dico_complet {
+  margin-bottom: 5%;
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/*  SOMMAIRE  */
+
+div#sommaire {
+  padding-top: 7%;
+}
+
+/*  DEFINITION  */
+
+span.motclef {
+  text-decoration: underline dotted #7f5a7c;
+  color : #292828;
+}
+
+div#definition {
+  text-align: justify;
+  padding : 3%;
+  color : #c99999;
+}
+
+/* CITATIONS */
 
 blockquote
 {
   font-style: normal;
   font-size: 16px;
-  margin-left: 32px;
-  border-left: 4px solid #CCC;
   padding-left: 8px;
+  border-left: 3px solid #e0c8c8;
+  color: #726f6b;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  line-height: 1.8em;
+  padding: 0em 2em;
+  position: relative;
+  transition: .2s border ease-in-out;
+  z-index: 0;
+  margin-left: 7%;
+	margin-right: 17%;
 }
 
-/*****************
- * BIBLIOGRAPHIE *
- *****************/
+blockquote:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -3px;
+  height: 2em;
+  background-color: #fff;
+  width: 4px;
+  margin-top: -1em;
+}
+
+blockquote:after {
+  content: "«";
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: -0.50em;
+  color: #b99999;
+  font-family: "Ionicons";
+  font-style: normal;
+  line-height: 2em;
+  text-align: center;
+  text-indent: -2px;
+  width: 1em;
+  margin-top: -1.1em;
+  transition: .2s all ease-in-out, .4s transform ease-in-out;
+}
+
+cite {
+  display: block;
+  line-height: 1.8em;
+  margin-top: 1em;
+  font-size: 0.75em
+}
+
+/* BIBLIOGRAPHIE */
 
 span.booktitle {
  font-style: italic;
@@ -58,4 +294,65 @@ span.surname {
 div.bibl{
   padding-left: 2%;
   text-indent: -2%;
+}
+
+/*  BOUTONS  */
+
+button{
+  font-size: 90%;
+  color:#7F7785;
+  background-image:linear-gradient(#ffffff,#f8f8f8);
+  border: 1.5px solid #999999;
+  border-radius: 3px;
+  margin: 4px 4px 4px 4px;
+  
+}
+
+button:hover{
+  color:#dbaa7f;
+  background-image:linear-gradient(#fefdfe,#faf1fa);
+  border: 1.5px solid #ccbca2;
+}
+
+button i {
+  margin-right: 3px;
+}
+
+div.index button {
+  margin-left: 5%;
+  margin-bottom: 3%;
+  width: 90%;
+}
+
+div.navigation button {
+ margin-left: 68.2%;
+ margin-top: 3%;
+}
+
+/*  FONT  */
+
+/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on August 26, 2019 */
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('roboto-light-webfont.woff2') format('woff2'),
+         url('roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('roboto-medium-webfont.woff2') format('woff2'),
+         url('roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('roboto-bold-webfont.woff2') format('woff2'),
+         url('roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }

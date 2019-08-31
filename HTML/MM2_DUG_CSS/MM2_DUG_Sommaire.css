@@ -1,55 +1,17 @@
-#texte_complet p {
-    margin-left: 2%;
-}
+/*  POUR : poèmes > structure générale > sommaires  */
+
+/*  LIENS  */
 
 #texte_complet a {
   color:black;
   text-decoration: none;
 }
 
-h2{
-  border-bottom-width: 0.5px;
-  border-bottom-style: solid;
-  border-bottom-color: #b99999;
-}
-
-h3 {
-    color: #7c795d;
-    font-family: 'Source Sans Pro', sans-serif; 
-    font-size: 1.3em; 
-    font-weight: 400;
-	margin-bottom: 15px;
-}
-
-/****************
- *  NAVIGATION  *
- ****************/
+/*  NAVIGATION  */
 
 div.nav{
     position: fixed; 
-    bottom: 0;
-    padding-left:7%; 
-}
-
-div.index1 {
-    margin-top: 10%;
-   padding-left:4%;
-}
-
-
-button{
-    font-size: 90%;
-    color:#7F7785;
-    background-image:linear-gradient(#ffffff,#f8f8f8);
-    border: 1.5px solid #999999;
-    border-radius: 3px;
+    bottom: 0px;
+    padding-left:9%; 
     margin: 4px 4px 4px 4px;
-    
-}
-
-button:hover{
-    color:#dbaa7f;
-    background-image:linear-gradient(#fefdfe,#faf1fa);
-    border: 1.5px solid #ccbca2;
-    box-shadow: 1px 1px 1px 1px #fefdd3;
 }

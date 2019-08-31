@@ -1,4 +1,137 @@
-#col1{
+/*  POUR : poèmes > structure générale  */
+
+/*  NAVIGATION  */
+
+div#bibliographie {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: justify;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-left-style: solid;
+    border-left-width: 5px;
+    padding-left: 10px;
+    border-color: LightGray;
+}
+
+div.nav {
+    position: fixed; 
+    bottom: 0;
+    width: 21%;
+    text-align: center;
+}
+
+div.nav a {
+    margin: 2%;
+    border: 1.5px solid #999999;
+    border-radius: 4px 4px 0px 0px;
+    padding: 2%;
+    background-image: linear-gradient(#ffffff,#f8f8f8);
+}
+
+div.nav a:hover {
+    margin: 2%;
+    color:#dbaa7f;
+    background-image:linear-gradient(#fefdfe,#faf1fa);
+    border: 1.5px solid #ccbca2;
+    box-shadow: 1px 1px 1px 1px #fefdd3;
+}
+
+button {
+    font-size: 90%;
+    color:#7F7785;
+    background-image:linear-gradient(#ffffff,#f8f8f8);
+    border: 1.5px solid #999999;
+    border-radius: 3px;
+    margin: 4px 4px 4px 4px;
+    
+}
+
+button:hover {
+    color:#dbaa7f;
+    background-image:linear-gradient(#fefdfe,#faf1fa);
+    border: 1.5px solid #ccbca2;
+    box-shadow: 1px 1px 1px 1px #fefdd3;
+}
+
+div.retour {
+    position: fixed;
+    bottom: 0;
+    padding-left: 7%;
+    margin-bottom: 1%;
+}
+
+/*  INDEX  */
+
+div.index ul {
+    padding-left: 20px;
+    font-family: 'Source Sans Pro', sans-serif; 
+  }
+  
+.index h2 {
+  font-family: 'Source Sans Pro', sans-serif; 
+  color: #ffffff;
+  text-align:center; 
+  font-size: 20px;
+  font-weight:100;
+  background-color:#dc8389;
+  width:100%;
+  }
+  
+  div.index h3 {
+    padding-left: 20px;
+    margin-top: 1px;
+      margin-bottom: -10px;
+    color: #7c795d;
+    font-size: 1.2rem;
+  }
+  
+  div.index .index1 button {
+      margin-left: 1%;
+      margin-bottom: 3%;
+      width: 95%;
+  }
+  
+  .index a, .index a:link, .index a:hover {
+  text-decoration: none;
+  color: #997A8D;
+  }
+  
+  .index a, .index a:visited, .index a:active {
+  text-decoration: none;
+  color: #91283B;
+  }
+  
+  .index {
+      position: fixed; 
+      width:20%;
+      top:0%;
+      height: 100%;
+      background-color:#ffffff;
+      border-color:#dc8389;
+      border-width:0px 1px 0px 0px;
+      border-style:solid;
+      padding-right:1%;
+      padding-left: 0.2%;
+      overflow: auto;
+  }
+  
+  .index a[href="#"]{
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       font-size:2em;
+       padding-left:0.5%;
+  }
+ 
+div.index1 {
+    margin-top: 5%;
+    padding-left:4%;
+}
+
+/* REPARTITION TEXTE */
+
+#col1 {
   float:left;
   margin-top: 1%;
   margin-left: 27%;
@@ -8,7 +141,7 @@
   color:#0A0A0A;
 }
 
-#col2{
+#col2 {
   display: inline-block;
   margin-top: 1%;
   margin-right: 2%;
@@ -18,13 +151,30 @@
   color:#0A0A0A;
 }
 
-#col3{
+#col3 {
   margin-top: 1%;
   margin-left: 25%;
   padding:1%;
   counter-reset: line;
   color:#0A0A0A;
 }
+
+/* TITRES */
+
+h2 {
+    font-family: 'Century', sans-serif;
+    font-size: 2.5em;
+    margin-left: 2%;
+    margin: 10px 0 10px 2%;
+}
+
+h3 {
+    margin-left: 2%;
+    font-weight: 200;
+    margin: 10px 0 20px 2%;
+}
+
+/* POEME STUCTURE */
 
 span.l{
     counter-increment: line;
@@ -73,99 +223,4 @@ span.quote {
 
 span.origPlace:before, span.origDate:before, span.bibl:before{
   content: " ";
-}
-
-h3 {
-  color: #b99999;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.3em;
-  font-weight: 400;
-  margin-top: -15px;
-  margin-bottom: 15px;
-  margin-left: 13px;
-}
-
-/*******************
- *   DEFINITIONS   *
- *******************/
-
-div#definition1{
-margin-top: 2%;
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-
-div#definition2{
-height: 43.5%;
-overflow: auto;
-display: block;
-}
-
-div#definition2 div {
-margin-bottom: 4px;
-border-radius: 5px;
-}
-
-div#afficher {
-    overflow: auto;
-    height: 50%;
-}
-
-span.lem {
-    text-decoration: none;
-    border-bottom: dotted 1px #C44C51;
-}
-
-span.rdg {
-    text-decoration: none;
-    border-bottom: dotted 1px #C44C51;
-}
-
-span.motclef{
-    text-decoration-style: dotted;
-}
-
-/****************
- *  NAVIGATION  *
- ****************/
-
-div#bibliographie{
-    font-family: 'Source Sans Pro', sans-serif;
-    text-align: justify;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border-left-style: solid;
-    border-left-width: 5px;
-    padding-left: 10px;
-    border-color: LightGray;
-}
-
-div.nav{
-    position: fixed; 
-    bottom: 0;
-    padding-left:7%; 
-    margin-bottom: 1%;
-}
-
-div.index1 {
-    margin-top: 5%;
-    padding-left:4%;
-}
-
-button{
-    font-size: 90%;
-    color:#7F7785;
-    background-image:linear-gradient(#ffffff,#f8f8f8);
-    border: 1.5px solid #999999;
-    border-radius: 3px;
-    margin: 4px 4px 4px 4px;
-    
-}
-
-button:hover{
-    color:#dbaa7f;
-    background-image:linear-gradient(#fefdfe,#faf1fa);
-    border: 1.5px solid #ccbca2;
-    box-shadow: 1px 1px 1px 1px #fefdd3;
 }
