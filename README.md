@@ -2,7 +2,7 @@
 
 ## Présentation du projet
 
-« Dasson ur Galon » est un projet mon mémoire de deuxième année de Master Lettres, Parcours Éditons numériques et imprimées de textes litéraires (2018 - 2019) sous la direction de Nathalie GASIGLIA et Mathieu MARCHAL. Ce projet vise à la numérisation, la normalisation et l’encodage du recueil de Dasson ur Galon de Loeiz Herrieu. 
+« Dasson ur Galon » est un projet mon mémoire de deuxième année de Master Lettres, Parcours Éditons numériques et imprimées de textes litéraires (2018 - 2019) sous la direction de Nathalie GASIGLIA et Mathieu MARCHAL. Ce projet vise à la numérisation, la normalisation et l’encodage du recueil de *Dasson ur Galon* de Loeiz Herrieu. 
 
 Plus d'informations sur le projet sur le site internet du projet. 
 
