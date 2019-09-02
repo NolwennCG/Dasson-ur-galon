@@ -12,7 +12,7 @@ Nolwenn CHEVALIER (Université de Lille)
 
 ## Normes de transcription
 
-- pour que les transformations soient correctement effectuées les fichiers .odt doivent appliquer les styles définis dans `ODT/MM2_DUG_Modele.odt.odt`
+- pour que les transformations soient correctement effectuées les fichiers .odt doivent appliquer les styles définis dans `ODT/MM2_DUG_Modele.odt`
 
 ## Informations techniques
 
