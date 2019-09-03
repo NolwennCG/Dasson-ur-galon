@@ -28,7 +28,7 @@ Sept transformations sont à exécuter dans l'ordre pour transformer l'.odt en .
 1. `1_ODTversXML.xslt`
 2. `Poeme_2A_XMLversTEI.xsl`
 3. `Poeme_2B_XMLversTEI-attr.xsl`
-4. `Poeme_3_Dipl_XMLversHTML.xsl` ou `Poeme_3_Norm_XMLversHTML.xsl`
+4. `Poeme_3_Cmp_XMLversHTML.xsl` ou `Poeme_3_Norm_XMLversHTML.xsl`
 
 #### 1. ODT vers XML
 - transformation : `1_ODTversXML.xslt`
@@ -52,7 +52,7 @@ Sept transformations sont à exécuter dans l'ordre pour transformer l'.odt en .
 - sortie HTML : le texte s'affiche en deux colonnes (col 1 : normalisé ; col 2 : original)
 - cette version est liée à `typographie.js`
 #### 4. XML-TEI vers HTML (compilatoire)
-- transformation : `Poeme_3_Comp_XMLversHTML.xsl`
+- transformation : `Poeme_3_Cmp_XMLversHTML.xsl`
 - format : .xml > .html
 - sortie HTML : le texte compile la version normalisée est original (ex. : "mot[d]")
 - cette version est liée à `checkboxes.js`
