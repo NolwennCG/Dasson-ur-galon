@@ -13,13 +13,17 @@ Nolwenn CHEVALIER (Université de Lille)
 ## Normes de transcription
 
 - pour que les transformations soient correctement effectuées les fichiers .odt doivent appliquer les styles définis dans `ODT/MM2_DUG_Modele.odt`
+- l'ajout de nouveaux styles est possible mais le nom de ceux-ci doit suivre un modèle particulier : 
+  - `element.attribut_1_orig` ou `element.attribut_1_reg` : pour les éléments avec une seule balise dans le `<choice>`
+  - `element.attribut_2_orig` et `element.attribut_2_reg` : pour les éléments avec deux balises dans le `<choice>`
+  - `_3_element` : pour les éléments sans `<choice>`
+  - `element1_4_element2` : pour les autres éléments imbriqués sans `<choice>`
 
 ## Informations techniques
 
 - Le balisage des fichiers XML-TEI respecte la norme TEI
 
 ## Transformation .odt vers XML-TEI
-
 
 ### Les transformations XSTL
 Les transformations sont à appliquer à partir du fichier `content.xml` contenu dans l'.odt. Pour le récupérer, vous pouvez ouvrir le .odt dans Oxygen XML editor ou l'éxtraire à partir de l'odt transformé en .zip. 
