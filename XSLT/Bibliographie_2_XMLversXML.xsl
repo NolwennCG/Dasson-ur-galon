@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
+<xsl:stylesheet exclude-result-prefixes="form fo svg text style office" version="2.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+    xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+    xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"
+    xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"
+    xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"
+    xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"
+    xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
     <!-- Pour BIBLIOGRAPHIE. Traitement bibliographie à partir de OpenOffice, Nolwenn CHEVALIER, 2019 -->
 
     <xsl:strip-space elements="*"/>
@@ -11,309 +20,106 @@
         </body>
     </xsl:template>
 
-    <xsl:template match="bibliography-mark">
-        <xsl:variable name="type" select="@bibliography-type"/>
-        <xsl:element name="bibl">
-            <xsl:choose>
-
-                <xsl:when test="$type = 'unpublished'">
-                    <xsl:choose>
-                        <!-- author -->
-                        <xsl:when test="contains(@author, ',')">
-                            <xsl:variable name="author1" select="substring-before(@author, ', ')"/>
-                            <xsl:variable name="author2" select="substring-after(@author, ', ')"/>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after($author1, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before($author1, ' ')"/>
-                                </forename>
-                                <xsl:text>, </xsl:text>
-                            </xsl:element>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after($author2, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before($author2, ' ')"/>
-                                </forename>
-                                <xsl:text>. </xsl:text>
-                            </xsl:element>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after(@author, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before(@author, ' ')"/>
-                                </forename>
-                                <xsl:text>. </xsl:text>
-                            </xsl:element>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <booktitle>
-                        <xsl:value-of select="@title"/>
-                    </booktitle>
-                    <xsl:text>. </xsl:text>
-                    <xsl:text>Non publié, </xsl:text>
-                    <date>
-                        <xsl:value-of select="@year"/>
-                    </date>
-                    <xsl:text>, </xsl:text>
-                    <biblScope unit="page">
-                        <xsl:value-of select="@pages"/>
-                    </biblScope>
-                    <xsl:text> f.</xsl:text>
-                </xsl:when>
-
-                <xsl:when test="$type = 'phdthesis'">
-                    <xsl:choose>
-                        <!-- author -->
-                        <xsl:when test="contains(@author, ',')">
-                            <xsl:variable name="author1" select="substring-before(@author, ', ')"/>
-                            <xsl:variable name="author2" select="substring-after(@author, ', ')"/>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after($author1, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before($author1, ' ')"/>
-                                </forename>
-                                <xsl:text>, </xsl:text>
-                            </xsl:element>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after($author2, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before($author2, ' ')"/>
-                                </forename>
-                                <xsl:text>. </xsl:text>
-                            </xsl:element>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after(@author, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before(@author, ' ')"/>
-                                </forename>
-                                <xsl:text>. </xsl:text>
-                            </xsl:element>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <booktitle>
-                        <xsl:value-of select="@title"/>
-                    </booktitle>
-                    <xsl:text>. </xsl:text>
-                    <xsl:text>Thèse de doctorat : </xsl:text>
-                    <biblScope unit="discipline">
-                        <xsl:value-of select="@series"/>
-                    </biblScope>
-                    <xsl:text>. </xsl:text>
-                    <pubPlace>
-                        <xsl:value-of select="@address"/>
-                    </pubPlace>
-                    <xsl:text> : </xsl:text>
-                    <publisher>
-                        <xsl:value-of select="@publisher"/>
-                    </publisher>
-                    <xsl:text>, </xsl:text>
-                    <date>
-                        <xsl:value-of select="@year"/>
-                    </date>
-                    <xsl:text>, </xsl:text>
-                    <biblScope unit="page">
-                        <xsl:value-of select="@pages"/>
-                    </biblScope>
-                    <xsl:text> f.</xsl:text>
-                </xsl:when>
-
-                <xsl:when test="$type = 'journal'">
-                    <xsl:choose>
-                        <!-- author -->
-                        <xsl:when test="contains(@author, ',')">
-                            <xsl:variable name="author1" select="substring-before(@author, ', ')"/>
-                            <xsl:variable name="author2" select="substring-after(@author, ', ')"/>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after($author1, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before($author1, ' ')"/>
-                                </forename>
-                                <xsl:text>, </xsl:text>
-                            </xsl:element>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after($author2, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before($author2, ' ')"/>
-                                </forename>
-                                <xsl:text>. </xsl:text>
-                            </xsl:element>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after(@author, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before(@author, ' ')"/>
-                                </forename>
-                                <xsl:text>. </xsl:text>
-                            </xsl:element>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <articletitle>
-                        <xsl:value-of select="@title"/>
-                    </articletitle>
-                    <xsl:text>. </xsl:text>
-                    <booktitle>
-                        <xsl:value-of select="@journal"/>
-                    </booktitle>
-                    <xsl:text>, </xsl:text>
-                    <date>
-                        <xsl:value-of select="@year"/>
-                    </date>
-                    <xsl:text>, </xsl:text>
-                    <biblScope unit="volume">
-                        <xsl:value-of select="@number"/>
-                    </biblScope>
-                    <xsl:text>, </xsl:text>
-                    <biblScope unit="page">
-                        <xsl:value-of select="@pages"/>
-                    </biblScope>
-                    <xsl:text>.</xsl:text>
-                </xsl:when>
-
-                <xsl:when test="$type = 'www'">
-                    <publisher>
-                        <xsl:value-of select="@publisher"/>
-                    </publisher>
-                    <xsl:text>. </xsl:text>
-                    <booktitle>
-                        <xsl:value-of select="@title"/>
-                    </booktitle>
-                    <xsl:text> [en ligne]. </xsl:text>
-                    <xsl:text>Disponible sur : &lt;</xsl:text>
-                    <url>
-                        <xsl:value-of select="@url"/>
-                    </url>
-                    <xsl:text>&gt; (consulté en 02/2019).</xsl:text>
-                </xsl:when>
-
-                <xsl:when test="$type = 'book'">
-                    <xsl:choose><!-- author -->
-                        <xsl:when test="contains(@author, ',')">
-                            <xsl:variable name="author1" select="substring-before(@author, ', ')"/>
-                            <xsl:variable name="author2" select="substring-after(@author, ', ')"/>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after($author1, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before($author1, ' ')"/>
-                                </forename>
-                                <xsl:text>, </xsl:text>
-                            </xsl:element>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after($author2, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before($author2, ' ')"/>
-                                </forename>
-                                <xsl:text>. </xsl:text>
-                            </xsl:element>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:element name="author">
-                                <surname>
-                                    <xsl:value-of select="substring-after(@author, ' ')"/>
-                                </surname>
-                                <xsl:text> </xsl:text>
-                                <forename>
-                                    <xsl:value-of select="substring-before(@author, ' ')"/>
-                                </forename>
-                                <xsl:text>. </xsl:text>
-                            </xsl:element>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:choose> <!-- volume -->
-                        <xsl:when test="@volume = @*">
-                            <booktitle>
-                                <xsl:value-of select="@title"/>
-                            </booktitle>
-                            <xsl:text>, </xsl:text>
-                            <xsl:text>tome </xsl:text>
-                            <biblScope unit="volume">
-                                <xsl:value-of select="@volume"/>
-                            </biblScope>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <booktitle>
-                                <xsl:value-of select="@title"/>
-                            </booktitle>
-                            <xsl:text>. </xsl:text>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:if test="@edition = @*">
-                        <biblScope unit="edition">
-                            <xsl:text>(</xsl:text>
-                            <xsl:value-of select="@edition"/>
-                            <sup>ème</sup>
-                            <xsl:text> éd.). </xsl:text>
-                        </biblScope>
-                    </xsl:if>
-                    <pubPlace>
-                        <xsl:value-of select="@address"/>
-                    </pubPlace>
-                    <xsl:text> : </xsl:text>
-                    <publisher>
-                        <xsl:value-of select="@publisher"/>
-                    </publisher>
-                    <xsl:text>, </xsl:text>
-                    <date>
-                        <xsl:value-of select="@year"/>
-                    </date>
-                    <xsl:text>, </xsl:text>
-                    <biblScope unit="page">
-                        <xsl:value-of select="@pages"/>
-                    </biblScope>
-                    <xsl:text> p.</xsl:text>
-                    <xsl:if test="@series = @*">
-                        <series>
-                            <xsl:text> (</xsl:text>
-                            <xsl:value-of select="@series"/>
-                            <xsl:text>)</xsl:text>
-                        </series>
-                    </xsl:if>
-                </xsl:when>
-
-            </xsl:choose>
+    <xsl:template match="text:bibliography-mark">
+        <xsl:variable name="type" select="@text:bibliography-type"/>
+        <xsl:variable name="text" select="text()"/>
+        <xsl:variable name="longueur" select="(string-length($text))-2"/>
+        <xsl:element name="bibliography-mark">
+                <xsl:choose>
+                    <!--non publié-->
+                    <xsl:when test="$type = 'unpublished'">
+                        <xsl:if test="@text:author"><author><xsl:value-of select="@text:author"/></author>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:title"><title><xsl:value-of select="@text:title"/></title>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:year"><year><xsl:value-of select="@text:year"/></year>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:pages"><pages><xsl:value-of select="@text:pages"/></pages><xsl:text> p.</xsl:text></xsl:if>
+                        <xsl:text>. 
+</xsl:text>
+                    </xsl:when>
+                    <!--livre-->
+                    <xsl:when test="$type = 'book'">
+                        <xsl:if test="@text:author"><author><xsl:value-of select="@text:author"/></author>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:title"><title><xsl:value-of select="@text:title"/></title>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:edition"><xsl:text>vol </xsl:text><edition><xsl:value-of select="@text:edition"/></edition>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:address"><address><xsl:value-of select="@text:address"/></address>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:publisher"><publisher><xsl:value-of select="@text:publisher"/></publisher>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:year"><year><xsl:value-of select="@text:year"/></year>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:pages"><pages><xsl:value-of select="@text:pages"/></pages><xsl:text> p.</xsl:text></xsl:if>
+                        <xsl:text>. 
+</xsl:text>
+                    </xsl:when>
+                    <!--www-->
+                    <xsl:when test="$type = 'www'">
+                        <xsl:if test="@text:publisher"><publisher><xsl:value-of select="@text:publisher"/></publisher>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:title"><title><xsl:value-of select="@text:title"/></title>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:year"><year><xsl:value-of select="@text:year"/></year></xsl:if>
+                        <xsl:text>. </xsl:text>
+                        <xsl:if test="@text:url"><xsl:text>Disponible sur : &lt;</xsl:text><a><xsl:value-of select="@text:url"/></a><xsl:text>&gt;</xsl:text><xsl:text>.</xsl:text></xsl:if>
+                        <xsl:text>
+</xsl:text>
+                    </xsl:when>
+                    <!--magazine-->
+                    <xsl:when test="$type = 'journal'">
+                        <xsl:if test="@text:author"><author><xsl:value-of select="@text:author"/></author>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:title"><article><xsl:text>« </xsl:text><xsl:value-of select="@text:title"/><xsl:text> »</xsl:text></article>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:journal"><title><xsl:value-of select="@text:journal"/></title>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:address"><address><xsl:value-of select="@text:address"/></address>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:publisher"><publisher><xsl:value-of select="@text:publisher"/></publisher>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:number"><number><xsl:value-of select="@text:number"/></number>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:year"><year><xsl:value-of select="@text:year"/></year>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:pages"><pages><xsl:value-of select="@text:pages"/></pages><xsl:text> p.</xsl:text></xsl:if>
+                        <xsl:text>. </xsl:text>
+                        <xsl:text>
+</xsl:text>
+                    </xsl:when>
+                    <!--thèse-->
+                    <xsl:when test="$type = 'phdthesis'">
+                        <xsl:if test="@text:author"><xsl:value-of select="@text:author"/>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:title"><xsl:value-of select="@text:title"/>
+                            <xsl:text>, thèse de doctorat : </xsl:text>
+                            <xsl:value-of select="@text:series"/>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:address"><xsl:value-of select="@text:address"/>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:publisher"><xsl:value-of select="@text:publisher"/>
+                            <xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:year"><xsl:value-of select="@text:year"/></xsl:if>
+                        <xsl:text>. 
+</xsl:text>
+                    </xsl:when>
+                </xsl:choose>    
+            
         </xsl:element>
     </xsl:template>
 
-    <xsl:template match="h">
+    <xsl:template match="h2">
         <h2>
             <xsl:apply-templates/>
         </h2>
+    </xsl:template>
+    
+    <xsl:template match="h3">
+        <h3>
+            <xsl:apply-templates/>
+        </h3>
     </xsl:template>
 
 </xsl:stylesheet>
