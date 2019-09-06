@@ -55,12 +55,12 @@
         </xsl:element>
     </xsl:template>
 
-    <xsl:template match="text:note-citation">
-        <xsl:element name="note-citation">
+    <xsl:template match="text:note-body">
+        <xsl:element name="note-body">
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
-
+    
     <!-- élément text:p -->
     <xsl:template match="text:p">
         <xsl:choose>
@@ -226,10 +226,16 @@
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
-
-    <!-- élément text:bibliography-mark -->
-    <xsl:template match="bibliography-mark">
-        <xsl:variable name="type" select="@bibliography-type"/>
+    
+    <xsl:template match="text:note-citation"/>
+    
+    <!-- élément text:bibliography-mark pour page bibliographie -->
+    <!--<xsl:template match="text:bibliography-mark">
+        <xsl:copy-of select="."/>
+    </xsl:template>-->
+    <!-- élément text:bibliography-mark pour autres -->
+    <xsl:template match="text:bibliography-mark">
+        <xsl:variable name="type" select="@text:bibliography-type"/>
         <xsl:variable name="text" select="text()"/>
         <xsl:variable name="longueur" select="(string-length($text))-2"/>
         <xsl:element name="span">
@@ -237,42 +243,42 @@
                 <xsl:choose>
                     <!--non publié-->
                     <xsl:when test="$type = 'unpublished'">
-                        <xsl:if test="@author"><xsl:value-of select="@author"/></xsl:if>
-                        <xsl:if test="@year"> <xsl:text> (</xsl:text><xsl:value-of select="@year"/><xsl:text>). </xsl:text></xsl:if>
-                        <xsl:if test="@title"><xsl:value-of select="@title"/></xsl:if>
+                        <xsl:if test="@text:author"><xsl:value-of select="@text:author"/></xsl:if>
+                        <xsl:if test="@text:year"> <xsl:text> (</xsl:text><xsl:value-of select="@text:year"/><xsl:text>). </xsl:text></xsl:if>
+                        <xsl:if test="@text:title"><xsl:value-of select="@text:title"/></xsl:if>
                         <xsl:text>. </xsl:text>
                     </xsl:when>
                     <!--livre-->
                     <xsl:when test="$type = 'book'">
-                        <xsl:if test="@author"><xsl:value-of select="@author"/></xsl:if>
-                        <xsl:if test="@year"><xsl:text> (</xsl:text><xsl:value-of select="@year"/><xsl:text>)</xsl:text></xsl:if><xsl:text>. </xsl:text>
-                        <xsl:if test="@title"><xsl:value-of select="@title"/><xsl:text>. </xsl:text></xsl:if>
-                        <xsl:if test="@address"><xsl:value-of select="@address"/><xsl:text> : </xsl:text></xsl:if>
-                        <xsl:if test="@publisher"><xsl:value-of select="@publisher"/></xsl:if>
+                        <xsl:if test="@text:author"><xsl:value-of select="@text:author"/></xsl:if>
+                        <xsl:if test="@text:year"><xsl:text> (</xsl:text><xsl:value-of select="@text:year"/><xsl:text>)</xsl:text></xsl:if><xsl:text>. </xsl:text>
+                        <xsl:if test="@text:title"><xsl:value-of select="@text:title"/><xsl:text>. </xsl:text></xsl:if>
+                        <xsl:if test="@text:address"><xsl:value-of select="@text:address"/><xsl:text> : </xsl:text></xsl:if>
+                        <xsl:if test="@text:publisher"><xsl:value-of select="@text:publisher"/></xsl:if>
                         <xsl:text>. </xsl:text>
                     </xsl:when>
                     <!--www-->
                     <xsl:when test="$type = 'www'">
-                        <xsl:if test="@publisher"><xsl:value-of select="@publisher"/><xsl:text>. </xsl:text></xsl:if>
-                        <xsl:if test="@title"><xsl:value-of select="@title"/><xsl:text> [en ligne]. </xsl:text></xsl:if>
-                        <xsl:if test="@url"><xsl:text>Disponible sur : &lt;</xsl:text><xsl:value-of select="@url"/><xsl:text>&gt;</xsl:text></xsl:if>
+                        <xsl:if test="@text:publisher"><xsl:value-of select="@text:publisher"/><xsl:text>. </xsl:text></xsl:if>
+                        <xsl:if test="@text:title"><xsl:value-of select="@text:title"/><xsl:text> [en ligne]. </xsl:text></xsl:if>
+                        <xsl:if test="@text:url"><xsl:text>Disponible sur : &lt;</xsl:text><xsl:value-of select="@text:url"/><xsl:text>&gt;</xsl:text></xsl:if>
                         <xsl:text>.</xsl:text>
                     </xsl:when>
                     <!--magazine-->
                     <xsl:when test="$type = 'journal'">
-                        <xsl:if test="@author"><xsl:value-of select="@author"/></xsl:if>
-                        <xsl:if test="@year"><xsl:text> (</xsl:text><xsl:value-of select="@year"/><xsl:text>)</xsl:text></xsl:if><xsl:text>. </xsl:text>
-                        <xsl:if test="@title"><xsl:value-of select="@title"/><xsl:text>, </xsl:text></xsl:if>
-                        <xsl:if test="@number"><xsl:value-of select="@number"/></xsl:if>
+                        <xsl:if test="@text:author"><xsl:value-of select="@text:author"/></xsl:if>
+                        <xsl:if test="@text:year"><xsl:text> (</xsl:text><xsl:value-of select="@text:year"/><xsl:text>)</xsl:text></xsl:if><xsl:text>. </xsl:text>
+                        <xsl:if test="@text:title"><xsl:value-of select="@text:title"/><xsl:text>, </xsl:text></xsl:if>
+                        <xsl:if test="@text:number"><xsl:value-of select="@text:number"/></xsl:if>
                         <xsl:text>. </xsl:text>
                     </xsl:when>
                     <!--thèse-->
                     <xsl:when test="$type = 'phdthesis'">
-                        <xsl:if test="@author"><xsl:value-of select="@author"/></xsl:if>
-                        <xsl:if test="@year"><xsl:text> (</xsl:text><xsl:value-of select="@year"/><xsl:text>)</xsl:text></xsl:if><xsl:text>. </xsl:text>
-                        <xsl:if test="@title"><xsl:value-of select="@title"/><xsl:text>. Thèse de doctorat : </xsl:text><xsl:value-of select="@series"/></xsl:if><xsl:text>. </xsl:text>
-                        <xsl:if test="@address"><xsl:value-of select="@address"/></xsl:if>
-                        <xsl:if test="@publisher"><xsl:text> : </xsl:text><xsl:value-of select="@publisher"/></xsl:if><xsl:text>. </xsl:text>
+                        <xsl:if test="@text:author"><xsl:value-of select="@text:author"/></xsl:if>
+                        <xsl:if test="@text:year"><xsl:text> (</xsl:text><xsl:value-of select="@text:year"/><xsl:text>)</xsl:text></xsl:if><xsl:text>. </xsl:text>
+                        <xsl:if test="@text:title"><xsl:value-of select="@text:title"/><xsl:text>. Thèse de doctorat : </xsl:text><xsl:value-of select="@text:series"/></xsl:if><xsl:text>. </xsl:text>
+                        <xsl:if test="@text:address"><xsl:value-of select="@text:address"/></xsl:if>
+                        <xsl:if test="@text:publisher"><xsl:text> : </xsl:text><xsl:value-of select="@text:publisher"/></xsl:if><xsl:text>. </xsl:text>
                     </xsl:when>
                 </xsl:choose>    
             </xsl:attribute>

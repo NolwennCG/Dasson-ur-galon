@@ -11,11 +11,11 @@
                 <link href="../MM2_DUG_CSS/MM2_DUG.css" rel="stylesheet" type="text/css"/>
                 <link href="../MM2_DUG_CSS/MM2_DUG_Generale.css" rel="stylesheet" type="text/css"/>
                 <link href="../MM2_DUG_CSS/MM2_DUG_Normalise.css" rel="stylesheet" type="text/css"/>
-                <script src="../MM2_DUG_highlightjs/definition.js"/>
+                <script src="../MM2_DUG_JavaScript/definition.js"/>
                 <link rel="stylesheet"
                     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-                <link rel="stylesheet" href="../MM2_DUG_highlightjs/styles/atom-one-dark.css"/>
-                <script src="../MM2_DUG_highlightjs/highlight.pack.js"/>
+                <link rel="stylesheet" href="../MM2_DUG_JavaScript/styles/atom-one-dark.css"/>
+                <script src="../MM2_DUG_JavaScript/highlight.pack.js"/>
                 <script>hljs.initHighlightingOnLoad();</script>
                 <title>
                     <xsl:text>DUG Normalisation</xsl:text>
@@ -27,13 +27,13 @@
                 <div class="menu">
                     <ul id="menuplus">
                         <li>
-                            <a href="../MM2_DUG_Accueil.html">Accueil</a>
+                            <a href="MM2_DUG_Accueil.html">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="MM2_DUG_Projet.html">Projet</a>
                         </li>
                         <li>
                             <a href="MM2_DUG_Introduction.html">Introduction</a>
-                        </li>
-                        <li>
-                            <a href="MM2_DUG_Langue.html">La langue</a>
                         </li>
                         <li>
                             <a href="MM2_DUG_Normalisation.html">Normalisation</a>
@@ -59,7 +59,7 @@
                                     <a href="../MM2_DUG_Poemes/MM2_DUG_FR.html">Traduction française</a>
                                 </li>
                                 <li>
-                                    <a href="../MM2_DUG_Poemes/MM2_DUG_FR.html">Glossaire</a>
+                                    <a href="MM2_DUG_Glossaire.html">Glossaire</a>
                                 </li>
                             </ul>
                         </li>
@@ -67,10 +67,10 @@
                 </div>
 
                 <div class="index">
-                    <div id="sommaire">
-                        <h7>Sommaire</h7>
+                    <h2>Sommaire</h2>
+                    <div id="sommaire"> 
                     </div>
-                    <h7>Lexique</h7>
+                    <h2>Lexique</h2>
                     <div id="definition"> </div>
                 </div>
 
@@ -88,20 +88,29 @@
     <xsl:template match="body">
         <xsl:apply-templates/>
     </xsl:template>
+    
+    <xsl:template match="*">
+        <xsl:element name="{local-name()}">
+            <xsl:for-each select="attribute::*">
+                <xsl:attribute name="{local-name()}">
+                    <xsl:value-of select="."/>
+                </xsl:attribute>
+            </xsl:for-each>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
 
     <xsl:template match="lb">
         <br/>
     </xsl:template>
 
-    <xsl:template
-        match="ul | li | quote | bibl | figcaption | table | td | tr">
+    <xsl:template match="ul | li | quote | bibl | figcaption | table | td | tr">
         <xsl:element name="{name()}">
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
     
-    <xsl:template
-        match="h1 | h2 | h3 | h4 | h5 | h6">
+    <xsl:template match="h1 | h2 | h3 | h4 | h5 | h6">
         <xsl:element name="{name()}">
             <xsl:attribute name="id">
                 <xsl:value-of select="translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZé -’', 'abcdefghijklmnopqrstuvwxyze__')"/>
@@ -182,7 +191,7 @@
         <xsl:element name="span">
             <xsl:choose>
                 <xsl:when test="contains(., 'tonique')"><xsl:attribute name="class">motclef tonique</xsl:attribute></xsl:when>
-                <xsl:when test="contains(., 'amuït')"><xsl:attribute name="class">motclef amuït</xsl:attribute></xsl:when>
+                <xsl:when test="contains(., 'amuïs')"><xsl:attribute name="class">motclef amuït</xsl:attribute></xsl:when>
                 <xsl:when test="contains(., 'compilatoire')"><xsl:attribute name="class">motclef compilatoire</xsl:attribute></xsl:when>
                 <xsl:when test="contains(., 'brève')"><xsl:attribute name="class">motclef brève</xsl:attribute></xsl:when>
                 <xsl:when test="contains(., 'diacritique')"><xsl:attribute name="class">motclef diacritique</xsl:attribute></xsl:when>

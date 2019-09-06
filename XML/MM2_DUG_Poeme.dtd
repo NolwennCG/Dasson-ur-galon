@@ -59,11 +59,13 @@
                         <!ELEMENT sic (#PCDATA)>
                         <!ELEMENT corr (#PCDATA)>
                         <!ATTLIST corr resp CDATA #IMPLIED>
-                    <!ELEMENT note (#PCDATA | choice | hi)*>
+                    <!ELEMENT note (#PCDATA | choice | hi | seg | span)*>
                     <!ATTLIST note resp CDATA #IMPLIED>
                     <!ATTLIST note n CDATA #IMPLIED>
                         <!ELEMENT hi (#PCDATA)>
                         <!ATTLIST hi rend CDATA #IMPLIED>
+                        <!ELEMENT span (#PCDATA)>
+                        <!ATTLIST span title CDATA #IMPLIED>
             <!ELEMENT label (#PCDATA | abbr | pc | seg | pb)*>
             <!ELEMENT p (#PCDATA | abbr | pc | seg | pb)*>
             <!ELEMENT pb (#PCDATA)>
