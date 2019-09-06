@@ -4,15 +4,15 @@
       <meta charset="utf-8">
       <link href="../MM2_DUG_CSS/MM2_DUG.css" rel="stylesheet" type="text/css">
       <link href="../MM2_DUG_CSS/MM2_DUG_Generale.css" rel="stylesheet" type="text/css">
-      <link href="../MM2_DUG_CSS/MM2_DUG_Normalise.css" rel="stylesheet" type="text/css"><script src="../MM2_DUG_highlightjs/definition.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="../MM2_DUG_highlightjs/styles/atom-one-dark.css"><script src="../MM2_DUG_highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>DUG Normalisation</title>
+      <link href="../MM2_DUG_CSS/MM2_DUG_Normalise.css" rel="stylesheet" type="text/css"><script src="../MM2_DUG_JavaScript/definition.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="../MM2_DUG_JavaScript/styles/atom-one-dark.css"><script src="../MM2_DUG_JavaScript/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>DUG Normalisation</title>
    </head>
    <body onload="visualise_mots_clefs();">
       <div class="menu">
          <ul id="menuplus">
-            <li><a href="../MM2_DUG_Accueil.html">Accueil</a></li>
+            <li><a href="MM2_DUG_Accueil.html">Accueil</a></li>
+            <li><a href="MM2_DUG_Projet.html">Projet</a></li>
             <li><a href="MM2_DUG_Introduction.html">Introduction</a></li>
-            <li><a href="MM2_DUG_Langue.html">La langue</a></li>
             <li><a href="MM2_DUG_Normalisation.html">Normalisation</a></li>
             <li><a href="MM2_DUG_Analyse.html">Analyse lexicale</a></li>
             <li><a href="MM2_DUG_Bibliographie.html">Bibliographie</a></li>
@@ -20,783 +20,87 @@
                   <li><a href="../MM2_DUG_Poemes/MM2_DUG_0.html">Dasson ur galon</a></li>
                   <li><a href="../MM2_DUG_Poemes/MM2_DUG_0D.html">Compilatoire</a></li>
                   <li><a href="../MM2_DUG_Poemes/MM2_DUG_FR.html">Traduction française</a></li>
-                  <li><a href="../MM2_DUG_Poemes/MM2_DUG_FR.html">Glossaire</a></li>
+                  <li><a href="MM2_DUG_Glossaire.html">Glossaire</a></li>
                </ul>
             </li>
          </ul>
       </div>
       <div class="index">
-         <div id="sommaire">
-            <h7>Sommaire</h7>
-         </div>
-         <h7>Lexique</h7>
+         <h2>Sommaire</h2>
+         <div id="sommaire"></div>
+         <h2>Lexique</h2>
          <div id="definition"></div>
       </div>
       <div id="texte_complet">
          
-         
-         <h2 id="comprendre_lannexe_des_balises">Comprendre l’annexe des balises</h2>
-         
-         
-         <h3 id="les_balises_utilisees">Les balises utilisées</h3>
-         
-         <p>Le balisage des poèmes est conforme à la norme TEI. Une balise est construite de la sorte&nbsp;: </p>
-         
-         <div class="code"><pre>Balisage TEI :<code>&lt;nom-élément nom-attribut="valeur-attribut"&gt;élément&lt;/nom-élément&gt;</code></pre></div>
-         <ul>
-            <li>
-               Nom-élément&nbsp;: indique le type l’élément balisé. 
-            </li>
-            <li>
-               Nom-attribut&nbsp;: indique le nom conventionnel pour cette catégorie de division de texte. 
-            </li>
-            <li>
-               Valeur-attribut&nbsp;: indique la valeur de l’attribut. Les valeurs des attributs sauront être simples, claires et concrèts afin de permettre une définition rigoureuse des textes et faciliter le travail des chercheurs. 
-            </li>
-         </ul>
-         
-         
-         <h3 id="les_exemples_utilises">Les exemples utilisés</h3>
-         
-         <p>Pour illustrer les explications de cette page, nous ne nous pencherons que sur l’élément dont il est question dans chaque exemple
-            de <span class="motclef normalis">normalisation</span> / <span class="motclef skoueriekadur">skoueriekadur</span> (sauf dans le cas où la <span class="motclef normalis">normalisation</span> précédente influence la <span class="motclef normalis">normalisation</span> dont il est question). Par exemple, si nous utilisons le mot <i>leùéné</i> pour illustrer le cas des lettres ramistes, nous ne nous attarderons pas sur les <span class="motclef diacritique">signes-diacritiques</span> également présents dans le mot et les laisserons tels quels pour présenter le résultat
-            <span class="motclef normalis">normalisé</span> <i>l</i><i>eùvéné</i> (plutôt que <i>levene</i><i>z</i>), et <span class="motclef compilatoire">compilatoire</span> <i>l</i><i>eù[v]éné</i> (plutôt que <i>leù[v]é[e]né[e]</i><i>z</i>). 
+         <p>Nous avons fait le choix d’une version <span class="motclef normalis">normalisée</span> pour cette édition de <i>Dasson ur Galon</i> de Loeiz Herrieu. Nous proposons donc une version fidèle à l’édition originale, mais
+            en adaptant dans un certain nombre de cas la transcription aux normes modernes. 
          </p>
          
-         <p>Les transcriptions phonétiques sont tirées de <i>Geriadur en Here</i>.
+         <p>Le CRNTL, dans son article sur les normes, définit la <span class="motclef normalis">normalisation</span> ainsi&nbsp;: 
          </p>
-         
-         
-         <h2 id="normalisation">Normalisation</h2>
-         
          
          <blockquote>Normalisation&nbsp;: règles définissant ce qui doit être choisi parmi les usages d'une
             langue, ce à quoi doit se conformer la communauté linguistique au nom d'un certain
             idéal esthétique ou socio-culturel, et qui fournit son objet à la grammaire normative
             ou à la grammaire au sens courant du terme&nbsp;; tout ce qui est d'usage commun et courant
             dans une communauté linguistique et correspond alors à l'institution sociale que constitue
-            la langue.<cite>Définition CRNTL, «&nbsp;<a href="https://www.cnrtl.fr/definition/norme">norme</a>&nbsp;»</cite></blockquote>
+            la langue.
+         </blockquote>
          
          
-         <blockquote>En linguistique, la normalisation, la codification ou la standardisation est le processus
-            de standardisation et de développement d’une norme pour une langue, par la valorisation
-            d'une variété de langue ou d'un fait de langue particuliers.<cite>Définition Wikipédia, «&nbsp;<a href="https://fr.wikipedia.org/wiki/Normalisation_linguistique">Normalisation linguistique</a>&nbsp;»</cite></blockquote>
+         <h3 id="les_balises_utilisees">Les balises utilisées</h3>
          
-         
-         <h3 id="les_changements_de_voyelles_et_de_consonnes">Les changements de voyelles et de consonnes</h3>
-         
-         
-         <h4 id="les_permutations_de_voyelles">Les permutations de voyelles</h4>
-         
-         <p>Les permutations de voyelles sont fréquentes en <span class="motclef vannetais">vannetais</span>, Ar Mason y consacre un chapitre dans <i>Le vannetais unifié</i> (<span title="Roparzh Ar Mason, Le Vannetais unifié : prononciation, grammaire et vocabulaire, Brest, Skridoù Breizh, 1943">[Ar Mason, 1943]</span><i> </i>p.9-11). Dans cette édition critique, la différence à été faite entre leur <span class="motclef ouvert">ouverture</span> (<i>e</i> en <i>a</i>) et leur <span class="motclef ferm">fermeture</span> (<i>a</i> en <i>e</i>). <br>Il y a en breton sept voyelles pures que l'on peut grouper ainsi&nbsp;:
-         </p>
-         
-         <figure><img src="../MM2_DUG_Images/LeGoff_1902_p1.png"><br><figcaption>Tableau des sept voyelles pures (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.1)
-            </figcaption>
-         </figure>
-         
-         <p>Le tableau présenté par Le Goff est similaire au triangle vocalique&nbsp;:</p>
-         
-         <figure><img src="../MM2_DUG_Images/Autre_1.png"><figcaption><br>Triangle vocalique
-            </figcaption>
-         </figure>
-         
-         
-         <h5 id="ouverture_des_voyelles_dans_le_texte_regularise">Ouverture des voyelles dans le texte régularisé</h5>
-         
-         <p>L’<span class="motclef ouvert">ouverture</span> du <i>e</i> en <i>a</i> (<span title="Roparzh Ar Mason, Le Vannetais unifié : prononciation, grammaire et vocabulaire, Brest, Skridoù Breizh, 1943">[Ar Mason, 1943]</span><i> </i>p.13) s’explique par le fait que le <i>e</i> est un intermédiaire entre le son <i>a</i> et <i>i</i> (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.1). 
-         </p>
-         
-         <p>La permutation des voyelles est rétablie selon l’orthographe <span class="motclef peurunvan"><i>peurunvan</i></span>. 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  me[a]n
-               </td>
-               <td>
-                  men
-               </td>
-               <td>
-                  man
-               </td>
-               <td>
-                  mon / ma
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  joé[a]
-               </td>
-               <td>
-                  joé
-               </td>
-               <td>
-                  joa
-               </td>
-               <td>
-                  joie
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  zaouo[a]rn
-               </td>
-               <td>
-                  zaouorn
-               </td>
-               <td>
-                  zaouarn
-               </td>
-               <td>
-                  mains
-               </td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>m&lt;seg type="amenuisement_voyelle"&gt;&lt;choice&gt;&lt;orig&gt;e&lt;/orig&gt;&lt;reg&gt;a&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;n</code></pre></div>
-         
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="augmentation_voyelle"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite de l’<span class="motclef ouvert">ouverture</span> de voyelles. 
-         </p>
-         
-         
-         <h5 id="fermeture_des_voyelles_dans_le_texte_original">Fermeture des voyelles dans le texte original</h5>
-         
-         <p>Inversement, la <span class="motclef ferm">fermeture</span> du <i>a</i> en <i>e</i> s’explique par le fait que le <i>e</i> est un intermédiaire entre le son <i>a</i> et <i>i</i> (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.1) et la <span class="motclef ferm">fermeture</span> du <i>e</i> en <i>i</i> peut s’expliquer par le fait que le <i>e</i> est proche du <i>i</i>, etc.<br>A noter également que le <i>a</i> se prononce <i>e</i> dans presque toutes les <span class="motclef diphtong">diphtongues</span> en <i>oa</i>, <i>oua</i>, <i>wa</i> comme dans <i>goèd</i> ainsi que dans d’autres mots comme <i>gant</i> orthographié <i>get</i> par Loeiz Herrieu (<span title="Roparzh Ar Mason, Le Vannetais unifié : prononciation, grammaire et vocabulaire, Brest, Skridoù Breizh, 1943">[Ar Mason, 1943]</span><i> </i>p.9)<i>. </i></p>
-         
-         <p>La permutation des voyelles est rétablie selon l’orthographe <span class="motclef peurunvan"><i>peurunvan</i></span>. 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  e[i]ùé
-               </td>
-               <td>
-                  eùé
-               </td>
-               <td>
-                  iùé
-               </td>
-               <td>
-                  aussi
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  diméa[o]m
-               </td>
-               <td>
-                  diméam
-               </td>
-               <td>
-                  diméom
-               </td>
-               <td>
-                  marrions-nous
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  a[e]barh
-               </td>
-               <td>
-                  abarh
-               </td>
-               <td>
-                  ebarh
-               </td>
-               <td>
-                  dans
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  deu[ou]r
-               </td>
-               <td>
-                  deur
-               </td>
-               <td>
-                  dour
-               </td>
-               <td>
-                  eau
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  goè[a]d
-               </td>
-               <td>
-                  goèd
-               </td>
-               <td>
-                  goad
-               </td>
-               <td>
-                  sang
-               </td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>d&lt;seg type="augmentation_voyelle"&gt;&lt;choice&gt;&lt;orig&gt;eu&lt;/orig&gt;&lt;reg&gt;ou&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;r</code></pre></div>
-         
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="augmentation_voyelle"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite de la <span class="motclef ferm">fermeture</span> de voyelles. 
-         </p>
-         
-         
-         <h5 id="amuïssement_des_voyelles_dans_le_texte_regularise">Amuïssement des voyelles dans le texte régularisé</h5>
-         
-         <p>L’<span>amuïssement</span> des voyelles est spécifique à chaque cas. 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  ihuél
-               </td>
-               <td>
-                  ihuél
-               </td>
-               <td>
-                  huél
-               </td>
-               <td>
-                  haut
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  em-doemmed
-               </td>
-               <td>
-                  em-doemmed
-               </td>
-               <td>
-                  em-dommed
-               </td>
-               <td>
-                  se réchauffer
-               </td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>&lt;seg type="amuissement_voyelle"&gt;&lt;choice&gt;&lt;orig&gt;i&lt;/orig&gt;&lt;/choice&gt;&lt;/seg&gt;huél</code></pre></div>
-         
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; uniquement, on utilisera &lt;seg type="amuissement_voyelle"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite de l’<span>amuïssement</span> d’une voyelle. 
-         </p>
-         
-         
-         <h5 id="amuïssement_voyelle_dans_le_texte_original">Amuïssement voyelle dans le texte original</h5>
-         
-         <p>L’<span>amuïssement</span> des voyelles est spécifique à chaque cas. 
-         </p>
-         
-         <p>Par exemple, en vannetais comme en <span class="motclef peurunvan"><i>peurunvan</i></span>, <i>eo</i> se prononce souvent <i>e</i> ou <i>eu</i> (<span title="Roparzh ar Mason, Le Vannetais unifié. Prononciation, Grammaire et Vocabulaire, Brest, Hor Yezh, 1943">[Mason, 1943]</span> p.10). Si bien que l’on ne retrouve pas toujours ce <i>o</i> retranscrit dans la graphie. 
-         </p>
-         
-         <p>Les voyelles <span>amuïent</span> dans le textes originales seront rétablies selon l’orthographe <span class="motclef peurunvan">peurunvan</span>. 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  é[o]
-               </td>
-               <td>
-                  é
-               </td>
-               <td>
-                  éo
-               </td>
-               <td>
-                  conjugaison du verbe <i>être</i></td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>é&lt;seg type="amuissement_voyelle"&gt;&lt;choice&gt;&lt;reg&gt;o&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;</code></pre></div>
-         
-         <p>En plus de &lt;choice&gt; avec &lt;reg&gt; uniquement, on utilisera &lt;seg type="amuissement_voyelle"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite de l’<span>amuïssement</span> d’une voyelle. 
-         </p>
-         
-         
-         <h4 id="les_changements_de_consonnes">Les changements de consonnes</h4>
-         
-         
-         <h5 id="amuïssement_des_consonnes_dans_le_texte_regularise">Amuïssement des consonnes dans le texte régularisé</h5>
-         
-         <p>L’<span>amuïssement</span> des consonnes est spécifique à chaque cas. Voici quelques exemples des cas les plus
-            courants. 
-         </p>
-         
-         <p>L’ajout d’un <i>n</i> ou <i>m</i> <span class="motclef final">final</span> à l’adjectif possessif <i>me[a]</i> (<i>mon</i>, <i>ma</i>), devant <i>d</i> et <i>g</i> pour le <i>n</i> et <i>b</i> pour le <i>m</i> (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.34), ne sera pas gardé, conformément à la graphie <span class="motclef peurunvan"><i>peurunvan</i></span> (<span title="Yann Desbordes, Petite grammaire du Breton Moderne, Lesneven, Hor Yezh, 1990">[Desbordes, 1990]</span> p.43).
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  men dous
-               </td>
-               <td>
-                  men dous
-               </td>
-               <td>
-                  me dous
-               </td>
-               <td>
-                  ma douce
-               </td>
-            </tr>
-         </table>
-         
-         <p>L’<span>amuïssement</span> du <i>h</i> initial dans certaines formes du verbe <i>gobér</i> pour <i>ober</i> (<i>faire</i>) vient du changement du <i>h</i> en <i>g</i> à cause des règles de mutation (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.54), ce dernier s’<span>amuïssant</span> devant les particules verbales <i>a</i>/<i>e</i> et <i>ne</i> (négation) en <span class="motclef peurunvan"><i>peurunvan</i></span> (<span title="Yann Desbordes, Petite grammaire du Breton Moderne, Lesneven, Hor Yezh, 1990">[Desbordes, 1990]</span> p.71). 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  hrér
-               </td>
-               <td>
-                  hrér
-               </td>
-               <td>
-                  rér
-               </td>
-               <td>
-                  conjugaison du verbe <i>faire</i></td>
-            </tr>
-         </table>
-         
-         <p>Le <i>g</i> s’<span class="motclef amuït">amuït</span> dans le pronom complément <i>dirazon</i>. Le pronom complément est formé par une préposition sur laquelle vient s’ajouter
-            le suffixe de la marque de personne&nbsp;: <i>dirak</i> (<i>devant</i>) + <i>me</i> (<i>moi</i>) (<span title="Yann Desbordes, Petite grammaire du Breton Moderne, Lesneven, Hor Yezh, 1990">[Desbordes, 1990]</span> p.75). L’agglutination de deux éléments provoque l’<span>amuïssement</span> de la consonne <span class="motclef final">finale</span>, une consonne <span class="motclef épenth">épenthétique</span> est insérée en cas de <span class="motclef hiatus">hiatus</span>. La présence du <i>g</i> dans le texte original vient du fait que l’agglutination du pronom suffixe à la préposition
-            n’est pas systématique en <span class="motclef vannetais">vannetais</span> (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.32-33).
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  diragzoñ
-               </td>
-               <td>
-                  diragzoñ
-               </td>
-               <td>
-                  dirazoñ
-               </td>
-               <td>
-                  devant moi
-               </td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>dira&lt;seg type="amuissement_consonne"&gt;&lt;choice&gt;&lt;orig&gt;g&lt;/orig&gt;&lt;/choice&gt;&lt;/seg&gt;zoñ</code></pre></div>
-         
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; uniquement, on utilisera &lt;seg type="amuissement_consonne"&gt; pour baliser ce phénomène. <br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite de l’<span>amuïssement</span> des consonnes. 
-         </p>
-         
-         
-         <h5 id="amuïssement_des_consonnes_dans_le_texte_original">Amuïssement des consonnes dans le texte original</h5>
-         
-         <p>Le <i>v</i>, en position interne, est particulièrement sensible. Il est, avec le <i>z</i> en position interne également, la consonne qui subit le plus d'altérations (<span title="Jean-Marie Plonéis, Le parler de berrien : au carrefour des dialectes bretons, essai de description phonematique et morphologique, , Selaf, 1983">[Plonéis, 1983]</span> p. 35). Généralement, le <i>w</i> (cf. <a href="#la_semie_voyelle_w">la semie-voyelle w</a>) et le <i>v</i> (notamment en <span class="motclef final">finale</span>) se prononce <i>u</i> ou sont muets comme dans <i>war</i> (cf. <a href="#les_elisions">élisions</a>) ou <i>evn</i> (<span title="Roparzh Ar Mason, Le Vannetais unifié : prononciation, grammaire et vocabulaire, Brest, Skridoù Breizh, 1943">[Ar Mason, 1943]</span> p.8). <br>L'<span>amuïssement</span> du <i>z</i> <span class="motclef intervocalique">intervocalique</span> peut entraîner trois phénomènes (<span title="Jean-Marie Plonéis, Le parler de berrien : au carrefour des dialectes bretons, essai de description phonematique et morphologique, , Selaf, 1983">[Plonéis, 1983]</span> p.39)&nbsp;: 
+         <p>Le balisage des poèmes est conforme à la norme TEI. Une balise est construite de la
+            sorte&nbsp;: 
          </p>
          <ul>
             <li>
-               le développement d'un <span class="motclef hiatus">hiatus</span> à la place du z (<i>gwezenn</i> ['gwe:-ən])&nbsp;;
+               
+               <p>Nom-élément&nbsp;: indique le type d’élément balisé. </p>
             </li>
             <li>
-               la suppression d'une syllabe (<i>gouzoug</i> [gu:g])&nbsp;;
+               
+               <p>Nom-attribut&nbsp;: indique le nom conventionnel pour cette catégorie de division de texte.
+                  
+               </p>
             </li>
             <li>
-               un <span class="motclef diphtong">diphtongaison</span> (<i>ezomm</i>). 
+               
+               <p>Valeur-attribut&nbsp;: indique la valeur de l’attribut. Les valeurs des attributs sauront
+                  être simples, claires et concrètes afin de permettre une définition rigoureuse des
+                  textes et faciliter le travail des chercheurs. 
+               </p>
             </li>
          </ul>
          
-         <p>Le <i>n</i> <span class="motclef intervocalique">intervocalique</span> subit parfois un <span>amuïssement</span> lui aussi&nbsp;: le phénomène s'accompagne de la <span class="motclef nasal">nasalisation</span> de la voyelle accentuée qui précède et entraîne la formation d'une <span class="motclef diphtong">diphtongue</span> <span class="motclef nasal">nasale</span> comme pour <i>hini</i> ['hi:ni] se dit souvent [hɛ̃i] (<span title="Jean-Marie Plonéis, Le parler de berrien : au carrefour des dialectes bretons, essai de description phonematique et morphologique, , Selaf, 1983">[Plonéis, 1983]</span> p.54). 
-         </p>
+         <div class="code"><pre>Balisage TEI :<code>&lt;nom-élément nom-attribut="valeur-attribut"&gt;élément&lt;/nom-élément&gt;</code></pre></div>
          
-         <p>L’<span>amuïssement</span> des consonnes dans le texte original sera rétabli en <span class="motclef peurunvan"><i>peurunvan</i></span>. 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  bleu[v]n
-               </td>
-               <td>
-                  bleun
-               </td>
-               <td>
-                  bleuvn
-               </td>
-               <td>
-                  fleur
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  dimé[z]am[p]
-               </td>
-               <td>
-                  diméam
-               </td>
-               <td>
-                  dimézamp
-               </td>
-               <td>
-                  marions-nous
-               </td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>bleu&lt;seg type="amuissement_consonne"&gt;&lt;choice&gt;&lt;reg&gt;v&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;n</code></pre></div>
-         
-         <p>En plus de &lt;choice&gt; avec &lt;reg&gt; uniquement, on utilisera &lt;seg type="amuissement_voyelle"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite de l’<span>amuïssement</span> d’une consonne. 
+         <p>La valeur des attributs donne matière à réfléchir&nbsp;: faut-il se baser sur le nom du
+            phénomène présent dans le texte original ou dans la <span class="motclef normalis">normalisation</span>&nbsp;? Dans les deux cas, certains phénomènes seraient sans nom puisqu’il y a des cas
+            de disparition de voyelles et de consonnes. La valeur donnée aux attributs doit être
+            assez souple pour englober un phénomène, mais assez spécifique pour avoir une valeur
+            en recherche scientifique. Finalement, il a été décidé de donner le nom du phénomène
+            le plus parlant. 
          </p>
          
          
-         <h6 id="le_z">Le <i>z</i></h6>
+         <h2 id="le_protocole_dedition">Le protocole d’édition</h2>
          
-         <p>On peut remarquer l'<span>amuïssement</span> de <i>z</i> <span class="motclef final">final</span> au singulier en vannetais. Comme le montre l’utilisation de parenthèses pour la retranscription phonétique <span class="motclef peurunvan"><i>peurunvan</i></span>, ce <i>z</i> est prononcé ou pas selon le locuteur en <span class="motclef peurunvan"><i>peurunvan</i></span> mais figure bien dans la graphie du mot (<span title="Martial Ménard et Iwan Kadored, Geriadur brezhoneg An Here, Quimper, An Here, 2001">[Ménard &amp; Kadored, 2001]</span> p.XXII). La <span class="motclef final">finale</span> <i>é</i> pour le <span class="motclef peurunvan"><i>peurunvan</i></span> <i>ez</i> est ainsi presque systématique&nbsp;: <i>buhé</i> pour <i>buhez</i> (<i>vie</i>), <i>guirioné</i> / <i>gwirionez</i> (<i>vérité</i>), <i>truhé</i> / <i>truhez</i> (<i>pitié</i>), <i>larganté</i> / <i>largantez</i> (<i>générosité</i>), <i>karanté</i> / <i>karantez</i> (<i>affection</i>), etc (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.19). <br>Le <i>z</i> et le <i>s</i> sont ainsi muet dans de nombreux mots appris à l’usage (<span title="Roparzh Ar Mason, Le Vannetais unifié : prononciation, grammaire et vocabulaire, Brest, Skridoù Breizh, 1943">[Ar Mason, 1943]</span> p.9).
+         
+         <h3 id="assimilation_des_consonnes">Assimilation des consonnes</h3>
+         
+         
+         <h4 id="les_voisements">Les voisements</h4>
+         
+         <p>En <span class="motclef peurunvan"><i>peurunvan</i></span>, la consonne <span class="motclef final">finale</span> d’un mot ne change jamais quelque soit la liaison phonétique éventuelle avec le mot
+            qui suit. Les substantifs s’écrivent avec une consonne <span class="motclef vois">voisée</span> tandis que les autres classes de mots s’écrivent avec une consonne non-<span class="motclef vois">voisée</span> (cette règle connaît cependant un certain nombre d’exceptions) (Desbordes, 1990,
+            p.109)&nbsp;: 
          </p>
          <table>
             <tr>
                <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  buhé[z]
-               </td>
-               <td>
-                  buhé
-               </td>
-               <td>
-                  buhéz ['by(h):e(s)]
-               </td>
-               <td>
-                  vie
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  kleu[z]
-               </td>
-               <td>
-                  kleu
-               </td>
-               <td>
-                  kleuz [klø:(s)]
-               </td>
-               <td>
-                  talus
-               </td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>buhé&lt;seg type="amuissement_consonne"&gt;&lt;choice&gt;&lt;reg&gt;z&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;</code></pre></div>
-         
-         <p>Ces <i>z</i> peuvent se retrouver en milieu d’un mot lorsqu’un suffixe est ajouté. Nous ne changerons pas le balisage du <i>z</i> lorsque le cas se présente. 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  buhé[z]ieu
-               </td>
-               <td>
-                  buhéieu
-               </td>
-               <td>
-                  buhézieu
-               </td>
-               <td>
-                  vies
-               </td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>buhé&lt;seg type="amuissement_consonne"&gt;&lt;choice&gt;&lt;reg&gt;z&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;ieu</code></pre></div>
-         
-         
-         <h5 id="les_consonnes_palatalisees">Les consonnes palatalisées</h5>
-         
-         
-         <h6 id="le_l">Le <i>l</i></h6>
-         
-         <p>C’est le lexicographe Grégoire de Rostrenen qui, dans son <i>Dictionnaire Françoise-Celtique ou Françoise-Bretonne</i> en 1732, introduit le <i>(i)lh</i> pour remplacer le <i>(i)ll</i> dans le cas où le <i>l</i> est <span class="motclef palatal">palatalisé</span> (<span title="Iwan Wmffre,  Breton orthographies and dialects : The twentieth-century orthography war in Brittany, Oxford, Peter Lang, 2007">[Wmffre, 2007]</span> p.18). Par la suite, cette graphie sera encouragée par les linguistes Emile Ernault
-            et François Vallée à la suite de leur travaux de 1895 sur les dictionnaires de Gonidec
-            (<span title="Iwan Wmffre,  Breton orthographies and dialects : The twentieth-century orthography war in Brittany, Oxford, Peter Lang, 2007">[Wmffre, 2007]</span> p.23).
-         </p>
-         
-         <p>Le <i>l</i> <span class="motclef palatal">palatalisé</span> est un consonne <span class="motclef spira">spirante</span> latérale <span class="motclef palatal">palatale</span> <span class="motclef vois">voisée</span>&nbsp;: il est le résultat d’une modification phonétique dans laquelle le son est produit
-            par une partie plus à l'avant du palais dur que celle utilisée pour le son d'origine.
-            Il s’écrit [ʎ] ou [lj] (<span title="Martial Ménard et Iwan Kadored, Geriadur brezhoneg An Here, Quimper, An Here, 2001">[Ménard &amp; Kadored, 2001]</span> p.XXIV). 
-         </p>
-         
-         <p>On peut constater une différence dans la graphie du <i>l</i> <span class="motclef palatal">palatalisé</span> en <span class="motclef vannetais">vannetais</span> et en <span class="motclef peurunvan"><i>peurunvan</i></span><i>&nbsp;</i>: il s’écrit généralement <i>ll</i> en <span class="motclef vannetais">vannetais</span> et <i>lh</i> en <span class="motclef peurunvan"><i>peurunvan</i></span> (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.5). 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  taill[lh]et
-               </td>
-               <td>
-                  taillet
-               </td>
-               <td>
-                  tailhet ['taljɛt]
-               </td>
-               <td>
-                  tailler
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  skuill[lh]et
-               </td>
-               <td>
-                  skuillet
-               </td>
-               <td>
-                  skuilhet
-               </td>
-               <td>
-                  versé
-               </td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>tai&lt;seg type="consonne_palatalisée"&gt;&lt;choice&gt;&lt;orig&gt;ll&lt;/orig&gt;&lt;reg&gt;lh&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;et</code></pre></div>
-         
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="consonne_palatalisée"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite d’une consonne <span class="motclef palatal">palatalisé</span>. 
-         </p>
-         
-         
-         <h5 id="les_mutations_consonantiques">Les mutations consonantiques</h5>
-         
-         <p>Les <span class="motclef mutation">mutations</span> consonantiques touchent majoritairement les verbes (cf. <a href="#autre">autre</a>). <br>La forme <i>behen</i> est accepté en <span class="motclef peurunvan"><i>peurunvan</i></span> mais moins courante que sa forme avec un <i>f</i>. 
-         </p>
-         
-         <p>Les formes verbales avec un <i>h</i> central sont acceptées en <span class="motclef peurunvan"><i>peurunvan</i></span> mais moins utilisées que celle en <i>f</i>. C’est pourquoi nous rétablirons les formes les plus utilisées en <span class="motclef peurunvan">peurunvan</span>. 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  veh[f]en
-               </td>
-               <td>
-                  vehen
-               </td>
-               <td>
-                  vefen
-               </td>
-               <td>
-                  conjugaison du verbe <i>être</i></td>
-            </tr>
-            <tr>
-               <td>
-                  helleh[f]en
-               </td>
-               <td>
-                  hellehen
-               </td>
-               <td>
-                  hellefen
-               </td>
-               <td>
-                  conjugaison du verbe <i>pouvoir</i></td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>kor&lt;seg type="mutation_consonantique"&gt;&lt;choice&gt;&lt;orig&gt;v&lt;/orig&gt;&lt;reg&gt;f&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;</code></pre></div>
-         
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="mutation_consonantique"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite des <span class="motclef mutation">mutations</span> consonantiques. 
-         </p>
-         
-         
-         <h5 id="les_voisements">Les voisements</h5>
-         
-         <p>En <span class="motclef peurunvan"><i>peurunvan</i></span>, la consonne <span class="motclef final">finale</span> d’un mot ne change jamais quel le que soit la liaison phonétique éventuelle avec
-            le mot qui suit. Les substantifs s’écrivent avec une consonne <span class="motclef vois">voisée</span> tandis que les autres classes de mots s’écrivent avec une consonne <span class="motclef vois">non-voisée</span> (cette règle connaît cependant un certain nombre d’exceptions) (<span title="Yann Desbordes, Petite grammaire du Breton Moderne, Brest, Hor Yezh, 1990">[Desbordes, 1990]</span> p.109)&nbsp;: 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  nom 
+                  nom
                </td>
                <td>
                   traduction 
@@ -810,48 +114,50 @@
             </tr>
             <tr>
                <td>
-                  an droug 
-               </td>
+                  an drou<b>g </b></td>
                <td>
                   le mal 
                </td>
                <td>
-                  drouk 
-               </td>
+                  drou<b>k </b></td>
                <td>
                   méchant 
                </td>
             </tr>
             <tr>
                <td>
-                  ar mad 
-               </td>
+                  ar ma<b>d </b></td>
                <td>
                   le bien 
                </td>
                <td>
-                  mat 
-               </td>
+                  ma<b>t </b></td>
                <td>
                   bien / bon 
                </td>
             </tr>
          </table>
          
-         <p>Dans son manuel <i>Le Breton Usuel (dialecte de Vannes)</i>, Loeiz Herrieu nous indique deux sortes de changements liés à la liaison entre les
-            mots à l'oral (<span title="Loeiz Herrieu, Manuel français-breton contenant un précis de grammaire, des listes alphabétiques de mots usuels, des conversations, Lorient, Éditions Dihunamb, 1934">[Herrieu, 1934]</span> p.11). 
+         <p>Dans son manuel <i>Le breton Usuel (dialecte de Vannes)</i>, Loeiz Herrieu nous indique deux sortes de changements liés à la liaison entre les
+            mots à l'oral (Herrieu, 1934, p.11). 
          </p>
          <ul>
             <li>
-               Le premier est l'adoucissement (<span class="motclef vois">voisement</span>) de la <span class="motclef final">finale</span> forte d'un mot devant un autre mot commençant par une voyelle ou un <i>h</i> muet : <i>guélet</i> (voir) se dira donc <i>guéled em eus</i> (j'ai vu), et <i>get</i> (avec) se dira <i>ged an dud</i> (avec les gens). 
+               
+               <p>Le premier est l'adoucissement (<span class="motclef vois">voisement</span>) de la <span class="motclef final">finale</span> forte d'un mot devant un autre mot commençant par une voyelle ou un <i>h</i> muet&nbsp;: <i>guélet</i> (voir) se dira donc <i>guéled em eus</i> (j'ai vu), et <i>get</i> (avec) se dira <i>ged an dud</i> (avec les gens). 
+               </p>
             </li>
             <li>
-               Le deuxième changement est le renforcement de l'<span class="motclef initial">initiale</span> douce (<span class="motclef vois">dévoisement</span>) d'un mot qui suit un autre mot à la <span class="motclef final">finale</span> forte : <i>d'en ti</i> (à la maison) se dira donc <i>donet t'en ti</i> (venir à la maison).
+               
+               <p>Le deuxième changement est le renforcement de l'initiale douce (dévoisement) d'un
+                  mot qui suit un autre mot à la <span class="motclef final">finale</span> forte&nbsp;: <i>d'en ti</i> (à la maison) se dira donc <i>donet t'en ti</i> (venir à la maison).
+               </p>
             </li>
          </ul>
          
          <p>Seul le premier de ses deux changements se retrouve graphiquement dans ses poèmes
-            puisqu'on peut lire «&nbsp;Pennvèuet on bet deoh&nbsp;» (<span title="Loeiz Herrieu, Dasson ur galon, Pontivy, Dihunamb, 1957">[Herrieu, 1957]</span> p.4) et «&nbsp;Krabiset d'el lann&nbsp;» (<span title="Loeiz Herrieu, Dasson ur galon, Pontivy, Dihunamb, 1957">[Herrieu, 1957]</span> p.8). 
+            puisqu'on peut lire «&nbsp;Pennvèuet on bet deoh&nbsp;» (Herrieu, 1957, p.4) et «&nbsp;Krabiset d'el
+            lann&nbsp;» (Herrieu, 1957, p.8). 
          </p>
          
          <p>Nous ne garderons pas ces <span class="motclef vois">voisements</span> qui ne correspondent pas une des fonctions attribuées aux <span class="motclef mutation">mutations</span> en <span class="motclef peurunvan"><i>peurunvan</i></span>. 
@@ -873,14 +179,11 @@
             </tr>
             <tr>
                <td>
-                  penaoz[s]
-               </td>
+                  penao<b>z</b><b>[</b><b>s</b><b>]</b></td>
                <td>
-                  penaoz
-               </td>
+                  penao<b>z</b></td>
                <td>
-                  penaos
-               </td>
+                  penao<b>s</b></td>
                <td>
                   pourquoi
                </td>
@@ -890,24 +193,22 @@
                   peb[p]
                </td>
                <td>
-                  peb
-               </td>
+                  pe<b>b</b></td>
                <td>
-                  pep
-               </td>
+                  pe<b>p</b></td>
                <td>
                   chaque
                </td>
             </tr>
             <tr>
                <td>
-                  seg[k]red[t]
+                  se<b>g</b><b>[</b><b>k</b><b>]</b>red
                </td>
                <td>
-                  segred
+                  se<b>g</b>red
                </td>
                <td>
-                  sekret
+                  se<b>k</b>red
                </td>
                <td>
                   secret
@@ -915,14 +216,11 @@
             </tr>
             <tr>
                <td>
-                  korv[f]
-               </td>
+                  kor<b>v</b><b>[</b><b>f</b><b>]</b></td>
                <td>
-                  korv
-               </td>
+                  kor<b>v</b></td>
                <td>
-                  korf
-               </td>
+                  kor<b>f</b></td>
                <td>
                   corps
                </td>
@@ -931,82 +229,96 @@
          
          <div class="code"><pre>Balisage TEI :<code>penao&lt;seg type="voisement"&gt;&lt;choice&gt;&lt;orig&gt;z&lt;/orig&gt;&lt;reg&gt;s&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;</code></pre></div>
          
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="voisement"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite des <span class="motclef vois">voisements</span>. 
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="voisement"&gt; pour
+            baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque de niveau
+            segment. Celle-ci est complétée par un attribut @type pour préciser que le segment
+            dont il est question traite des voisements. 
+         </div>
+         
+         
+         <h4 id="les_nasalisations">Les nasalisations</h4>
+         
+         <p>Le <span class="motclef tilde">tilde</span> est un signe <span class="motclef diacritique">diacritique</span>&nbsp;:
          </p>
          
+         <blockquote>86. AN DILDENN. — Ne vez kavet nemet dindan ar stumm <i>ñ</i>. Lakaat un <i>ñ</i> war-lercʼh ur vogalenn a zo diskouez e rank ar vogalenn-se bezañ distaget dre ar
+            fri.
+            <span title="«&nbsp;86. LE TILDE. — On ne le trouve que sous la forme ñ. Mettre un ñ après une voyelle indique que la prononciation de cette voyelle(-là) doit être nasalisée.&nbsp;» (Frañsez Kervella, Yezhadur Bras ar Brezhoneg, La Baule, Skridoù Breizh, 1947, p. 56)">*</span></blockquote>
          
-         <h5 id="les_nasalisations">Les nasalisations</h5>
-         
-         <p>Le <span class="motclef tilde">tilde</span> est un <span class="motclef diacritique">signe diacritique</span>&nbsp;:
+         <p>Toutes les voyelles peuvent être <span class="motclef nasal">nasalisées</span> en breton. 
          </p>
          
-         
-         
-         <blockquote>86. LE TILDE. — On ne le trouve que sous la forme ñ. Mettre un ñ après une voyelle
-            indique que la prononciation de cette voyelle(-là) doit être nasalisée. <cite>Frañsez Kervella, <i>Yezhadur Bras ar Brezhoneg</i>, La Baule, Skridoù Breizh, 1947, p. 56</cite></blockquote>
-         
-         <p>Toutes les voyelles peuvent être <span class="motclef nasal">nasalisées</span> en breton&nbsp;:
+         <p>Le <span class="motclef tilde">tilde</span> n’a pas toujours été utilisé en breton. Par exemple, ce n’est qu’à partir de 1908
+            que <i>amañ</i> sera écrit ainsi, on le retrouve donc tel quel dans le <i>Grand dictionnaire français-breton</i> publié en 1931 de Frañsez Vallée (créateur de l’Entente des écrivains bretons avec
+            Émile Ernault pour la défense d’une orthographe commune). 
          </p>
          
-         <figure><img src="../MM2_DUG_Images/Menard_2001_pXXV.png"><figcaption><br>Tableau des voyelles nasalisées (<span title="Martial Ménard, Iwan Kadored, Geriadur brezhoneg, Plougastell-Daoulaz, An Here, 2001">[Ménard &amp; Kadored, 2001]</span> p.XXV)
-            </figcaption>
-         </figure>
-         
-         <p>Le <span class="motclef tilde">tilde</span> n’a pas toujours été utilisé en breton. Par exemple, ce n’est qu’à partie de 1908
-            que <i>amañ</i> sera écrit ainsi, on le retrouve donc tel quel dans le <i>Grand dictionnaire français-breton</i> publié en 1931 de Frañsez Vallée (créateur de l’Entente des écrivains bretons avec Émile Ernault pour la défense d’une
-            orthographe commune). 
-         </p>
-         
-         <p>La convention veut que toutes les voyelles suivies de <i>n</i>, <i>nn</i> ou <i>gn</i> soient <span class="motclef nasal">nasalisées</span> comme <i>Yann</i> [ˈjãn], <i>kigne</i> [ˈkĩɲɛs], <i>son</i> [ˈsɔ̃:n]&nbsp;; à l’exception du <i>en</i> qui n’est <span class="motclef nasal">nasale</span> que lorsque le <i>n</i> porte un <span class="motclef tilde">tilde</span> comme dans <i>cheñch</i> [ˈʃɛ̃ʃː], contrairement à <i>kroc’hen</i> ['kro:ɣεn]. L’ajout d’un <span class="motclef tilde">tilde</span> pour noter une voyelle <span class="motclef nasal">nasalisée</span> n’est donc pas automatique. On le retrouve surtout à l’intérieur des mot&nbsp;: 
+         <p>La convention veut que toutes les voyelles suivies de <i>n</i>, <i>nn</i> ou <i>gn</i> soient <span class="motclef nasal">nasalisées</span> comme <i>Yann</i> [ˈjãn], <i>kigne</i><i>z</i> [ˈkĩɲɛs], <i>son</i> [ˈsɔ̃:n]&nbsp;; à l’exception du <i>en</i> qui n’est nasal que lorsque le <i>n</i> porte un <span class="motclef tilde">tilde</span> comme dans <i>cheñch</i> [ˈʃɛ̃ʃː], contrairement à <i>kroc’hen</i> ['kro:ɣεn]. L’ajout d’un <span class="motclef tilde">tilde</span> pour noter une voyelle <span class="motclef nasal">nasalisée</span> n’est donc pas automatique. On le retrouve surtout à l’intérieur des mot&nbsp;: 
          </p>
          <ul>
             <li>
-               devant <i>s</i> comme dans <i>noblañs</i> (<i>noblesse</i>), <i>puñs</i> (<i>puits</i>)&nbsp;;
+               
+               <p>devant <i>s</i> comme dans <i>noblañs</i> (<i>noblesse</i>), <i>puñs</i> (<i>puits</i>)&nbsp;;
+               </p>
             </li>
             <li>
-               devant <i>ch</i> ou <i>j</i> comme dans <i>Fañch</i>, <i>soñj </i>(<i>songe</i>)&nbsp;;
+               
+               <p>devant <i>ch</i> ou <i>j</i> comme dans <i>Fañch</i>, <i>soñj </i>(<i>songe</i>)&nbsp;;
+               </p>
             </li>
             <li>
-               devant un <i>v</i> comme dans <i>klañv</i> (<i>malade</i>), <i>preñv</i> (<i>ver</i>).<i> </i></li>
+               
+               <p>devant un <i>v</i> comme dans <i>klañv</i> (<i>malade</i>), <i>preñv</i> (<i>ver</i>).<i> </i></p>
+               
+               <p>Cependant, le <span class="motclef tilde">tilde</span> est aussi utilisé pour noter les <i>n</i> muets, on le retrouve surtout&nbsp;:
+               </p>
+            </li>
+            <li>
+               
+               <p>à la fin de certains mots comme <i>amañ</i> (<i>ici</i>), <i>kenañ</i> (<i>beaucoup</i>)&nbsp;;
+               </p>
+            </li>
+            <li>
+               
+               <p>à la fin des infinitifs comme <i>kanañ</i> (<i>chanter</i>), <i>deskiñ</i> (<i>apprendre</i>)&nbsp;;
+               </p>
+            </li>
+            <li>
+               
+               <p>à la fin du comparatif général comme <i>bravañ</i> (<i>plus beau</i>), <i>gwashañ</i> (<i>pire</i>) (Desbordes, 1990, p.110-111).
+               </p>
+               
+               <p>Contrairement au <span class="motclef peurunvan"><i>peurunvan</i></span>, le <span class="motclef vannetais">vannetais</span> figurait la voyelle <span class="motclef nasal">nasale</span>&nbsp;:
+               </p>
+            </li>
+            <li>
+               
+               <p><i>a</i> et <i>o</i> par un <i>ñ</i> même en fin de mot comme <i>bihañ</i> pour <i>bihan</i> [ˈbi(h)ːañ] (<i>petit</i>)&nbsp;;
+               </p>
+            </li>
+            <li>
+               
+               <p><i>a</i> et <i>o</i> par un <i>ñ</i> avant deux <i>n</i> comme dans <i>mañn</i><i>é</i> pour <i>menez</i> (<i>montagne</i>)&nbsp;;
+               </p>
+            </li>
+            <li>
+               
+               <p><i>a</i> et <i>o</i> par un <i>n</i> avant une autre consonne que <i>n</i> comme dans <i>fallanté</i> pour <i>fallentez</i> (<i>méchanceté</i>)&nbsp;;
+               </p>
+            </li>
+            <li>
+               
+               <p><i>a</i> et <i>o</i> par un <i>n</i> avant deux <i>n</i> en fin de mot comme dans <i>lann</i> pour <i>lann</i> (<i>lande</i>)&nbsp;;
+               </p>
+            </li>
+            <li>
+               
+               <p><i>e</i>, <i>i</i> et <i>u</i> par un <i>n</i> comme dans <i>puns</i> pour <i>puñs</i> (<i>puits</i>) ou <i>irvin</i> pour <i>irvin</i> (<i>navet</i>) (Le Goff, 1902, p.2-3). 
+               </p>
+            </li>
          </ul>
          
-         <p>Cependant, le <span class="motclef tilde">tilde</span> est aussi utilisé pour noter les <i>n</i> muet, on le retrouve surtout&nbsp;:
-         </p>
-         <ul>
-            <li>
-               à la fin de certains mots comme <i>amañ</i> (<i>ici</i>), <i>kenañ</i> (<i>beaucoup</i>)&nbsp;;
-            </li>
-            <li>
-               à la fin des infinitifs comme <i>kanañ</i> (<i>chanter</i>), <i>deskiñ</i> (<i>apprendre</i>)&nbsp;;
-            </li>
-            <li>
-               à la fin du comparatif général comme <i>bravañ</i> (<i>plus beau</i>), <i>gwashañ</i> (<i>pire</i>) (<span title="Yann Desbordes, Petite grammaire du Breton Moderne, Lesneven, Hor Yezh, 1990">[Desbordes, 1990]</span> p.110-111).
-            </li>
-         </ul>
-         
-         <p>Contrairement au <span class="motclef peurunvan"><i>peurunvan</i></span>, le <span class="motclef vannetais">vannetais</span> figurait la voyelle <span class="motclef nasal">nasale</span>&nbsp;:
-         </p>
-         <ul>
-            <li>
-               <i>a</i> et <i>o</i> par un <i>ñ</i> même en fin de mot comme <i>bihañ</i> pour <i>bihan</i> [ˈbi(h)ːañ] (<i>petit</i>)&nbsp;;
-            </li>
-            <li>
-               <i>a</i> et <i>o</i> par un <i>ñ</i> avant deux <i>n</i> comme dans <i>mañn</i><i>é</i> pour <i>menez</i> (<i>montagne</i>)&nbsp;;
-            </li>
-            <li>
-               <i>a</i> et <i>o</i> par un <i>n</i> avant une autre consonne que <i>n</i> comme dans <i>fallanté</i> pour <i>fallentez</i> (<i>méchanceté</i>)&nbsp;;
-            </li>
-            <li>
-               <i>a</i> et <i>o</i> par un <i>n</i> avant deux <i>n</i> en fin de mot comme dans <i>lann</i> pour <i>lann</i> (<i>lande</i>)&nbsp;;
-            </li>
-            <li>
-               <i>e</i>, <i>i</i> et <i>u</i> par un <i>n</i> comme dans <i>puns</i> pour <i>puñs</i> (<i>puits</i>) ou <i>irvin</i> pour <i>irvin</i> (<i>navet</i>) (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.2-3). 
-            </li>
-         </ul>
-         
-         <p>Les voyelles <span class="motclef nasal">nasalisées</span> ainsi que les <i>n</i> muet en fin de mots seront écrits selon la convention <span class="motclef peurunvan"><i>peurunva</i><i>n</i></span>. 
+         <p>Les voyelles <span class="motclef nasal">nasalisées</span> ainsi que les <i>n</i> muet en fin de mots seront écrits selon la convention <span><i>peurunva</i></span><span><i>n</i></span>. 
          </p>
          <table>
             <tr>
@@ -1025,14 +337,11 @@
             </tr>
             <tr>
                <td>
-                  dirazoñ[on]
-               </td>
+                  diraz<b>oñ[on]</b></td>
                <td>
-                  dirazoñ
-               </td>
+                  diraz<b>oñ</b></td>
                <td>
-                  dirazon
-               </td>
+                  diraz<b>on</b></td>
                <td>
                   devant moi
                </td>
@@ -1053,13 +362,13 @@
             </tr>
             <tr>
                <td>
-                  kri[e][ñ]ù
+                  kri<b>[</b><b>e</b><b>][</b><b>ñ</b><b>]</b>ù
                </td>
                <td>
                   kriù
                </td>
                <td>
-                  krieñù
+                  kri<b>e</b><b>ñ</b>v
                </td>
                <td>
                   fort
@@ -1067,28 +376,22 @@
             </tr>
             <tr>
                <td>
-                  spurmantei[i]n[ñ]
-               </td>
+                  spurmant<b>ei</b><b>[i]</b><b>n[ñ]</b></td>
                <td>
-                  spurmantein
-               </td>
+                  spurmant<b>ein</b></td>
                <td>
-                  spurmantiñ
-               </td>
+                  spurmant<b>iñ</b></td>
                <td>
                   apercevoir
                </td>
             </tr>
             <tr>
                <td>
-                  éma[añ]
-               </td>
+                  ém<b>a[añ]</b></td>
                <td>
-                  éma
-               </td>
+                  ém<b>a</b></td>
                <td>
-                  émañ
-               </td>
+                  ém<b>añ</b></td>
                <td>
                   Il est / c’est
                </td>
@@ -1097,26 +400,25 @@
          
          <div class="code"><pre>Balisage TEI :<code>diraz&lt;seg type="nasalisation"&gt;&lt;choice&gt;&lt;orig&gt;oñ&lt;/orig&gt;&lt;reg&gt;on&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;</code></pre></div>
          
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et/ou &lt;reg&gt;, on utilisera &lt;seg type="nasalisation"&gt;
-            pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite des <span class="motclef nasal">nasalisations</span>. 
-         </p>
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et/ou &lt;reg&gt;, on utilisera &lt;seg type="nasalisation"&gt;
+            pour baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque
+            de niveau segment. Celle-ci est complétée par un attribut @type pour préciser que
+            le segment dont il est question traite des nasalisations. 
+         </div>
          
          
          <h3 id="les_diacritiques">Les diacritiques</h3>
          
-         
-         <blockquote>Diacritique&nbsp;: signe qui est ajouté à une lettre de l'alphabet pour en modifier la
-            prononciation.<cite>Définition CNRLT, «&nbsp;<a href="https://fr.wikipedia.org/wiki/Diacritique"><span>Diacritique</span></a>&nbsp;»</cite></blockquote>
-         
-         <p>Les <span class="motclef diacritique">signes diacritiques</span> peuvent prendre des formes variés comme : un accent, un tréma, un <span class="motclef tilde">tilde</span>, etc. 
+         <p>Les signes <span class="motclef diacritique">diacritiques</span> peuvent prendre des formes variées comme&nbsp;: un accent, un tréma, un <span class="motclef tilde">tilde</span>, etc&nbsp;: ils sont ajoutés aux lettres pour en modifier la prononciation.
          </p>
          
          
          <h4 id="les_signes_diacritiques">Les signes diacritiques</h4>
          
-         <p>En <span class="motclef vannetais">vannetais</span>, le <i>e</i> fermé est marqué par un accent aigu (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.2). Les accents sont <span class="motclef normalis">normalisés</span> par des <i>e</i> sans accent en <span class="motclef peurunvan"><i>peurunvan</i></span>, leur valeur phonétique est appris par l’usage. 
+         <p>En <span class="motclef vannetais">vannetais</span>, le <i>e</i> <span class="motclef ferm">fermé</span> est marqué par un accent aigu (Le Goff, 1902, p.2). Les accents sont <span class="motclef normalis">normalisés</span> par des <i>e</i> sans accent en <span class="motclef peurunvan"><i>peurunvan</i></span>, leur valeur phonétique est appris par l’usage. 
+         </p>
+         
+         <p>Le seul cas où le <i>e</i> marqué par un accent n’est pas <span class="motclef normalis">normalisé</span> est lorsqu’il est suivi d’un verbe comme <i>é tonet</i>. L’usage du <i>é</i> est encore toléré en <span class="motclef peurunvan"><i>peurunvan</i></span> et le changer en <i>o</i> (<i>o tonet</i>) implique plus que la <span class="motclef normalis">normalisation</span> du signe <span class="motclef diacritique">diacritique</span> mais un changement de sonorité. 
          </p>
          <table>
             <tr>
@@ -1135,13 +437,13 @@
             </tr>
             <tr>
                <td>
-                  parré[e]z
+                  parr<b>é</b><b>[e]</b>z
                </td>
                <td>
-                  parréz
+                  parr<b>é</b>z
                </td>
                <td>
-                  parrez
+                  parr<b>e</b>z
                </td>
                <td>
                   paroisse
@@ -1149,13 +451,13 @@
             </tr>
             <tr>
                <td>
-                  ké[ê]r
+                  k<b>é</b><b>[ê]</b>r
                </td>
                <td>
-                  kér
+                  k<b>é</b>r
                </td>
                <td>
-                  kêr
+                  k<b>ê</b>r
                </td>
                <td>
                   ville
@@ -1163,13 +465,13 @@
             </tr>
             <tr>
                <td>
-                  amzé[e]r
+                  amz<b>é</b><b>[</b><b>e</b><b>]</b>r
                </td>
                <td>
-                  amzér
+                  amz<b>é</b>r
                </td>
                <td>
-                  amzer
+                  amz<b>e</b>r
                </td>
                <td>
                   temps
@@ -1180,7 +482,7 @@
          <div class="code"><pre>Balisage TEI :<code>parr&lt;seg type="signe_diacritique"&gt;&lt;choice&gt;&lt;orig&gt;é&lt;/orig&gt;&lt;reg&gt;e&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;z</code></pre></div>
          
          <p>En <span class="motclef vannetais">vannetais</span>, le <i>e</i> <span class="motclef ouvert">ouvert</span> est marqué par un accent grave, sauf devant les consonnes doubles ou la plupart des
-            consonnes <span class="motclef final">finales</span> (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.2). Comme le <i>e</i> <span class="motclef ferm">fermé</span>, les accents sont <span class="motclef normalis">normalisés</span> par des <i>e</i> sans accent en <span class="motclef peurunvan"><i>peurunvan</i></span>, leur valeur phonétique est appris par l’usage.
+            consonnes finales (Le Goff, 1902, p.2). Comme le <i>e</i> <span class="motclef ferm">fermé</span>, les accents sont <span class="motclef normalis">normalisés</span> par des <i>e</i> sans accent en <span class="motclef peurunvan"><i>peurunvan</i></span>, leur valeur phonétique est appris par l’usage.
          </p>
          <table>
             <tr>
@@ -1199,13 +501,13 @@
             </tr>
             <tr>
                <td>
-                  ‘è[e]l
+                  ‘<b>è</b><b>[e]</b>l
                </td>
                <td>
-                  ‘èl
+                  ‘<b>è</b>l
                </td>
                <td>
-                  ‘el
+                  ‘<b>e</b>l
                </td>
                <td>
                   comme
@@ -1215,7 +517,11 @@
          
          <div class="code"><pre>Balisage TEI :<code>‘&lt;seg type="signe_diacritique"&gt;&lt;choice&gt;&lt;orig&gt;è&lt;/orig&gt;&lt;reg&gt;e&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;l</code></pre></div>
          
-         <p>Le <i>a</i> peut être une voyelle <span class="motclef longue">longue</span> ou <span class="motclef brève">brève</span>. Le <i>a</i> long est marqué par un accent circonflexe en <span class="motclef vannetais">vannetais</span> (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.2), tandis que la quantité de la voyelle est indiqué par deux <i>a</i> en <span class="motclef peurunvan"><i>peurunvan</i></span>. <br>L’accent circonflexe, placé sur le <i>e</i>, marque également une voyelle <span class="motclef longue">longue</span>. 
+         <p>Le <i>a</i> peut être une voyelle <span class="motclef longue">longue</span> ou <span class="motclef brève">brève</span>. Le <i>a</i> long est marqué par un accent circonflexe en <span class="motclef vannetais">vannetais</span> (Le Goff, 1902, p.2), tandis que la quantité de la voyelle est indiquée par deux
+            <i>a</i> en <span class="motclef peurunvan"><i>peurunvan</i></span>.
+         </p>
+         
+         <p>L’accent circonflexe, placé sur le <i>e</i>, marque également une voyelle <span class="motclef longue">longue</span>. 
          </p>
          <table>
             <tr>
@@ -1234,13 +540,13 @@
             </tr>
             <tr>
                <td>
-                  pellâ[aa]d
+                  pell<b>â</b><b>[</b><b>aa</b><b>]</b>d
                </td>
                <td>
-                  pellâd
+                  pell<b>â</b>d
                </td>
                <td>
-                  pellaad
+                  pell<b>aa</b>t
                </td>
                <td>
                   s’éloigner
@@ -1248,13 +554,13 @@
             </tr>
             <tr>
                <td>
-                  gohâ[aa]d
+                  goh<b>â</b><b>[aa]</b>d
                </td>
                <td>
-                  gohâd
+                  goh<b>â</b>d
                </td>
                <td>
-                  gohaad
+                  gosh<b>aa</b>t
                </td>
                <td>
                   vieillir
@@ -1262,13 +568,13 @@
             </tr>
             <tr>
                <td>
-                  diavê[ae]zein
+                  diav<b>ê</b><b>[ae]</b>zein
                </td>
                <td>
-                  diavêzein
+                  diav<b>ê</b>zein
                </td>
                <td>
-                  diavaezein
+                  diav<b>ae</b>ziñ
                </td>
                <td>
                   extérioriser
@@ -1278,7 +584,7 @@
          
          <div class="code"><pre>Balisage TEI :<code>goh&lt;seg type="signes_diacritiques"&gt;&lt;choice&gt;&lt;orig&gt;â&lt;/orig&gt;&lt;reg&gt;aa&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;d</code></pre></div>
          
-         <p>Autres exemples de <span class="motclef diacritique">signes diacritiques</span> rencontrés et <span class="motclef normalis">normalisés</span>&nbsp;:
+         <p>Autres exemples de signes <span class="motclef diacritique">diacritiques</span> rencontrés et <span class="motclef normalis">normalisés</span>&nbsp;:
          </p>
          <table>
             <tr>
@@ -1297,13 +603,13 @@
             </tr>
             <tr>
                <td>
-                  eu[ü]ruz
+                  e<b>u</b><b>[</b><b>ü</b><b>]</b>ruz
                </td>
                <td>
-                  euruz
+                  e<b>u</b>ruz
                </td>
                <td>
-                  eüruz
+                  e<b>ü</b>rus
                </td>
                <td>
                   heureux
@@ -1313,23 +619,26 @@
          
          <div class="code"><pre>Balisage TEI :<code>eu&lt;seg type="signes_diacritiques"&gt;&lt;choice&gt;&lt;orig&gt;u&lt;/orig&gt;&lt;reg&gt;ü&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;ruz</code></pre></div>
          
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="<span class="motclef digramme">digramme</span>"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite des signes <span class="motclef diacritique">diacritique</span>. 
-         </p>
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="digramme"&gt; pour
+            baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque de niveau
+            segment. Celle-ci est complétée par un attribut @type pour préciser que le segment
+            dont il est question traite des signes diacritique. 
+         </div>
          
          
          <h4 id="les_digrammes_diacritiques">Les digrammes diacritiques</h4>
          
          
-         <h6 id="le_zh">Le <i>zh</i></h6>
+         <h5 id="le_zh">Le <i>zh</i></h5>
          
-         <p>Le <span class="motclef digramme">digramme</span> <i>zh</i> a une histoire très mouvementée à laquelle Iwan Wmffre consacre de nombreuse pages
+         <p>Le <span class="motclef digramme">digramme</span> <i>zh</i> a une histoire très mouvementée à laquelle Iwan Wmffre consacre de nombreuses pages
             dans <i>Breton Orthographies and Dialects: The Twentieth-century Orthography War in Brittany</i> (volume 2). Définitivement introduit en 1941 lors d’une commission d'écrivains à
-            laquelle participent notamment Roparz Hemon, Loeiz Herrieu et Le Goff, le <span class="motclef digramme">digramme</span> <i>zh</i> est deviendra finalement le symbole de l'unification entre la graphie <span>KLT</span> et le <span class="motclef vannetais">vannetais</span>. 
+            laquelle participent notamment Roparz Hemon, Loeiz Herrieu et Le Goff, le <span class="motclef digramme">digramme</span> <i>zh</i> deviendra finalement le symbole de l'unification entre la graphie KLT et <span class="motclef vannetais">vannetaise</span>. 
          </p>
          
-         <p>Le <span class="motclef digramme">digramme</span> <i>zh</i> réunit le <i>z</i> [z] <span>KLT</span> et le <i>h</i> [h] <span class="motclef vannetais">vannetais</span>, permettant à chacun de le prononcer selon son parler. Ainsi, <i>chat</i> qui s'écrivait <i>kaz</i> en <span>KLT</span> et <i>kah</i> en <span class="motclef vannetais">vannetais</span> est écrit <i>kazh</i> en <span class="motclef peurunvan"><i>peurunvan</i></span> (cf. carte 364 de l’Atlas linguistique de la Basse-Bretagne de Pierre Le Roux, 1927). Le <span class="motclef digramme">digramme</span> <i>zh</i> est un consensus graphique qui n’affecte pas la prononciation (<span title="Donald MacAulay, The Celtic Languages, Cambridge, Cambridge University Press, 1992">[MacAulay, 1992]</span> p.382). 
+         <p>Le <span class="motclef digramme">digramme</span> <i>zh</i> réunit le <i>z</i> [z] KLT et le <i>h</i> [h] <span class="motclef vannetais">vannetais</span>, permettant à chacun de le prononcer selon son parler. Ainsi, <i>chat</i> qui s'écrivait <i>kaz</i> en KLT et <i>kah</i> en <span class="motclef vannetais">vannetais</span> est écrit <i>kazh</i> en <span class="motclef peurunvan"><i>peurunvan</i></span> (cf. carte 364 de l’Atlas linguistique de la Basse-Bretagne de Pierre Le Roux, 1927).
+            Le <span class="motclef digramme">digramme</span> <i>zh</i> est un consensus graphique qui n’affecte pas la prononciation (MacAulay, 1992, p.382).
+            
          </p>
          
          <p>Nous <span class="motclef normalis">normaliserons</span> ces <i>z</i> en <i>zh</i>. Le <i>zh</i> peut être considéré comme un <span class="motclef digramme">digramme</span> puisqu’il s’agit d’un assemblage de deux signes qui ne peuvent pas s'interpréter
@@ -1352,28 +661,22 @@
             </tr>
             <tr>
                <td>
-                  noah[zh]
-               </td>
+                  noa<b>h[zh]</b></td>
                <td>
-                  noah
-               </td>
+                  noa<b>h</b></td>
                <td>
-                  noazh
-               </td>
+                  noa<b>zh</b></td>
                <td>
                   nu
                </td>
             </tr>
             <tr>
                <td>
-                  guh[zh]
-               </td>
+                  gu<b>h[</b><b>zh</b><b>]</b></td>
                <td>
-                  guh
-               </td>
+                  gu<b>h</b></td>
                <td>
-                  guzh
-               </td>
+                  gu<b>zh</b></td>
                <td>
                   caché
                </td>
@@ -1383,10 +686,10 @@
          <div class="code"><pre>Balisage TEI :<code>noa&lt;seg type="digramme_diacritique"&gt;&lt;choice&gt;&lt;orig&gt;h&lt;/orig&gt;&lt;reg&gt;zh&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;</code></pre></div>
          
          
-         <h6 id="le_eu">Le <i>eu</i></h6>
+         <h5 id="le_eu">Le <i>eu</i></h5>
          
-         <p><i>E</i> <span class="motclef normalis">normalisé</span> <i>eu</i> sera également considéré comme un <span class="motclef digramme">digramme</span> <span class="motclef diacritique">diacritique</span> puisqu’il les deux lettres s’assemblent pour former les sons /œ̃/, /ø/ ou /œ/, son
-            intermédiaire entre <i>e</i> et <i>o</i> (<span title="Pierre Le Goff, Auguste Guillevic, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye, 1902">[Guillevic &amp; Le Goff, 1902]</span> p.1). Cela permet de le différencier des <i>e</i> <span class="motclef ouvert">ouvert</span> ou <span class="motclef ferm">fermé</span> <span class="motclef normalis">normalisés</span> <i>e</i> (cf. <a href="#les_signes_diacritiques"><span class="motclef diacritique"><i>signes diacritiques</i></span></a>). 
+         <p>Le <i>e</i> <span class="motclef normalis">normalisé</span> <i>eu</i> sera également considéré comme un <span class="motclef digramme">digramme</span> <span class="motclef diacritique">diacritique</span> puisque les deux lettres s’assemblent pour former les sons /œ̃/, /ø/ ou /œ/, son
+            intermédiaire entre <i>e</i> et <i>o</i> (Guillevic &amp; Le Goff, 1902, p.1). Cela permet de le différencier des <i>e</i> <span class="motclef ouvert">ouvert</span><span>s</span> ou fermés <span class="motclef normalis">normalisés</span> <i>e</i> (cf. <i>signes </i><span class="motclef diacritique"><i>diacritiques</i></span>). 
          </p>
          <table>
             <tr>
@@ -1405,13 +708,13 @@
             </tr>
             <tr>
                <td>
-                  de[eu]s
+                  d<b>e</b><b>[</b><b>eu</b><b>]</b>s
                </td>
                <td>
-                  des
+                  d<b>e</b>s
                </td>
                <td>
-                  deus
+                  d<b>eu</b>s
                </td>
                <td>
                   conjugaison du verbe <i>avoir</i></td>
@@ -1420,11 +723,11 @@
          
          <div class="code"><pre>Balisage TEI :<code>d&lt;seg type="digramme_diacritique"&gt;&lt;choice&gt;&lt;orig&gt;e&lt;/orig&gt;&lt;reg&gt;eu&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;s</code></pre></div>
          
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="digramme"&gt; pour
-            baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite des <span class="motclef digramme">digrammes</span> <span class="motclef diacritique">diacritiques</span>. 
-         </p>
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="digramme"&gt; pour
+            baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque de niveau
+            segment. Celle-ci est complétée par un attribut @type pour préciser que le segment
+            dont il est question traite des digrammes diacritiques. 
+         </div>
          
          
          <h4 id="les_trigrammes_diacritiques">Les trigrammes diacritiques</h4>
@@ -1433,12 +736,13 @@
             bretonnes, introduit le <span class="motclef trigramme">trigramme</span> <i>c’h</i> dans son ouvrage <i>Le Sacré-Collège de Jésus</i>. Julien Maunoir écrivait un breton proche du parlé et a inventé la lettre <i>c’h</i> à partir du <span class="motclef digramme">digramme</span> <i>ch</i> [ʃ]. La lettre <i>c’h</i> est utilisée pour représenter plusieurs phonèmes comme [ɣ], [x] et [h]. 
          </p>
          
-         <p>En <span class="motclef vannetais">vannetais</span>, le <i>h</i> peut être muet ou aspiré. Le <i>h</i> <span class="motclef initial">initial</span> est généralement aspiré, notamment lorsqu'il remplace un <i>k</i> ou un <i>g</i> suite à une mutation&nbsp;; le <i>h</i> médial peut être lui-aussi fortement aspiré (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.4). 
+         <p>En <span class="motclef vannetais">vannetais</span>, le <i>h</i> peut être muet ou aspiré. Le <i>h</i> <span class="motclef initial">initial</span> est généralement aspiré, notamment lorsqu'il remplace un <i>k</i> ou un <i>g</i> suite à une <span class="motclef mutation">mutation</span>&nbsp;; le <i>h</i> médial peut être lui-aussi fortement aspiré (Le Goff, 1902, p.4). 
          </p>
          
-         <p>Lorsque c’est le cas, il est écrit <i>c'h</i> en <span class="motclef peurunvan"><i>peurunvan</i></span>. Ce <i>c’h</i> correspond à la consonne <span class="motclef fricativ">fricative</span> <span class="motclef vélaire">vélaire</span> sourde [x]. Le <i>c’</i><i>h</i> peut être considéré comme un <span class="motclef trigramme">trigramme</span> <span class="motclef diacritique">diacritique</span> puisqu’il s’agit d’un assemblage de deux signes et d’une <span class="motclef diacritique">diacritique</span> qui ne peuvent pas s'interpréter par la valeur de chacun des signes pris isolément&nbsp;:
-            ils forment un unique <span class="motclef graphème">graphème</span>. Le trigramme <i>c’h</i> fonctionne comme une nouvelle lettre et possède sa propre entrée dans les dictionnaires
-            bretons. 
+         <p>Lorsque c’est le cas, il est écrit <i>c'h</i> en <span class="motclef peurunvan"><i>peurunvan</i></span>. Ce <i>c’h</i> correspond à la consonne <span class="motclef fricativ">fricative</span> <span class="motclef vélaire">vélaire</span> sourde [x]. Le <i>c’</i><i>h</i> peut être considéré comme un <span>tr</span><span>igramme</span> <span>diacr</span><span>i</span><span>tique</span> puisqu’il s’agit d’un assemblage de deux signes et d’une <span class="motclef diacritique">diacritique</span> qui ne peuvent pas s'interpréter par la valeur de chacun des signes pris isolément&nbsp;:
+            ils forment un unique <span class="motclef graphème">graphème</span>. Le <span class="motclef trigramme">trigramme</span> <i>c’h</i> fonctionne comme une nouvelle lettre et possède sa propre entrée dans les dictionnaires
+            bretons et sur le clavier d’ordinateur et smartphone breton (C’HWERTY, possède aussi
+            les touches directes pour le <i>ch</i> et <i>ñ</i>). 
          </p>
          <table>
             <tr>
@@ -1457,13 +761,13 @@
             </tr>
             <tr>
                <td>
-                  merh[c’h]ed 
+                  mer<b>h[c’h]</b>ed 
                </td>
                <td>
-                  merhed 
+                  mer<b>h</b>ed 
                </td>
                <td>
-                  merc’hed ['mɛrxɛd] 
+                  mer<b>c’h</b>ed ['mɛrxɛd] 
                </td>
                <td>
                   filles 
@@ -1471,13 +775,13 @@
             </tr>
             <tr>
                <td>
-                  h[c’h]oant
+                  <b>h[</b><b>c’h</b><b>]</b>oant
                </td>
                <td>
-                  hoant
+                  <b>h</b>oant
                </td>
                <td>
-                  c’hoant
+                  <b>c’h</b>oant
                </td>
                <td>
                   envie
@@ -1487,10 +791,11 @@
          
          <div class="code"><pre>Balisage TEI :<code>mer&lt;seg type="trigramme_diacritique"&gt;&lt;choice&gt;&lt;orig&gt;h&lt;/orig&gt;&lt;reg&gt;c’h&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;ed</code></pre></div>
          
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="trigramme_diacritique"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite des <span class="motclef digramme">digrammes</span> <span class="motclef diacritique">diacritiques</span>. 
-         </p>
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="trigramme_diacritique"&gt;
+            pour baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque
+            de niveau segment. Celle-ci est complétée par un attribut @type pour préciser que
+            le segment dont il est question traite des digrammes diacritiques. 
+         </div>
          
          
          <h4 id="les_lettres_ramistes">Les lettres ramistes</h4>
@@ -1498,7 +803,7 @@
          <p>Le lettres ramistes séparent la voyelle <i>i</i> de la consonne <i>j</i>, et la voyelle <i>u</i> de la consonne <i>v</i>. 
          </p>
          
-         <p>En <span class="motclef vannetais">vannetais</span>, certaines voyelles peuvent devenir des consonnes. Ainsi, le <i>ù</i> consonne est un son intermédiaire entre le <i>u</i> voyelle et le <i>v</i> (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.2). Ce <i>ù</i> intermédiaire est marqué d’un <span class="motclef diacritique">signe diacritique</span> sous la forme d’un accent. Il est <span class="motclef normalis">normalisé</span> par un <i>v</i> (ou <i>w</i> dans de rares cas) en <span class="motclef peurunvan"><i>peurunvan</i></span>. 
+         <p>En <span class="motclef vannetais">vannetais</span>, certaines voyelles peuvent devenir des consonnes. Ainsi, le <i>ù</i> consonne est un son intermédiaire entre le <i>u</i> voyelle et le <i>v</i> (Le Goff, 1902, p.2). Ce <i>ù</i> intermédiaire est marqué d’un signe <span class="motclef diacritique">diacritique</span> sous la forme d’un accent. Il est <span class="motclef normalis">normalisé</span> par un <i>v</i> (ou <i>w</i> dans de rares cas) en <span class="motclef peurunvan"><i>peurunvan</i></span>. 
          </p>
          <table>
             <tr>
@@ -1517,13 +822,13 @@
             </tr>
             <tr>
                <td>
-                  arsaù[v]et
+                  arsa<b>ù</b><b>[</b><b>v</b><b>]</b>et
                </td>
                <td>
-                  arsaùet
+                  arsa<b>ù</b>et
                </td>
                <td>
-                  arsavet
+                  arsa<b>v</b>et
                </td>
                <td>
                   arrêté
@@ -1531,27 +836,24 @@
             </tr>
             <tr>
                <td>
-                  biu[v]
-               </td>
+                  bi<b>u[</b><b>v</b><b>]</b></td>
                <td>
-                  biu
-               </td>
+                  bi<b>u</b></td>
                <td>
-                  biv
-               </td>
+                  bi<b>v</b></td>
                <td>
                   vivant
                </td>
             </tr>
             <tr>
                <td>
-                  Gelù[w]enn
+                  Gel<b>ù</b><b>[w]</b>enn
                </td>
                <td>
-                  Gelùenn
+                  Gel<b>ù</b>enn
                </td>
                <td>
-                  Gelwenn
+                  Gel<b>w</b>enn
                </td>
                <td>
                   Quelven 
@@ -1561,31 +863,32 @@
          
          <div class="code"><pre>Balisage TEI :<code>arsa&lt;seg type="lettre_ramiste"&gt;&lt;choice&gt;&lt;orig&gt;ù&lt;/orig&gt;&lt;reg&gt;v&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;et</code></pre></div>
          
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="diphtongue"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite des lettres ramistes. L’appelation lettre ramiste sera utilisée plutôt que
-            <span class="motclef diacritique">signe diacritique</span> car l’ambivalence de ce <i>ù</i> qui peut se comporter comme une consonne ou une voyelle rappelle les lettres ramistes
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="diphtongue"&gt; pour
+            baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque de niveau
+            segment. Celle-ci est complétée par un attribut @type pour préciser que le segment
+            dont il est question traite des lettres ramistes. L’appelation lettre ramiste sera
+            utilisée plutôt que signe diacritique car l’ambivalence de ce <i>ù</i> qui peut se comporter comme une consonne ou une voyelle rappelle les lettres ramistes
             latines. 
-         </p>
+         </div>
          
          
          <h4 id="les_abreviations_par_signe_special">Les abréviations par signe spécial</h4>
          
-         <p>L'<span>amuïssement</span> des sonores <span class="motclef intervocalique">intervocaliques</span> est un phénomène d'érosion phonétique&nbsp;: il réduit la durée d'expression du mot, donc
-            sa longueur, donc l'effort demandé au locuteur. C'est un phénomène considérable en
-            breton qui touche surtout le <i>z</i> et le <i>v</i>. 
+         <p>L'amuïssement des sonores <span class="motclef intervocalique">intervocaliques</span> est un phénomène d'érosion phonétique&nbsp;: il réduit la durée d'expression du mot, donc
+            sa <span class="motclef longue">longueur</span>, donc l'effort demandé au locuteur. C'est un phénomène considérable en breton qui
+            touche surtout le <i>z</i> et le <i>v</i>. 
          </p>
          
-         <p>L'<span>amuïsement</span> d'une consonne <span class="motclef intervocalique">intervocalique</span>, dont résulte la perte d'une syllabe, est grandement favorisé par l'importance de l'<span class="motclef tonique">accent tonique</span>&nbsp;; le fait que le phénomène soit nettement plus important en position post-tonique
-            l'atteste (<span title="Jean-Marie Plonéis, Le parler de berrien : au carrefour des dialectes bretons, essai de description phonematique et morphologique, , Selaf, 1983">[Plonéis, 1983]</span>, p.59). 
+         <p>L'amuïsement d'une consonne <span class="motclef intervocalique">intervocalique</span>, dont résulte la perte d'une syllabe, est grandement favorisé par l'importance de
+            l'accent <span class="motclef tonique">tonique</span>&nbsp;; le fait que le phénomène soit nettement plus important en position post-<span class="motclef tonique">tonique</span> l'atteste (Plonéis, 1983,, p.59). 
          </p>
          
-         <p>En <span class="motclef peurunvan"><i>peurunvan</i></span>, l’accent circonflexe a été ajouté sur les voyelles <i>e</i>, <i>o</i>, <i>u</i> pour marquer la contraction d’une voyelle ou d’une consonne&nbsp;: <i>lâr</i> (<i>lavar</i>)&nbsp;; <i>goût</i> (<i>gouzout</i>)&nbsp;; <i>kornôg</i> (<i>kornaoueg</i>) (<span title="Martial Ménard, Iwan Kadored, Geriadur brezhoneg, Plougastell-Daoulaz, An Here, 2001">[Ménard &amp; Kadored, 2001]</span> p.1285). La contraction est un procédé qui consiste à prélever au sein d’un mot une
-            ou plusieurs lettres, ce procédé s’accompagne d’un <span class="motclef diacritique">signe diacritique</span> placé au-dessus du mot.
+         <p>En <span class="motclef peurunvan"><i>peurunvan</i></span>, l’accent circonflexe a été ajouté sur les voyelles <i>e</i>, <i>o</i>, <i>u</i> pour marquer la contraction d’une voyelle ou d’une consonne&nbsp;: <i>lâr</i> (<i>lavar</i>)&nbsp;; <i>goût</i> (<i>gouzout</i>)&nbsp;; <i>kornôg</i> (<i>kornaoueg</i>) (Ménard &amp; Kadored, 2001, p.1285). La contraction est un procédé qui consiste à prélever
+            au sein d’un mot une ou plusieurs lettres, ce procédé s’accompagne d’un signe <span class="motclef diacritique">diacritique</span> placé au-dessus du mot.
          </p>
          
          <p>La forme complète de ces mots ne sera développée car il s’agit de formes également
-            acceptées en <span class="motclef vannetais">vannetais</span> et en <span class="motclef peurunvan"><i>peurunvan</i></span>, cependant le <span class="motclef diacritique">signe diacritique</span> de cette abréviation sera ajouté. 
+            acceptées en <span class="motclef vannetais">vannetais</span> et en <span class="motclef peurunvan"><i>peurunvan</i></span>, cependant le signe <span class="motclef diacritique">diacritique</span> de cette abréviation sera ajouté. 
          </p>
          <table>
             <tr>
@@ -1604,13 +907,13 @@
             </tr>
             <tr>
                <td>
-                  gou[û]d
+                  go<b>u[û]</b>d
                </td>
                <td>
-                  goud
+                  go<b>u</b>d
                </td>
                <td>
-                  goûd
+                  go<b>û</b>t
                </td>
                <td>
                   savoir
@@ -1618,13 +921,13 @@
             </tr>
             <tr>
                <td>
-                  la[â]red
+                  l<b>a[</b><b>â</b><b>]</b>red
                </td>
                <td>
-                  lared
+                  l<b>a</b>red
                </td>
                <td>
-                  lâred
+                  l<b>â</b>ret
                </td>
                <td>
                   dire
@@ -1634,29 +937,821 @@
          
          <div class="code"><pre>Balisage TEI :<code>go&lt;abbr type="signe_special"&gt;&lt;choice&gt;&lt;orig&gt;u&lt;/orig&gt;&lt;reg&gt;û&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;d</code></pre></div>
          
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;abbr type="signe_special"&gt; pour baliser ce phénomène.<br>La balise &lt;abbr&gt; contient une abréviation. Celle-ci est complétée par un attribut
-            @type pour préciser que l’abréviation dont il est question est signalé par une signe
-            spécial. 
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;abbr type="signe_special"&gt;
+            pour baliser ce phénomène. La balise &lt;abbr&gt; contient une abréviation. Celle-ci est
+            complétée par un attribut @type pour préciser que l’abréviation dont il est question
+            est signalé par un signe spécial. 
+         </div>
+         
+         
+         <h3 id="metaplasmes">Métaplasmes</h3>
+         
+         <blockquote>En rhétorique, on nomme métaplasme toute modification phonétique ou morphologique
+            qui altère l'intégrité d'un mot par addition, suppression, substitution ou permutation
+            d'unités (phonétiques ou morphologiques). 
+            <span title="Définition Wikipédia, «&nbsp;Métaplasme&nbsp;»">*</span></blockquote>
+         
+         <p>Les permutations de voyelles sont fréquentes en <span class="motclef vannetais">vannetais</span>, Ar Mason y consacre un chapitre dans <i>Le </i><i>vannetais</i><i> unifié</i> (Ar Mason, 1943,<i> </i>p.9-11). Dans cette édition critique, la différence à été faite entre leur <span class="motclef ouvert">ouverture</span> (<i>e</i> en <i>a</i>) et leur fermeture (<i>a</i> en <i>e</i>). Il y a en breton sept voyelles pures que l'on peut grouper de façon similaire au triangle vocalique. 
          </p>
          
          
-         <h3 id="divers">Divers</h3>
+         <h4 id="ouverture_des_voyelles_dans_le_texte_regularise">Ouverture des voyelles dans le texte régularisé</h4>
+         
+         <p>L’ouverture du <i>e</i> en <i>a</i> (Ar Mason, 1943,<i> </i>p.13) s’explique par le fait que le <i>e</i> est un intermédiaire entre les sons <i>a</i> et <i>i</i> (Le Goff, 1902, p.1). 
+         </p>
+         
+         <p>La permutation des voyelles est rétablie selon l’orthographe <span class="motclef peurunvan"><i>peurunvan</i></span>. 
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  m<b>e</b><b>[a]</b>n
+               </td>
+               <td>
+                  m<b>e</b>n
+               </td>
+               <td>
+                  m<b>a</b>n
+               </td>
+               <td>
+                  mon / ma
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  jo<b>é[a]</b></td>
+               <td>
+                  jo<b>é</b></td>
+               <td>
+                  jo<b>a</b></td>
+               <td>
+                  joie
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  zaou<b>o[a]</b>rn
+               </td>
+               <td>
+                  zaou<b>o</b>rn
+               </td>
+               <td>
+                  zaou<b>a</b>rn
+               </td>
+               <td>
+                  deux mains
+               </td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>m&lt;seg type="amenuisement_voyelle"&gt;&lt;choice&gt;&lt;orig&gt;e&lt;/orig&gt;&lt;reg&gt;a&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;n</code></pre></div>
+         
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="augmentation_voyelle"&gt;
+            pour baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque
+            de niveau segment. Celle-ci est complétée par un attribut @type pour préciser que
+            le segment dont il est question traite de l’ouverture de voyelles. 
+         </div>
+         
+         
+         <h4 id="fermeture_des_voyelles_dans_le_texte_original">Fermeture des voyelles dans le texte original</h4>
+         
+         <p>Inversement, la fermeture du <i>a</i> en <i>e</i> s’explique par le fait que le <i>e</i> est un intermédiaire entre le son <i>a</i> et <i>i</i> (Le Goff, 1902, p.1) et la fermeture du <i>e</i> en <i>i</i> peut s’expliquer par le fait que le <i>e</i> est proche du <i>i</i>, etc.
+         </p>
+         
+         <p>A noter également que le <i>a</i> se prononce <i>e</i> dans presque toutes les <span class="motclef diphtong">diphtongues</span> en <i>oa</i>, <i>oua</i>, <i>wa</i> comme dans <i>goèd</i> ainsi que dans d’autres mots comme <i>gant</i> orthographié <i>get</i> par Loeiz Herrieu (Ar Mason, 1943,<i> </i>p.9)<i>. </i></p>
+         
+         <p>La permutation des voyelles est rétablie selon l’orthographe <span class="motclef peurunvan"><i>peurunvan</i></span>. 
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <b>e[i]</b>ùé
+               </td>
+               <td>
+                  <b>e</b>ùé
+               </td>
+               <td>
+                  <b>i</b>vez
+               </td>
+               <td>
+                  aussi
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  dimé<b>a</b><b>[</b><b>o</b><b>]</b>m
+               </td>
+               <td>
+                  dimé<b>a</b>m
+               </td>
+               <td>
+                  dime<b>o</b>mp
+               </td>
+               <td>
+                  marrions-nous
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <b>a</b><b>[</b><b>e</b><b>]</b>barh
+               </td>
+               <td>
+                  <b>a</b>barh
+               </td>
+               <td>
+                  <b>e</b>-barzh
+               </td>
+               <td>
+                  dans
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  de<b>u</b><b>[</b><b>ou</b><b>]</b>r
+               </td>
+               <td>
+                  d<b>eu</b>r
+               </td>
+               <td>
+                  d<b>ou</b>r
+               </td>
+               <td>
+                  eau
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  go<b>è</b><b>[a]</b>d
+               </td>
+               <td>
+                  go<b>è</b>d
+               </td>
+               <td>
+                  gw<b>a</b>d
+               </td>
+               <td>
+                  sang
+               </td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>d&lt;seg type="augmentation_voyelle"&gt;&lt;choice&gt;&lt;orig&gt;eu&lt;/orig&gt;&lt;reg&gt;ou&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;r</code></pre></div>
+         
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="augmentation_voyelle"&gt;
+            pour baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque
+            de niveau segment. Celle-ci est complétée par un attribut @type pour préciser que
+            le segment dont il est question traite de la fermeture de voyelles. 
+         </div>
+         
+         
+         <h4 id="amuïssement_des_voyelles_dans_le_texte_regularise">Amuïssement des voyelles dans le texte régularisé</h4>
+         
+         <p>L’amuïssement des voyelles est spécifique à chaque cas. </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <b>i</b><b>[]</b>huél
+               </td>
+               <td>
+                  <b>i</b>huél
+               </td>
+               <td>
+                  huel
+               </td>
+               <td>
+                  haut
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  em-do<b>e</b><b>[]</b>mmed
+               </td>
+               <td>
+                  em-do<b>e</b>mmed
+               </td>
+               <td>
+                  em-dommed
+               </td>
+               <td>
+                  se réchauffer
+               </td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>&lt;seg type="amuissement_voyelle"&gt;&lt;choice&gt;&lt;orig&gt;i&lt;/orig&gt;&lt;/choice&gt;&lt;/seg&gt;huél</code></pre></div>
+         
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; uniquement, on utilisera &lt;seg type="amuissement_voyelle"&gt;
+            pour baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque
+            de niveau segment. Celle-ci est complétée par un attribut @type pour préciser que
+            le segment dont il est question traite de l’amuïssement d’une voyelle. 
+         </div>
+         
+         
+         <h4 id="amuïssement_des_voyelles_dans_le_texte_original">Amuïssement des voyelles dans le texte original</h4>
+         
+         <p>L’amuïssement des voyelles est spécifique à chaque cas. </p>
+         
+         <p>Par exemple, en <span class="motclef vannetais">vannetais</span> comme en <span class="motclef peurunvan"><i>peurunvan</i></span>, <i>eo</i> se prononce souvent <i>e</i> ou <i>eu</i> (Mason, 1943, p.10). Si bien que l’on ne retrouve pas toujours ce <i>o</i> retranscrit dans la graphie. 
+         </p>
+         
+         <p>Les voyelles amuïent dans le textes originales seront rétablies selon l’orthographe
+            <span class="motclef peurunvan">peurunvan</span>. 
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  é<b>[</b><b>o</b><b>]</b></td>
+               <td>
+                  é
+               </td>
+               <td>
+                  é<b>o</b></td>
+               <td>
+                  conjugaison du verbe <i>être</i></td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>é&lt;seg type="amuissement_voyelle"&gt;&lt;choice&gt;&lt;reg&gt;o&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;</code></pre></div>
+         
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;reg&gt; uniquement, on utilisera &lt;seg type="amuissement_voyelle"&gt;
+            pour baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque
+            de niveau segment. Celle-ci est complétée par un attribut @type pour préciser que
+            le segment dont il est question traite de l’amuïssement d’une voyelle. 
+         </div>
+         Amuïssement des consonnes dans le texte régularisé
+         
+         <p>L’amuïssement des consonnes est spécifique à chaque cas. Voici quelques exemples des
+            cas les plus courants. 
+         </p>
+         
+         <p>L’ajout d’un <i>n</i> ou <i>m</i> final à l’adjectif possessif <i>me[a]</i> (<i>mon</i>, <i>ma</i>), devant <i>d</i> et <i>g</i> pour le <i>n</i> et <i>b</i> pour le <i>m</i> (Le Goff, 1902, p.34), ne sera pas gardé, conformément à la graphie <span class="motclef peurunvan"><i>peurunvan</i></span> (Desbordes, 1990, p.43).
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  me<b>n</b><b>[]</b> dous
+               </td>
+               <td>
+                  me<b>n</b> dous
+               </td>
+               <td>
+                  me dous
+               </td>
+               <td>
+                  ma douce
+               </td>
+            </tr>
+         </table>
+         
+         <p>L’amuïssement du <i>h</i> <span class="motclef initial">initial</span> dans certaines formes du verbe <i>gobér</i> pour <i>ober</i> (<i>faire</i>) vient du changement du <i>h</i> en <i>g</i> à cause des règles de <span class="motclef mutation">mutation</span> (Le Goff, 1902, p.54), ce dernier s’amuïssant devant les particules verbales <i>a</i>/<i>e</i> et <i>ne</i> (négation) en <span class="motclef peurunvan"><i>peurunvan</i></span> (Desbordes, 1990, p.71). 
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <b>h</b><b>[]</b>rér
+               </td>
+               <td>
+                  <b>h</b>rér
+               </td>
+               <td>
+                  raer
+               </td>
+               <td>
+                  conjugaison du verbe <i>faire</i></td>
+            </tr>
+         </table>
+         
+         <p>Le <i>g</i> s’amuït dans le pronom complément <i>dirazon</i>. Le pronom complément est formé par une préposition sur laquelle vient s’ajouter
+            le suffixe de la marque de personne&nbsp;: <i>dirak</i> (<i>devant</i>) + <i>me</i> (<i>moi</i>) (Desbordes, 1990, p.75). L’agglutination de deux éléments provoque l’amuïssement
+            de la consonne <span class="motclef final">finale</span>, une consonne <span class="motclef épenth">épenthétique</span> est insérée en cas de <span>h</span><span>ï</span><span>atus</span>. La présence du <i>g</i> dans le texte original vient du fait que l’agglutination du pronom suffixe à la préposition
+            n’est pas systématique en <span class="motclef vannetais">vannetais</span> (Le Goff, 1902, p.32-33).
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  dira<b>g</b><b>[]</b><b>z</b>oñ
+               </td>
+               <td>
+                  dira<b>g</b>zoñ
+               </td>
+               <td>
+                  dira<b>z</b>on
+               </td>
+               <td>
+                  devant moi
+               </td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>dira&lt;seg type="amuissement_consonne"&gt;&lt;choice&gt;&lt;orig&gt;g&lt;/orig&gt;&lt;/choice&gt;&lt;/seg&gt;zoñ</code></pre></div>
+         
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; uniquement, on utilisera &lt;seg type="amuissement_consonne"&gt;
+            pour baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque
+            de niveau segment. Celle-ci est complétée par un attribut @type pour préciser que
+            le segment dont il est question traite de l’amuïssement des consonnes. 
+         </div>
+         
+         
+         <h4 id="amuïssement_des_consonnes_dans_le_texte_original">Amuïssement des consonnes dans le texte original</h4>
+         
+         <p>Le <i>v</i>, en position interne, est particulièrement sensible. Il est, avec le <i>z</i> en position interne également, la consonne qui subit le plus d'altérations (Plonéis,
+            1983, p. 35). Généralement, le <i>w</i> (cf. la semie-voyelle w) et le <i>v</i> (notamment en <span class="motclef final">finale</span>) se prononcent <i>u</i> ou sont muets comme dans <i>war</i> (cf. élisions) ou <i>evn</i> (Ar Mason, 1943, p.8). 
+         </p>
+         
+         <p>L'amuïssement du <i>z</i> <span class="motclef intervocalique">intervocalique</span> peut entraîner trois phénomènes (Plonéis, 1983, p.39)&nbsp;: 
+         </p>
+         <ul>
+            <li>
+               
+               <p>le développement d'un <span class="motclef hiatus">hiatus</span> à la place du z (<i>gwezenn</i> ['gwe:-ən])&nbsp;;
+               </p>
+            </li>
+            <li>
+               
+               <p>la suppression d'une syllabe (<i>gouzoug</i> [gu:g])&nbsp;;
+               </p>
+            </li>
+            <li>
+               
+               <p>une <span class="motclef diphtong">diphtongaison</span> (<i>ezomm</i>). 
+               </p>
+            </li>
+         </ul>
+         
+         <p>Le <i>n</i> <span class="motclef intervocalique">intervocalique</span> subit parfois un <span class="motclef amuït">amuïssement</span> lui aussi&nbsp;: le phénomène s'accompagne de la <span class="motclef nasal">nasalisation</span> de la voyelle accentuée qui précède et entraîne la formation d'une <span class="motclef diphtong">diphtongue</span> <span class="motclef nasal">nasale</span> comme pour <i>hini</i> ['hi:ni] se dit souvent [hɛ̃i] (Plonéis, 1983, p.54). 
+         </p>
+         
+         <p>L’amuïssement des consonnes dans le texte original sera rétabli en <span class="motclef peurunvan"><i>peurunvan</i></span>. 
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  bleu<b>[</b><b>v</b><b>]</b>n
+               </td>
+               <td>
+                  bleun
+               </td>
+               <td>
+                  bleu<b>v</b>ñ
+               </td>
+               <td>
+                  fleur
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  dimé<b>[</b><b>z</b><b>]</b>am[p]
+               </td>
+               <td>
+                  diméam
+               </td>
+               <td>
+                  dime<b>z</b>omp
+               </td>
+               <td>
+                  marions-nous
+               </td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>bleu&lt;seg type="amuissement_consonne"&gt;&lt;choice&gt;&lt;reg&gt;v&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;n</code></pre></div>
+         
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;reg&gt; uniquement, on utilisera &lt;seg type="amuissement_voyelle"&gt;
+            pour baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque
+            de niveau segment. Celle-ci est complétée par un attribut @type pour préciser que
+            le segment dont il est question traite de l’amuïssement d’une consonne. 
+         </div>
+         
+         
+         <h5 id="le_z">Le z</h5>
+         
+         <p>On peut remarquer l'amuïssement du <i>z</i> final au singulier en <span class="motclef vannetais">vannetais</span>. Comme le montre l’utilisation de parenthèses pour la retranscription phonétique
+            <span class="motclef peurunvan"><i>peurunvan</i></span>, ce <i>z</i> est prononcé ou non selon le locuteur en <span class="motclef peurunvan"><i>peurunvan</i></span> mais figure bien dans la graphie du mot (Ménard &amp; Kadored, 2001, p.XXII). La <span class="motclef final">finale</span> <i>é</i> pour le <span class="motclef peurunvan"><i>peurunvan</i></span> <i>ez</i> est ainsi presque systématique&nbsp;: <i>buhé</i> pour <i>buhez</i> (<i>vie</i>), <i>guirioné</i> / <i>gwirionez</i> (<i>vérité</i>), <i>truhé</i> / <i>truhez</i> (<i>pitié</i>), <i>larganté</i> / <i>largantez</i> (<i>générosité</i>), <i>karanté</i> / <i>karantez</i> (<i>affection</i>), etc (Le Goff, 1902, p.19). 
+         </p>
+         
+         <p>Le <i>z</i> et le <i>s</i> sont ainsi muets dans de nombreux mots appris à l’usage (Ar Mason, 1943, p.9).
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  buhé<b>[z]</b></td>
+               <td>
+                  buhé
+               </td>
+               <td>
+                  buhé<b>z</b> ['by(h):e(s)]
+               </td>
+               <td>
+                  vie
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  kleu<b>[z]</b></td>
+               <td>
+                  kleu
+               </td>
+               <td>
+                  kleu<b>z</b> [klø:(s)]
+               </td>
+               <td>
+                  talus
+               </td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>buhé&lt;seg type="amuissement_consonne"&gt;&lt;choice&gt;&lt;reg&gt;z&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;</code></pre></div>
+         
+         <p>Ces <i>z</i> peuvent se retrouver en milieu d’un mot lorsqu’un suffixe est ajouté. Nous ne changerons
+            pas le balisage du <i>z</i> lorsque le cas se présente. 
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  buhé<b>[z]</b>ieu
+               </td>
+               <td>
+                  buhéieu
+               </td>
+               <td>
+                  buhe<b>z</b>ioù
+               </td>
+               <td>
+                  vies
+               </td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>buhé&lt;seg type="amuissement_consonne"&gt;&lt;choice&gt;&lt;reg&gt;z&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;ieu</code></pre></div>
+         
+         
+         <h4 id="les_consonnes_palatalisees">Les consonnes palatalisées</h4>
+         
+         
+         <h5 id="le_l">Le l</h5>
+         
+         <p>C’est le lexicographe Grégoire de Rostrenen qui, dans son <i>Dictionnaire Françoise-Celtique ou Françoise-Bretonne</i> en 1732, introduit le <i>(i)lh</i> pour remplacer le <i>(i)ll</i> dans le cas où le <i>l</i> est <span class="motclef palatal">palatalisé</span> (Wmffre, 2007, p.18). Par la suite, cette graphie sera encouragée par les linguistes
+            Emile Ernault et François Vallée à la suite de leur travaux de 1895 sur les dictionnaires
+            de Gonidec (Wmffre, 2007, p.23).
+         </p>
+         
+         <p>Le <i>l</i> <span class="motclef palatal">palatalisé</span> est une consonne <span class="motclef spira">spirante</span> latérale <span class="motclef palatal">palatale</span> <span class="motclef vois">voisée</span>&nbsp;: il est le résultat d’une modification phonétique dans laquelle le son est produit
+            par une partie plus à l'avant du palais dur que celle utilisée pour le son d'origine.
+            Il s’écrit [ʎ] ou [lj] (Ménard &amp; Kadored, 2001, p.XXIV). 
+         </p>
+         
+         <p>On peut constater une différence dans la graphie du <i>l</i> <span class="motclef palatal">palatalisé</span> en <span class="motclef vannetais">vannetais</span> et en <span class="motclef peurunvan"><i>peurunvan</i></span><i>&nbsp;</i>: il s’écrit généralement <i>ll</i> en <span class="motclef vannetais">vannetais</span> et <i>lh</i> en <span class="motclef peurunvan"><i>peurunvan</i></span> (Le Goff, 1902, p.5). 
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  tai<b>ll[lh]</b>et
+               </td>
+               <td>
+                  tai<b>ll</b>et
+               </td>
+               <td>
+                  tai<b>lh</b>et ['taljɛt]
+               </td>
+               <td>
+                  tailler
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  skui<b>ll</b><b>[</b><b>lh</b><b>]</b>et
+               </td>
+               <td>
+                  skui<b>ll</b>et
+               </td>
+               <td>
+                  skui<b>lh</b>et
+               </td>
+               <td>
+                  versé
+               </td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>tai&lt;seg type="consonne_palatalisée"&gt;&lt;choice&gt;&lt;orig&gt;ll&lt;/orig&gt;&lt;reg&gt;lh&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;et</code></pre></div>
+         
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="consonne_palatalisée"&gt;
+            pour baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque
+            de niveau segment. Celle-ci est complétée par un attribut @type pour préciser que
+            le segment dont il est question traite d’une consonne palatalisé. 
+         </div>
+         
+         
+         <h4 id="les_mutations_consonantiques">Les mutations consonantiques</h4>
+         
+         <p>Les <span class="motclef mutation">mutations</span> consonantiques touchent majoritairement les verbes (cf. autre). <br>La forme <i>behen</i> est acceptée en <span class="motclef peurunvan"><i>peurunvan</i></span> mais est moins courante que sa forme avec un <i>f</i>. 
+         </p>
+         
+         <p>Les formes verbales avec un <i>h</i> central sont acceptées en <span class="motclef peurunvan"><i>peurunvan</i></span> mais moins utilisées que celle en <i>f</i>. C’est pourquoi nous rétablirons les formes les plus utilisées en <span class="motclef peurunvan">peurunvan</span>. 
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  ve<b>h</b><b>[</b><b>f</b><b>]</b>en
+               </td>
+               <td>
+                  ve<b>h</b>en
+               </td>
+               <td>
+                  ve<b>f</b>en
+               </td>
+               <td>
+                  conjugaison du verbe <i>être</i></td>
+            </tr>
+            <tr>
+               <td>
+                  helle<b>h</b><b>[</b><b>f</b><b>]</b>en
+               </td>
+               <td>
+                  helle<b>h</b>en
+               </td>
+               <td>
+                  c’hell<b>f</b>en
+               </td>
+               <td>
+                  conjugaison du verbe <i>pouvoir</i></td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>kor&lt;seg type="mutation_consonantique"&gt;&lt;choice&gt;&lt;orig&gt;v&lt;/orig&gt;&lt;reg&gt;f&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;</code></pre></div>
+         
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="mutation_consonantique"&gt;
+            pour baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque
+            de niveau segment. Celle-ci est complétée par un attribut @type pour préciser que
+            le segment dont il est question traite des mutations consonantiques. 
+         </div>
+         
+         
+         <h4 id="les_metathèses">Les métathèses</h4>
+         
+         <p>Le CNRTL définit la <span class="motclef métathèse">métathèse</span> ainsi&nbsp;: l’«&nbsp;interversion de phonèmes contigus ou non, à l'intérieur d'un mot.&nbsp;»
+         </p>
+         
+         <p>Les <span class="motclef métathèse">métathèses</span> sont fréquentes en <span class="motclef vannetais">vannetais</span> dans la séquence <span class="motclef occlusive">occlusive</span> + <i>r</i> + voyelle + <span class="motclef occlusive">occlusive</span> comme <i>berton</i> pour <i>breton</i>. On peut noter d'autres <span class="motclef métathèse">métathèses</span> fréquentes comme <i>benal</i> pour <i>balan</i>. 
+         </p>
+         
+         <p>Bien qu’il s’agisse de mots trouvés tels quels dans les dictionnaires <span class="motclef vannetais">vannetais</span>, ces <span class="motclef métathèse">métathèses</span> seront <span class="motclef normalis">normalisées</span> pour faciliter la compréhension des poèmes. 
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <b>re</b><b>[</b><b>er</b><b>]</b>vé
+               </td>
+               <td>
+                  <b>re</b>vé
+               </td>
+               <td>
+                  h<b>er</b>vez
+               </td>
+               <td>
+                  selon
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  ba<b>nal[lan]</b></td>
+               <td>
+                  ba<b>nal</b></td>
+               <td>
+                  ba<b>lan</b></td>
+               <td>
+                  genêt
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  lann-g<b>ro</b><b>[</b><b>w</b><b>r</b><b>]</b>ah
+               </td>
+               <td>
+                  lann-g<b>ro</b>ah
+               </td>
+               <td>
+                  lann-g<b>w</b><b>r</b><b>a</b>zh
+               </td>
+               <td>
+                  ajonc nain
+               </td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>&lt;seg type="metathese"&gt;&lt;choice&gt;&lt;orig&gt;re&lt;/orig&gt;&lt;reg&gt;er&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;vé</code></pre></div>
+         
+         <div class="code"><pre>Balisage TEI :<code>lann-g&lt;seg type="metathese"&gt;&lt;choice&gt;&lt;orig&gt;ro&lt;/orig&gt;&lt;reg&gt;wr&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;ah*</code></pre></div>
+         
+         <p>*cas rare de superposition entre deux <span class="motclef normalis">normalisation</span><span>s</span>&nbsp;: on a choisi de mettre en avant la <span class="motclef métathèse">métathèse</span> plutôt que la <span class="motclef diphtong">diphtongaison</span>. 
+         </p>
+         
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="metathese"&gt; pour
+            baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque de niveau
+            segment. Celle-ci est complétée par un attribut @type pour préciser que le segment
+            dont il est question traite des métathèses. 
+         </div>
+         
+         
+         <h3 id="les_modifications_phonetiques">Les modifications phonétiques</h3>
          
          
          <h4 id="les_monophtonguaisons">Les monophtonguaisons</h4>
          
+         <p>Le CNRTL définit la monophtonguaison ainsi&nbsp;: «&nbsp;[la] réduction d'une <span class="motclef diphtong">diphtongue</span> à une voyelle simple.&nbsp;»
+         </p>
          
-         <blockquote>Monophtonguaison&nbsp;: réduction d'une diphtongue à une voyelle simple.<cite>Définition CRNTL, «&nbsp;<a href="https://www.cnrtl.fr/definition/monophtongaison">monophtongaison</a>&nbsp;»</cite></blockquote>
-         
-         
-         <blockquote>Monophtongue&nbsp;: phonème qui ne comporte qu'une seule émission de voix <cite>Définition CRNTL, «&nbsp;<a href="https://www.cnrtl.fr/definition/monophtongue">monophtongue</a>&nbsp;»</cite></blockquote>
-         
-         <p>Les réductions de certains <span>phonèmes</span> en <span class="motclef monophtongaison">monophtongaisons</span> sont détaillés par Le Goff et Guillevic au début en 1902 dans une tentative de convention
-            pour la <span class="motclef normalis">normalisation</span> du vannetais pour l’intégrer au <span class="motclef KTL">KTL</span> (<span title="Iwan Wmffre,  Breton orthographies and dialects : The twentieth-century orthography war in Brittany, Oxford, Peter Lang, 2007">[Wmffre, 2007]</span> p.27). 
+         <p>Les réductions de certains phonèmes en <span class="motclef monophtongaison">monophtongaisons</span> sont détaillées par Le Goff et Guillevic en 1902 dans une tentative de convention
+            pour la <span class="motclef normalis">normalisation</span> du <span class="motclef vannetais">vannetais</span> pour l’intégrer au <span>K.L.T</span> (Wmffre, 2007, p.27). 
          </p>
          
          <p>Une grande partie des réductions concernent la réduction du suffixe du nom verbal
-            <i>-ein</i> en accord avec les autres dialectes du breton par le remplacement du <i>ei</i> en <i>i</i> dans certains contexte. A noter que les infinitifs en -<i>iñ</i> se prononcent -<i>eiñg</i>, comme les infinitif en -<i>añ</i> et que les deux formes sont acceptées en <span class="motclef peurunvan"><i>peurunvan</i></span> (<span title="Roparzh ar Mason, Le Vannetais unifié. Prononciation, Grammaire et Vocabulaire, Brest, Hor Yezh, 1943">[Mason, 1943]</span> p.10) (cf. <a href="#les_nasalisations"><i>nasalisation</i></a>). <br>On trouve également la réduction du <i>ou</i> on <i>o</i> dans certains mots. 
+            <i>-ein</i> en accord avec les autres dialectes du breton par le remplacement du <i>ei</i> en <i>i</i> dans certains contexte. A noter que les infinitifs en -<i>iñ</i> se prononcent -<i>eiñg</i>, comme les infinitif en -<i>añ</i> et que les deux formes sont acceptées en <span class="motclef peurunvan"><i>peurunvan</i></span> (Mason, 1943, p.10) (cf. <span class="motclef nasal"><i>nasalisation</i></span>). 
+         </p>
+         
+         <p>On trouve également la réduction du <i>ou</i> en <i>o</i> dans certains mots. 
          </p>
          
          <p>Nous <span class="motclef normalis">normaliserons</span> ces <span class="motclef monophtongaison">monophtongaisons</span> selon l’orthographe <span class="motclef peurunvan"><i>peurunvan</i></span>. 
@@ -1678,13 +1773,13 @@
             </tr>
             <tr>
                <td>
-                  dei[i]n
+                  d<b>e</b><b>i[i]</b>n
                </td>
                <td>
-                  dein
+                  d<b>e</b><b>i</b>n
                </td>
                <td>
-                  din
+                  d<b>i</b>n
                </td>
                <td>
                   à moi
@@ -1692,14 +1787,11 @@
             </tr>
             <tr>
                <td>
-                  geou[o]
-               </td>
+                  ge<b>ou</b><b>[o]</b></td>
                <td>
-                  geou
-               </td>
+                  ge<b>ou</b></td>
                <td>
-                  geo
-               </td>
+                  ge<b>o</b></td>
                <td>
                   si
                </td>
@@ -1708,32 +1800,31 @@
          
          <div class="code"><pre>Balisage TEI :<code>d&lt;seg type="monophtongaison"&gt;&lt;choice&gt;&lt;orig&gt;ei&lt;/orig&gt;&lt;reg&gt;i&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;n</code></pre></div>
          
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="monophtongaison"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite de <span class="motclef monophtongaison">monophtongaisons</span>. 
-         </p>
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="monophtongaison"&gt;
+            pour baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque
+            de niveau segment. Celle-ci est complétée par un attribut @type pour préciser que
+            le segment dont il est question traite de monophtongaisons. 
+         </div>
          
          
          <h4 id="les_diphtongaisons">Les diphtongaisons</h4>
          
-         
-         <blockquote>Diphtongaison&nbsp;: transformation en diphtongue, résultant d'une alternance synchronique
-            ou d'une évolution diachronique.<cite>Définition CRNTL, «&nbsp;<a href="https://www.cnrtl.fr/definition/diphtongaison">diphtongaison</a>&nbsp;»</cite></blockquote>
-         
+         <p>Le CNRTL définit les <span class="motclef diphtong">diphtongues</span> ainsi&nbsp;:
+         </p>
          
          <blockquote>Diphtongue&nbsp;: voyelle qui, au cours de sa tenue (ou émission), subit une variation
             de timbre et qui, de ce fait, peut être considérée comme la fusion en une seule syllabe
             de deux éléments vocaliques perçus comme différents, successifs, et dont l'un est
-            plus fermé que l'autre. <cite>Définition CRNTL, «&nbsp;<a href="https://www.cnrtl.fr/definition/diphtongue">diphtongue</a>&nbsp;»</cite></blockquote>
+            plus fermé que l'autre. 
+         </blockquote>
          
-         <p>En <span class="motclef vannetais">vannetais</span>, l’accent tombe sur la dernière syllabe, ce qui peut expliquer la <span class="motclef monophtongaison">monophtongaison</span> de certains mots qui ne le sont pas en <span class="motclef peurunvan"><i>peurunvan</i></span> (<span title="Roparzh Ar Mason, Le Vannetais unifié : prononciation, grammaire et vocabulaire, Brest, Skridoù Breizh, 1943">[Ar Mason, 1943]</span><i> </i>p.8). On trouve plusieurs exemples de mots monosyllabiques se diphtonguant en <span class="motclef peurunvan"><i>peurunvan</i></span> comme <i>peur</i> pour <i>paour</i> (<i>pauvre</i>) ou <i>él</i> pour <i>ael</i> (<i>ange</i>)&nbsp;: cela s’explique par le fait qu’il s’agit de voyelles longues apprises à l’usage
-            (<span title="Pierre Le Goff, Grammaire bretonne du dialecte de Vannes, Vannes, Lafolye Frères, 1902">[Le Goff, 1902]</span> p.2). 
+         <p>En <span class="motclef vannetais">vannetais</span>, l’accent tombe sur la dernière syllabe, ce qui peut expliquer la <span class="motclef monophtongaison">monophtongaison</span> de certains mots qui ne le sont pas en <span class="motclef peurunvan"><i>peurunvan</i></span> (Ar Mason, 1943,<i> </i>p.8). On trouve plusieurs exemples de mots monosyllabiques se <span class="motclef diphtong">diphtonguant</span> en <span class="motclef peurunvan"><i>peurunvan</i></span> comme <i>peur</i> pour <i>paour</i> (<i>pauvre</i>) ou <i>él</i> pour <i>ael</i> (<i>ange</i>)&nbsp;: cela s’explique par le fait qu’il s’agit de voyelles <span class="motclef longue">longues</span> apprises à l’usage (Le Goff, 1902, p.2). 
          </p>
          
-         <p>L'accent grave, placé sur le <i>u</i> en <span class="motclef peurunvan"><i>peurunvan</i></span>, permet de signifier que -<i>où</i> se prononce -<i>aou</i> (<span title="Martial Ménard, Iwan Kadored, Geriadur brezhoneg, Plougastell-Daoulaz, An Here, 2001">[Ménard &amp; Kadored, 2001]</span> p.1285). 
+         <p>L'accent grave, placé sur le <i>u</i> en <span class="motclef peurunvan"><i>peurunvan</i></span>, permet de signifier que -<i>où</i> se prononce -<i>aou</i> (Ménard &amp; Kadored, 2001, p.1285). 
          </p>
          
-         <p>Nous <span class="motclef normalis">normaliserons</span> ces diphtongaisons selon l’orthographe <span class="motclef peurunvan"><i>peurunvan</i></span>. 
+         <p>Nous <span class="motclef normalis">normaliserons</span> ces <span class="motclef diphtong">diphtongaisons</span> selon l’orthographe <span class="motclef peurunvan"><i>peurunvan</i></span>. 
          </p>
          <table>
             <tr>
@@ -1752,14 +1843,12 @@
             </tr>
             <tr>
                <td>
-                  da[ae]reu[où]
+                  d<b>a[</b><b>ae</b><b>]</b>r<b>eu[où]</b></td>
+               <td>
+                  d<b>a</b>reu
                </td>
                <td>
-                  dareu
-               </td>
-               <td>
-                  daeroù
-               </td>
+                  d<b>ae</b>r<b>où</b></td>
                <td>
                   des larmes
                </td>
@@ -1769,24 +1858,22 @@
                   madeu[où]
                </td>
                <td>
-                  madeu
-               </td>
+                  mad<b>eu</b></td>
                <td>
-                  madoù
-               </td>
+                  mad<b>où</b></td>
                <td>
                   des biens
                </td>
             </tr>
             <tr>
                <td>
-                  eu[ao]n
+                  <b>eu</b><b>[</b><b>ao</b><b>]</b>n
                </td>
                <td>
-                  aon
+                  <b>eu</b>n
                </td>
                <td>
-                  aon
+                  <b>ao</b>n
                </td>
                <td>
                   peur
@@ -1794,13 +1881,13 @@
             </tr>
             <tr>
                <td>
-                  lo[oe]ned
+                  l<b>o</b><b>[o</b><b>e</b><b>]</b>ned
                </td>
                <td>
-                  loned
+                  l<b>o</b>ned
                </td>
                <td>
-                  loened
+                  l<b>oe</b>ned
                </td>
                <td>
                   animaux
@@ -1810,19 +1897,20 @@
          
          <div class="code"><pre>Balisage TEI :<code>mad&lt;seg type="diphtongaison"&gt;&lt;choice&gt;&lt;orig&gt;eu&lt;/orig&gt;&lt;reg&gt;où&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;</code></pre></div>
          
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="diphtongue"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite de <span class="motclef diphtong">diphtongaisons</span>. 
-         </p>
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="diphtongue"&gt; pour
+            baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque de niveau
+            segment. Celle-ci est complétée par un attribut @type pour préciser que le segment
+            dont il est question traite de diphtongaisons. 
+         </div>
          
          
-         <h6 id="la_semi_voyelle_w">La semi-voyelle <i>w</i></h6>
+         <h5 id="la_semi_voyelle_w">La semi-voyelle <i>w</i></h5>
          
          <p>C’est le linguiste Dom Louis Le Pelletier qui, dans son <i>Dictionnaire de la langue bretonne</i> en 1752, propose de standardiser <i>w</i> dans <i>gw</i>. Par la suite, l'usage de <i>gw</i> au lieu de <i>gu</i> pour noter la combinaison <i>gw</i> sera encouragée par les linguistes Emile Ernault et François Vallée à la suite de
             leur travaux de 1895 sur les dictionnaires de Gonidec.
          </p>
          
-         <p>Une semi-voyelle est une voyelle non syllabique qui forme une <span class="motclef diphtong">diphtongue</span> avec une voyelle syllabique qui la suit&nbsp;: la semi-voyelle <i>w</i> est utilisée en breton pour retranscrire le [w] (<i>ou</i>i&nbsp;; l<i>o</i>i&nbsp;; m<i>o</i>yen&nbsp;; <i>w</i>eb) et [ɥ] (h<i>u</i>it) (<span title="Martial Ménard et Iwan Kadored, Geriadur brezhoneg An Here, Quimper, An Here, 2001">[Ménard &amp; Kadored, 2001]</span> p.XX-XXII). Il n’y a aucune entrée commençant par <i>gw</i> dans le <i>Vocabulaire breton-français et français-breton du </i><i>dialecte</i><i> de Vannes</i> de Guillevic et Le Goff (1907) ni dans le <i>Dictionnaire breton-français du dialecte de Vannes</i> de Ernault (1904). 
+         <p>Une semi-voyelle est une voyelle non syllabique qui forme une <span class="motclef diphtong">diphtongue</span> avec une voyelle syllabique qui la suit&nbsp;: la semi-voyelle <i>w</i> est utilisée en breton pour retranscrire le [w] (<i>ou</i>i&nbsp;; l<i>o</i>i&nbsp;; m<i>o</i>yen&nbsp;; <i>w</i>eb) et [ɥ] (h<i>u</i>it) (Ménard &amp; Kadored, 2001, p.XX-XXII). Il n’y a aucune entrée commençant par <i>gw</i> dans le <i>Vocabulaire breton-français et français-breton du </i><i>dialecte</i><i> de Vannes</i> de Guillevic et Le Goff (1907) ni dans le <i>Dictionnaire breton-français du dialecte de Vannes</i> de Ernault (1904). 
          </p>
          
          <p>En nous appuyant sur <i>Geriadur an Here</i>, nos <span class="motclef normalis">normaliserons</span> les différentes graphies de [w] et [ɥ].
@@ -1844,13 +1932,13 @@
             </tr>
             <tr>
                <td>
-                  go[w]èd
+                  g<b>o</b><b>[w]</b>èd
                </td>
                <td>
-                  goèd
+                  g<b>o</b>èd
                </td>
                <td>
-                  gwèd
+                  g<b>w</b>ad
                </td>
                <td>
                   sang
@@ -1858,13 +1946,13 @@
             </tr>
             <tr>
                <td>
-                  siou[w]ah
+                  si<b>ou</b><b>[</b><b>w</b><b>]</b>ah
                </td>
                <td>
-                  siouah
+                  si<b>ou</b>ah
                </td>
                <td>
-                  siwah
+                  si<b>w</b>azh
                </td>
                <td>
                   hélas
@@ -1875,101 +1963,7 @@
          <div class="code"><pre>Balisage TEI :<code>strè&lt;seg type="diphtongaison"&gt;&lt;choice&gt;&lt;orig&gt;u&lt;/orig&gt;&lt;reg&gt;w&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;et</code></pre></div>
          
          
-         <h4 id="les_metathèses">Les métathèses</h4>
-         
-         
-         <blockquote>Interversion de phonèmes contigus ou non, à l'intérieur d'un mot.<cite>Définition CRNTL, «&nbsp;<a href="https://www.cnrtl.fr/definition/m%C3%A9tath%C3%A8se"><span class="motclef métathèse">métathèse</span></a>&nbsp;»</cite></blockquote>
-         
-         <p>Les <span class="motclef métathèse">métathèses</span> sont fréquentes en <span class="motclef vannetais">vannetais</span> dans la séquence <span class="motclef occlusive">occlusive</span> + <i>r</i> + voyelle + <span class="motclef occlusive">occlusive</span> comme <i>berton</i> pour <i>breton</i>. On peut noter d'autres <span class="motclef métathèse">métathèses</span> fréquentes comme <i>benal</i> pour <i>balan</i>. 
-         </p>
-         
-         <p>Bien qu’ils s’agisse de mots trouvés tels quels dans les dictionnaires <span class="motclef vannetais">vannetais</span>, ces <span class="motclef métathèse">métathèses</span> seront <span class="motclef normalis">normalisées</span> pour faciliter la compréhension des poèmes. 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  hu[uh]él
-               </td>
-               <td>
-                  huél
-               </td>
-               <td>
-                  uhél
-               </td>
-               <td>
-                  haut
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  re[er]vé
-               </td>
-               <td>
-                  revé
-               </td>
-               <td>
-                  ervé
-               </td>
-               <td>
-                  selon
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  banal[lan]
-               </td>
-               <td>
-                  banal
-               </td>
-               <td>
-                  balan
-               </td>
-               <td>
-                  genêt
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  lann-gro[wr]ah
-               </td>
-               <td>
-                  lann-groah
-               </td>
-               <td>
-                  lann-gwrah
-               </td>
-               <td>
-                  ajonc nain
-               </td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>&lt;seg type="metathese"&gt;&lt;choice&gt;&lt;orig&gt;re&lt;/orig&gt;&lt;reg&gt;er&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;vé</code></pre></div>
-         
-         <div class="code"><pre>Balisage TEI :<code>lann-g&lt;seg type="metathese"&gt;&lt;choice&gt;&lt;orig&gt;ro&lt;/orig&gt;&lt;reg&gt;wr&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;ah*</code></pre></div>
-         
-         <p>*cas rare de superposition entre deux <span class="motclef normalis">normalisations</span>&nbsp;: on a choisi de mettre en avant la <span class="motclef métathèse">métathèse</span> plutôt que la <span class="motclef diphtong">diphtongaison</span>. 
-         </p>
-         
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="metathese"&gt; pour
-            baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite des <span class="motclef métathèse">métathèses</span>. 
-         </p>
+         <h3 id="les_signes_de_ponctuation">Les signes de ponctuation</h3>
          
          
          <h4 id="les_desagglutinations">Les désagglutinations</h4>
@@ -1994,13 +1988,13 @@
             </tr>
             <tr>
                <td>
-                  em-[&nbsp;]lédet
+                  em<b>-</b><b>[&nbsp;]</b>lédet
                </td>
                <td>
-                  em-lédet
+                  em<b>-</b>lédet
                </td>
                <td>
-                  em&nbsp;lédet
+                  em<b>&nbsp;</b>lédet
                </td>
                <td>
                   étendre
@@ -2008,10 +2002,10 @@
             </tr>
             <tr>
                <td>
-                  d'é&nbsp;gilé
+                  d'é<b>&nbsp;</b><b>[]</b>gilé
                </td>
                <td>
-                  d'é&nbsp;gilé
+                  d'é<b>&nbsp;</b>gilé
                </td>
                <td>
                   d'égilé
@@ -2022,13 +2016,13 @@
             </tr>
             <tr>
                <td>
-                  mab[-]dén 
+                  mab<b>[-]</b>dén 
                </td>
                <td>
                   mabdén 
                </td>
                <td>
-                  mab-dén 
+                  mab<b>-</b>dén 
                </td>
                <td>
                   être humain / humanité
@@ -2038,17 +2032,96 @@
          
          <div class="code"><pre>Balisage TEI :<code>em&lt;seg type="desagglutination"&gt;&lt;choice&gt;&lt;orig&gt;-&lt;/orig&gt;&lt;reg&gt;&nbsp;&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;lédet</code></pre></div>
          
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="diphtongue"&gt; pour baliser ce phénomène.<br>La balise &lt;seg&gt; contient une unité de texte quelconque de niveau segment. Celle-ci
-            est complétée par un attribut @type pour préciser que le segment dont il est question
-            traite de desagglutinations. 
-         </p>
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et &lt;reg&gt;, on utilisera &lt;seg type="diphtongue"&gt; pour
+            baliser ce phénomène. La balise &lt;seg&gt; contient une unité de texte quelconque de niveau
+            segment. Celle-ci est complétée par un attribut @type pour préciser que le segment
+            dont il est question traite de desagglutinations. 
+         </div>
          
          
          <h4 id="les_elisions">Les élisions</h4>
          
-         <p>En <span class="motclef peurunvan"><i>peurunvan</i></span>, l’accent grave peut être placé sur un <i>a</i> en début de mot permet de marquer l'élision du mot comme <i>àr</i> pour <i>war</i> (<span title="Martial Ménard, Iwan Kadored, Geriadur brezhoneg, Plougastell-Daoulaz, An Here, 2001">[Ménard &amp; Kadored, 2001]</span> p.1285). Nous avons cependant choisi de marquer ces élisions comme les autres en remplaçant
-            la partie manquante par un apostrophe. <br>Les mêmes élisions existent en <span class="motclef vannetais">vannetais</span> et en <span class="motclef peurunvan"><i>peurunvan</i></span>. C’est pourquoi les abréviations ne seront pas développées dans la version <span class="motclef normalis">normalisée</span>, l’explicitation du sens du mot se fera au moyen du contexte, de la traduction française
+         <p>En <span class="motclef peurunvan"><i>peurunvan</i></span>, l’accent grave peut être placé sur un <i>a</i> en début de mot ce qui permet de marquer l'élision du mot comme <i>àr</i> pour <i>war</i> (Ménard &amp; Kadored, 2001, p.1285). Nous avons cependant choisi de marquer ces élisions
+            comme les autres en remplaçant la partie manquante par un apostrophe. 
+         </p>
+         
+         <p>Les mêmes élisions existent en <span class="motclef vannetais">vannetais</span> et en <span class="motclef peurunvan"><i>peurunvan</i></span>. C’est pourquoi les abréviations ne seront pas développées dans la version <span class="motclef normalis">normalisée</span>, l’explicitation du sens du mot se fera au moyen du contexte, de la traduction française
             ou, pour les cas les plus difficiles, d’une note. 
+         </p>
+         <table>
+            <tr>
+               <td>
+                  compilatoire
+               </td>
+               <td>
+                  fac-similaire
+               </td>
+               <td>
+                  normalisé
+               </td>
+               <td>
+                  traduction
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <b>[</b><b>ʼ</b><b>]</b>èl
+               </td>
+               <td>
+                  èl 
+               </td>
+               <td>
+                  <b>ʼ</b>el
+               </td>
+               <td>
+                  comme 
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  bet<b>[’]</b></td>
+               <td>
+                  bet
+               </td>
+               <td>
+                  bet<b>’</b></td>
+               <td>
+                  jusqu’à
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <b>‘</b>penn
+               </td>
+               <td>
+                  <b>‘</b>penn
+               </td>
+               <td>
+                  penn
+               </td>
+               <td>
+                  tête
+               </td>
+            </tr>
+         </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>&lt;pc type="elision"&gt;&lt;choice&gt;&lt;reg&gt;’&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;èl</code></pre></div>
+         
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et/ou &lt;reg&gt;, on utilisera &lt;pc type="diphtongue"&gt; pour
+            baliser ce phénomène. La balise &lt;pc&gt; contient un signe de ponctuation unique. Celle-ci
+            est complétée par un attribut @type pour préciser qu’il s’agit d’un signe de ponctuation
+            relatif à l’élision. 
+         </div>
+         
+         
+         <h4 id="lajout_ou_suppression_delements_de_ponctuation">L’ajout ou suppression d’éléments de ponctuation</h4>
+         
+         <p>La ponctuation d’origine est strictement conservée à l'exception des signes de ponctuation
+            marquant le discours direct dont l’usage n’est pas toujours conforme à l’usage moderne.
+            Lorsqu'il est nécessaire, des signes de ponctuations ont ainsi été ajoutés ou enlevés.
+            Dans l’exemple ci-dessous, la <span class="motclef normalis">normalisation</span> de la ponctuation est confirmée par la traduction de l’auteur. Dans quelques cas,
+            ces corrections touchent aussi d’autres éléments de ponctuation, une note sera ajoutée
+            lorsque le cas se présente. 
          </p>
          <table>
             <tr>
@@ -2067,54 +2140,34 @@
             </tr>
             <tr>
                <td>
-                  [ʼ]èl
+                  «&nbsp;Setu treménet en anderù, achiùet en danseu&nbsp;;
+                  <b>[</b><b>«&nbsp;</b><b>]</b>Araog ma tei en noz arnom, dam-ni d'er gér on deu.&nbsp;»
                </td>
                <td>
-                  èl 
+                  «&nbsp;Setu treménet en anderù, achiùet en danseu&nbsp;;
+                  <b>«&nbsp;</b>Araog ma tei en noz arnom, dam-ni d'er gér on deu.&nbsp;»
                </td>
                <td>
-                  ʼèl 
+                  «&nbsp;Setu treménet en anderù, achiùet en danseu&nbsp;;
+                  Araog ma tei en noz arnom, dam-ni d'er gér on deu.&nbsp;»
                </td>
                <td>
-                  comme 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  bet[’]
-               </td>
-               <td>
-                  bet
-               </td>
-               <td>
-                  bet’
-               </td>
-               <td>
-                  jusqu’à
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  ‘penn
-               </td>
-               <td>
-                  ‘penn
-               </td>
-               <td>
-                  penn
-               </td>
-               <td>
-                  tête
+                  «&nbsp;Voici passé l'après-midi, les danses sont terminées,
+                  Avant que la nuit ne vienne nous surprendre, rentrons tous deux.&nbsp;»
                </td>
             </tr>
          </table>
          
-         <div class="code"><pre>Balisage TEI :<code>&lt;pc type="elision"&gt;&lt;choice&gt;&lt;reg&gt;’&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;èl</code></pre></div>
+         <div class="code"><pre>Balisage TEI :<code>&lt;pc type="dialogue"&gt;&lt;choice&gt;&lt;orig&gt;«&nbsp;&lt;/orig&gt;&lt;/choice&gt;</code></pre></div>
          
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et/ou &lt;reg&gt;, on utilisera &lt;pc type="diphtongue"&gt; pour baliser ce phénomène.<br>La balise &lt;pc&gt; contient un signe de ponctuation unique. Celle-ci est complétée par
-            un attribut @type pour préciser qu’il s’agit d’un signe de ponctuation relatif à l’élision.
-            
-         </p>
+         <div class="code_expl">En plus de &lt;choice&gt; avec &lt;orig&gt; et/ou &lt;reg&gt;, on utilisera &lt;pc type="diphtongue"&gt; pour
+            baliser ce phénomène. La balise &lt;pc&gt; contient un signe de ponctuation unique. Celle-ci
+            est complétée par un attribut @type pour préciser qu’il s’agit d’un signe de ponctuation
+            relatif au dialogue. 
+         </div>
+         
+         
+         <h3 id="divers">Divers</h3>
          
          
          <h4 id="les_corrections">Les corrections</h4>
@@ -2139,13 +2192,13 @@
             </tr>
             <tr>
                <td>
-                  b[m]ouéh
+                  <b>b</b><b>[</b><b>m</b><b>]</b>ouéh
                </td>
                <td>
-                  bouéh
+                  <b>b</b>ouéh
                </td>
                <td>
-                  mouéh
+                  <b>m</b>ouezh
                </td>
                <td>
                   voix
@@ -2153,14 +2206,11 @@
             </tr>
             <tr>
                <td>
-                  abenn[n]
-               </td>
+                  abe<b>nn</b><b>[</b><b>n</b><b>]</b></td>
                <td>
-                  abenn
-               </td>
+                  abe<b>nn</b></td>
                <td>
-                  aben
-               </td>
+                  abe<b>n</b></td>
                <td>
                   
                </td>
@@ -2169,70 +2219,16 @@
          
          <div class="code"><pre>Balisage TEI :<code>abe&lt;sic&gt;nn&lt;/sic&gt;&lt;corr&gt;n&lt;/corr&gt;</code></pre></div>
          
-         <p>La balise &lt;sic&gt; contient du texte reproduit quoiqu'il est apparemment incorrect ou
+         <div class="code_expl">La balise &lt;sic&gt; contient du texte reproduit quoiqu'il est apparemment incorrect ou
             inexact, elle est suivi par la balise &lt;corr&gt; qui contient la forme correcte d'un passage
             qui est considéré erroné dans la copie du texte. 
-         </p>
-         
-         
-         <h4 id="lajout_ou_suppression_delements_de_ponctuation">L’ajout ou suppression d’éléments de ponctuation</h4>
-         
-         <p>La ponctuation d’origine est strictement conservée à l'exception des signes de ponctuation
-            marquant le discours direct dont l’usage n’est pas toujours conforme à l’usage moderne.
-            Lorsqu'il est nécessaire, des signes de ponctuations ont ainsi été ajoutés ou enlevés.
-            Dans l’exemple ci-dessous, la <span class="motclef normalis">normalisation</span> de la ponctuation est confirmée par la traduction de l’auteur. 
-         </p>
-         <table>
-            <tr>
-               <td>
-                  compilatoire
-               </td>
-               <td>
-                  fac-similaire
-               </td>
-               <td>
-                  normalisé
-               </td>
-               <td>
-                  traduction 
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  «&nbsp;Setu treménet en anderù, achiùet en danseu&nbsp;;
-                  [«&nbsp;]Araog ma tei en noz arnom, dam-ni d'er gér on deu.&nbsp;»
-               </td>
-               <td>
-                  «&nbsp;Setu treménet en anderù, achiùet en danseu&nbsp;;
-                  «&nbsp;Araog ma tei en noz arnom, dam-ni d'er gér on deu.&nbsp;»
-               </td>
-               <td>
-                  «&nbsp;Setu treménet en anderù, achiùet en danseu&nbsp;;
-                  Araog ma tei en noz arnom, dam-ni d'er gér on deu.&nbsp;»
-               </td>
-               <td>
-                  «&nbsp;Voici passé l'après-midi, les danses sont terminées,
-                  Avant que la nuit ne vienne nous surprendre, rentrons tous deux.&nbsp;»
-               </td>
-            </tr>
-         </table>
-         
-         <div class="code"><pre>Balisage TEI :<code>&lt;pc type="dialogue"&gt;&lt;choice&gt;&lt;orig&gt;«&nbsp;&lt;/orig&gt;&lt;/choice&gt;&lt;/seg&gt;</code></pre></div>
-         
-         <p>En plus de &lt;choice&gt; avec &lt;orig&gt; et/ou &lt;reg&gt;, on utilisera &lt;pc type="diphtongue"&gt; pour baliser ce phénomène.<br>La balise &lt;pc&gt; contient un signe de ponctuation unique. Celle-ci est complétée par
-            un attribut @type pour préciser qu’il s’agit d’un signe de ponctuation relatif au
-            dialogue. 
-         </p>
+         </div>
          
          
          <h4 id="autre">Autre</h4>
          
-         <p>La formation des verbes en <span class="motclef peurunvan"><i>peurunvan</i></span> s’est fait de la manière suivante&nbsp;: 
-         </p>
-         
-         <p>XXX LIZA</p>
-         
-         <p>C’est pourquoi leur <span class="motclef normalis">normalisation</span> ne peut être balisée selon un modèle particulier. 
+         <p>Le breton compte cinq verbes irréguliers&nbsp;: bezañ (être), gouzout (savoir), kaout (avoir),
+            mont (aller), ober (faire). C’est pourquoi leur <span class="motclef normalis">normalisation</span> ne peut être balisée selon un modèle particulier. 
          </p>
          <table>
             <tr>
@@ -2251,31 +2247,33 @@
             </tr>
             <tr>
                <td>
-                  N’en dé[eus] ken
+                  N’en d<b>é[eus]</b> ken
                </td>
                <td>
-                  N’en dé ken
+                  N’en d<b>é</b> ken
                </td>
                <td>
-                  N’en deus ken
+                  N’en d<b>eus</b> ken
                </td>
                <td>
                   conjugaison du verbe <i>avoir</i></td>
             </tr>
             <tr>
                <td>
-                  é hree[ai]m
+                  é hr<b>ee[ai]</b>m
                </td>
                <td>
-                  é hreem
+                  é hr<b>ee</b>m
                </td>
                <td>
-                  é hraim
+                  e r<b>ai</b>mp
                </td>
                <td>
                   conjugaison du verbe <i>faire</i></td>
             </tr>
          </table>
+         
+         <div class="code"><pre>Balisage TEI :<code>N’en d&lt;seg type="divers"&gt;&lt;choice&gt;&lt;orig&gt;é&lt;/orig&gt;&lt;reg&gt;e&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;ken</code></pre></div>
          
          <p>D’autres éléments sont balisés «&nbsp;autre&nbsp;» comme le cas ci-dessous&nbsp;: l’ajout d’un <i>h</i> déplace la majuscule, les <i>o</i> ne sont pas balisés en eux-mêmes comme éléments <span class="motclef normalis">normalisés</span>. 
          </p>
@@ -2296,13 +2294,13 @@
             </tr>
             <tr>
                <td>
-                  [H]O[o]ll
+                  [H]<b>O[o]</b>ll
                </td>
                <td>
-                  Oll
+                  <b>O</b>ll
                </td>
                <td>
-                  Holl
+                  H<b>o</b>ll
                </td>
                <td>
                   tout
@@ -2310,7 +2308,7 @@
             </tr>
          </table>
          
-         <p></p>
+         <div class="code"><pre>Balisage TEI :<code>&lt;seg type="amuissement_consonne"&gt;&lt;choice&gt;&lt;reg&gt;H&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;&lt;seg type="divers"&gt;&lt;choice&gt;&lt;orig&gt;O&lt;/orig&gt;&lt;reg&gt;o&lt;/reg&gt;&lt;/choice&gt;&lt;/seg&gt;ll</code></pre></div>
       </div>
    </body>
 </html>

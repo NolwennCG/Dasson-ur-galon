@@ -94,7 +94,7 @@ ul.sidenotes .num {
   margin-right: 5px;
 }
 
-div.lg a {
+div.lg a, h2 a {
   font:.6em Verdana, sans-serif; 
   vertical-align:top;
   color: black;

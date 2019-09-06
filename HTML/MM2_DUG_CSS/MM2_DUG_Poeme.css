@@ -11,6 +11,7 @@ div#bibliographie {
     border-left-width: 5px;
     padding-left: 10px;
     border-color: LightGray;
+    font-size: 0.75em;
 }
 
 div.nav {

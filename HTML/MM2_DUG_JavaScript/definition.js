@@ -9,6 +9,7 @@ function visualise_mots_clefs() {
 		var attr = tablDuo[1];
         span.setAttribute('onMouseUp','montre_definition(\''+attr+'\');');
         //span.setAttribute('onmouseout','efface_definition();'); 
+        span.setAttribute('title','lexique');
     }
 }
 

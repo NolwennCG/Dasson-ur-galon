@@ -1,43 +1,10 @@
 /*  POUR : dossiers littéraires > structure générale > page normalisation  */
 
-/*  HIERARCHIE DES TITRES  */
-
-body {
-  counter-reset: section3;  /* Nous mettons à zéro le compteur chapitre */
-}
-
-h2 {
-  counter-reset: section3;
-}
-
-h3 {
-  counter-reset: section4;
-}
-
-h3:before {
-  counter-increment: section3;  /* Ajoute 1 au compteur chapitre */
-  content: counter(section3, upper-roman) ". ";
-}
-
-h4 {
-  counter-reset: section5;
-}
-
-h4:before {
-  counter-increment: section4;  /* Ajoute 1 au compteur chapitre */
-  content: counter(section4, decimal) ". ";
-}
-
-h5:before {
-  counter-increment: section5;  /* Ajoute 1 au compteur chapitre */
-  content: counter(section4, decimal) ". " counter(section5, decimal) ". ";
-}
-
 /*  CODE  */
 
 pre {
-   margin-left: 7%;
-	 margin-right: 17%;
+   margin-left: 8%;
+	 margin-right: 18%;
 }
 
 div.xml p {
@@ -45,3 +12,9 @@ div.xml p {
   padding: 1%;
 }
 
+div.code_expl {
+  padding: 1%;
+  border: 3px solid #f5f5f5;
+   margin-left: 8%;
+	 margin-right: 18%;
+}

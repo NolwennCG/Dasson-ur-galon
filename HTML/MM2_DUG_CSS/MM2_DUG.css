@@ -4,7 +4,7 @@
 
 #texte_complet p {
 	 margin-top: 1px;
-	 margin-bottom: 8px;
+	 margin-bottom: 1.5%;
 	 margin-left: 7%;
 	 margin-right: 17%;
 }
@@ -13,8 +13,9 @@
 	 margin-top: 1px;
 	 margin-bottom: 8px;
    margin-left: 7%;
-	 margin-right: 17%;
+	 /*! margin-right: 17%; */
 }
+
 #texte_complet > div > p {
   padding-bottom: 10px;
 	line-height: 150%;
@@ -119,9 +120,9 @@ ul#menuplus ul li:first-child {
 
 /* Root Menu */
 ul#menuplus a {
-  border-right: 1px solid #999999;
-  border-left: 1px solid #999999;
-  border-top: 1px solid #999999;
+  border-right: 1px solid #dc8389;
+  border-left: 1px solid #dc8389;
+  border-top: 1px solid #dc8389;
 	border-radius: 4px 4px 0px 0px;
 	float: none !important;
 	display: block;
